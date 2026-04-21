@@ -172,6 +172,31 @@ function amal_acf_fields()
 			['key' => 'field_about_image', 'label' => __('صورة القسم', 'amal-malki'), 'name' => 'about_image', 'type' => 'image'],
 		],
 	]);
+
+	// Why Us Section Fields
+	$why_us_fields = [
+		['key' => 'field_why_us_title', 'label' => __('العنوان', 'amal-malki'), 'name' => 'why_us_title', 'type' => 'text'],
+		['key' => 'field_why_us_subtitle', 'label' => __('النص الفرعي', 'amal-malki'), 'name' => 'why_us_subtitle', 'type' => 'textarea'],
+		['key' => 'field_why_us_bg_color', 'label' => __('لون خلفية القسم', 'amal-malki'), 'name' => 'why_us_bg_color', 'type' => 'color_picker'],
+		['key' => 'field_why_us_text_color', 'label' => __('لون النصوص', 'amal-malki'), 'name' => 'why_us_text_color', 'type' => 'color_picker'],
+		['key' => 'field_why_us_card_bg_1', 'label' => __('لون البطاقات (تدرج 1)', 'amal-malki'), 'name' => 'why_us_card_bg_1', 'type' => 'color_picker'],
+		['key' => 'field_why_us_card_bg_2', 'label' => __('لون البطاقات (تدرج 2)', 'amal-malki'), 'name' => 'why_us_card_bg_2', 'type' => 'color_picker'],
+		['key' => 'field_why_us_card_text', 'label' => __('لون نصوص البطاقات', 'amal-malki'), 'name' => 'why_us_card_text', 'type' => 'color_picker'],
+	];
+	for ($i = 1; $i <= 7; $i++) {
+		$why_us_fields[] = ['key' => 'field_why_us_f'.$i.'_title', 'label' => "ميزة $i - العنوان", 'name' => "why_us_f{$i}_title", 'type' => 'text'];
+		$why_us_fields[] = ['key' => 'field_why_us_f'.$i.'_text', 'label' => "ميزة $i - النص", 'name' => "why_us_f{$i}_text", 'type' => 'textarea'];
+	}
+
+	acf_add_local_field_group([
+		'key' => 'group_why_us',
+		'title' => __('Why Us Section', 'amal-malki'),
+		'location' => [
+			[['param' => 'page_type', 'operator' => '==', 'value' => 'front_page']],
+			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
+		],
+		'fields' => $why_us_fields,
+	]);
 }
 add_action('acf/init', 'amal_acf_fields');
 
