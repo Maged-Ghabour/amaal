@@ -182,6 +182,8 @@ function amal_acf_fields()
 		['key' => 'field_why_us_card_bg_1', 'label' => __('لون البطاقات (تدرج 1)', 'amal-malki'), 'name' => 'why_us_card_bg_1', 'type' => 'color_picker'],
 		['key' => 'field_why_us_card_bg_2', 'label' => __('لون البطاقات (تدرج 2)', 'amal-malki'), 'name' => 'why_us_card_bg_2', 'type' => 'color_picker'],
 		['key' => 'field_why_us_card_text', 'label' => __('لون نصوص البطاقات', 'amal-malki'), 'name' => 'why_us_card_text', 'type' => 'color_picker'],
+		['key' => 'field_why_us_top_row', 'label' => __('عدد الكروت في الصف الأول', 'amal-malki'), 'name' => 'why_us_top_row', 'type' => 'number', 'default_value' => 4, 'min' => 1, 'max' => 6],
+		['key' => 'field_why_us_bottom_row', 'label' => __('عدد الكروت في الصف الثاني', 'amal-malki'), 'name' => 'why_us_bottom_row', 'type' => 'number', 'default_value' => 3, 'min' => 1, 'max' => 6],
 	];
 	for ($i = 1; $i <= 7; $i++) {
 		$why_us_fields[] = ['key' => 'field_why_us_f'.$i.'_title', 'label' => "ميزة $i - العنوان", 'name' => "why_us_f{$i}_title", 'type' => 'text'];

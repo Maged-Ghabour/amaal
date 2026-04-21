@@ -41,6 +41,8 @@ if (empty($features)) {
 		['title' => 'رؤية قانونية تصنع الفارق', 'text' => 'لا نكتفي بحل المشكلة بل نعمل على منعها قبل حدوثها عبر تحليل قانوني استباقي.'],
 	];
 }
+$top_row_count = function_exists('get_field') && get_field('why_us_top_row') ? (int) get_field('why_us_top_row') : 4;
+$bottom_row_count = function_exists('get_field') && get_field('why_us_bottom_row') ? (int) get_field('why_us_bottom_row') : 3;
 ?>
 
 <section id="why-us" class="why-us-section" style="background-color: <?php echo esc_attr($bg_color); ?>;"
@@ -55,9 +57,12 @@ if (empty($features)) {
 		</div>
 
 		<div class="why-us-flex-grid">
-			<?php foreach ($features as $feature): ?>
+			<?php foreach ($features as $index => $feature): 
+				$is_top_row = ($index < $top_row_count);
+				$cards_per_row = $is_top_row ? $top_row_count : $bottom_row_count;
+			?>
 				<div class="why-us-card"
-					style="background: linear-gradient(135deg, <?php echo esc_attr($card_bg_1); ?>, <?php echo esc_attr($card_bg_2); ?>);">
+					style="--cols: <?php echo esc_attr($cards_per_row); ?>; background: linear-gradient(135deg, <?php echo esc_attr($card_bg_1); ?>, <?php echo esc_attr($card_bg_2); ?>);">
 					<h3 class="why-us-card__title" style="color: <?php echo esc_attr($card_text); ?>;">
 						<?php echo esc_html($feature['title']); ?></h3>
 					<p class="why-us-card__text" style="color: <?php echo esc_attr($card_text); ?>; opacity: 0.85;">

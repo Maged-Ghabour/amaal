@@ -561,11 +561,9 @@ ol {
   .why-us-flex-grid {
     gap: var(--space-md);
   }
-  .why-us-card:nth-child(-n+3) {
-    width: calc(33.333% - (var(--space-md) * 2 / 3));
-  }
-  .why-us-card:nth-child(n+4) {
-    width: calc(25% - (var(--space-md) * 3 / 4));
+  .why-us-card {
+    /* If --cols is set, divide space dynamically. Fallback is 3. */
+    width: calc((100% / var(--cols, 3)) - (var(--space-md) * (var(--cols, 3) - 1) / var(--cols, 3)));
   }
 }
 
