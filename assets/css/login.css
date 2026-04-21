@@ -1,0 +1,140 @@
+/* Custom Login Page Styling for Amal Malki Legal Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500&display=swap');
+
+:root {
+  --color-gold: #C9A84C;
+  --color-gold-light: #E8C96A;
+  --color-dark: #1A0E05;
+  --color-white: #FFFFFF;
+}
+
+body.login {
+  background: linear-gradient(180deg, #4D201B 0%, #411429 28.35%, #34193A 75%, #231B42 100%) !important;
+  font-family: 'Noto Sans Arabic', sans-serif !important;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+body.login div#login {
+  width: 400px;
+  max-width: 90%;
+  padding: 0;
+  margin: auto;
+}
+
+/* Form Container */
+body.login #loginform, 
+body.login #registerform, 
+body.login #lostpasswordform {
+  background-color: var(--color-white) !important;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  padding: 2.5rem 2rem !important;
+  border: none !important;
+}
+
+/* Inputs */
+body.login .input,
+body.login input[type="text"],
+body.login input[type="password"] {
+  border: 1.5px solid #E8E0D4 !important;
+  border-radius: 6px !important;
+  padding: 0.8rem 1rem !important;
+  font-size: 1rem !important;
+  box-shadow: none !important;
+  transition: border-color 0.3s;
+}
+
+body.login .input:focus,
+body.login input[type="text"]:focus,
+body.login input[type="password"]:focus {
+  border-color: var(--color-gold) !important;
+  box-shadow: 0 0 0 1px var(--color-gold) !important;
+}
+
+/* Labels */
+body.login label {
+  font-family: 'Noto Serif Arabic', serif;
+  color: var(--color-dark) !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  margin-bottom: 8px !important;
+  display: block;
+}
+
+/* Button */
+body.login .button-primary {
+  background: var(--color-gold) !important;
+  border-color: var(--color-gold) !important;
+  color: var(--color-dark) !important;
+  font-family: 'Noto Serif Arabic', serif !important;
+  font-weight: 700 !important;
+  width: 100%;
+  padding: 0.6rem !important;
+  font-size: 1.1rem !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  margin-top: 1rem;
+}
+
+body.login .button-primary:hover {
+  background: var(--color-gold-light) !important;
+  border-color: var(--color-gold-light) !important;
+  transform: translateY(-2px);
+}
+
+/* Links (Lost password, Back to blog) */
+body.login #nav, 
+body.login #backtoblog {
+  text-align: center;
+  margin-top: 1.5rem !important;
+  padding: 0 !important;
+}
+
+body.login #nav a, 
+body.login #backtoblog a {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+body.login #nav a:hover, 
+body.login #backtoblog a:hover {
+  color: var(--color-gold) !important;
+  text-decoration: none;
+}
+
+/* Messages (Error, notice) */
+body.login .message,
+body.login #login_error {
+  border-inline-start: 4px solid var(--color-gold) !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #c62828 !important; /* mostly errors */
+}
+body.login .message {
+  color: #2e7d32 !important; /* success notices */
+}
+
+/* Checkbox */
+body.login input[type="checkbox"] {
+  border-color: #E8E0D4 !important;
+}
+
+body.login input[type="checkbox"]:checked {
+  background-color: var(--color-gold) !important;
+  border-color: var(--color-gold) !important;
+}
+
+/* Language Switcher dropdown */
+.wp-core-ui .button.button-secondary {
+    color: var(--color-dark) !important;
+    border-color: #E8E0D4 !important;
+}

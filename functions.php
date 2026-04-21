@@ -325,6 +325,40 @@ function amal_maintenance_mode()
 }
 add_action('template_redirect', 'amal_maintenance_mode');
 
+// ─── Custom Login Page ────────────────────────────────────────────────────────
+function amal_login_stylesheet() {
+    wp_enqueue_style('amal-login-style', AMAL_ASSETS . '/css/login.css', [], AMAL_VERSION);
+    
+    // Inject the custom logo dynamically if it exists
+    $custom_logo_id = get_theme_mod('custom_logo');
+    if ($custom_logo_id) {
+        $logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
+        echo '<style type="text/css">
+            #login h1 a, .login h1 a {
+                background-image: url(' . esc_url($logo_url) . ');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+                height: 100px;
+                display: block;
+                margin-bottom: 20px;
+            }
+        </style>';
+    }
+}
+add_action('login_enqueue_scripts', 'amal_login_stylesheet');
+
+function amal_login_logo_url() {
+    return home_url();
+}
+add_filter('login_headerurl', 'amal_login_logo_url');
+
+function amal_login_logo_url_title() {
+    return get_bloginfo('name');
+}
+add_filter('login_headertext', 'amal_login_logo_url_title');
+
 // ─── Include Files ────────────────────────────────────────────────────────────
 $includes = [
 	'/inc/template-tags.php',    // custom template helpers
