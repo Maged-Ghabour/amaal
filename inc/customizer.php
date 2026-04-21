@@ -77,4 +77,21 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
 		'type' => 'checkbox',
 	]);
 
+	// ── Section: Hero Section ──────────────────────────────
+	$wp_customize->add_section('amal_hero', [
+		'title' => __('القسم الرئيسي (Hero)', 'amal-malki'),
+		'panel' => 'amal_options',
+	]);
+
+	$wp_customize->add_setting('hero_default_bg', [
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	]);
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_default_bg', [
+		'label' => __('صورة خلفية القسم الرئيسي', 'amal-malki'),
+		'section' => 'amal_hero',
+		'settings' => 'hero_default_bg',
+	]));
+
 });

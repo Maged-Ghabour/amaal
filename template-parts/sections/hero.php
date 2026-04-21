@@ -17,7 +17,11 @@ $title    = $hero_title    ?: __( 'هنا تُدار الحلول', 'amal-malki'
 $subtitle = $hero_subtitle ?: __( 'من الاستشارة إلى الحل، نرافقك قانونياً برؤية دقيقة واحتراف يصنع الفارق', 'amal-malki' );
 $btn_text = $hero_btn_text ?: __( 'اطلب استشارة', 'amal-malki' );
 $btn_url  = $hero_btn_url  ?: home_url( '/#contact' );
-$bg_url   = $hero_bg       ? esc_url( $hero_bg['url'] ) : AMAL_ASSETS . '/images/hero-bg.jpg';
+
+// Background URL logic: First ACF, then Customizer, then default fallback.
+$customizer_bg = get_theme_mod( 'hero_default_bg', '' );
+$default_bg    = AMAL_ASSETS . '/images/hero-bg.jpg';
+$bg_url        = $hero_bg ? esc_url( $hero_bg['url'] ) : ( $customizer_bg ? esc_url( $customizer_bg ) : $default_bg );
 
 $social_instagram = get_theme_mod( 'social_instagram', '#' );
 $social_tiktok    = get_theme_mod( 'social_tiktok',    '#' );
