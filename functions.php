@@ -145,7 +145,10 @@ function amal_acf_fields()
 	acf_add_local_field_group([
 		'key' => 'group_hero',
 		'title' => __('Hero Section', 'amal-malki'),
-		'location' => [[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]],
+		'location' => [
+			[['param' => 'page_type', 'operator' => '==', 'value' => 'front_page']],
+			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
+		],
 		'fields' => [
 			['key' => 'field_hero_title', 'label' => __('العنوان الرئيسي', 'amal-malki'), 'name' => 'hero_title', 'type' => 'text'],
 			['key' => 'field_hero_subtitle', 'label' => __('النص الفرعي', 'amal-malki'), 'name' => 'hero_subtitle', 'type' => 'textarea'],
@@ -159,7 +162,10 @@ function amal_acf_fields()
 	acf_add_local_field_group([
 		'key' => 'group_about',
 		'title' => __('About Section', 'amal-malki'),
-		'location' => [[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]],
+		'location' => [
+			[['param' => 'page_type', 'operator' => '==', 'value' => 'front_page']],
+			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
+		],
 		'fields' => [
 			['key' => 'field_vision_text', 'label' => __('رؤيتنا', 'amal-malki'), 'name' => 'vision_text', 'type' => 'textarea'],
 			['key' => 'field_mission_text', 'label' => __('رسالتنا', 'amal-malki'), 'name' => 'mission_text', 'type' => 'textarea'],
