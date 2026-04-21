@@ -4,11 +4,19 @@
  *
  * @package AmalMalki
  */
+$show_contact = function_exists('get_field') && get_field('show_contact_section') !== null ? get_field('show_contact_section') : true;
+if ( ! $show_contact ) { return; }
+
+$contact_title = function_exists('get_field') ? get_field('contact_section_title') : null;
+$contact_subtitle = function_exists('get_field') ? get_field('contact_section_subtitle') : null;
+
+$sec_title = $contact_title ?: __( 'اطلب استشارتك الآن', 'amal-malki' );
+$sec_sub = $contact_subtitle ?: __( 'فريقنا جاهز لمساعدتك في أي وقت', 'amal-malki' );
 ?>
 <section id="contact" class="contact-section" aria-label="<?php esc_attr_e( 'تواصل معنا', 'amal-malki' ); ?>">
 	<div class="container">
-		<h2 class="section-title contact-title"><?php _e( 'اطلب استشارتك الآن', 'amal-malki' ); ?></h2>
-		<p class="contact-subtitle"><?php _e( 'فريقنا جاهز لمساعدتك في أي وقت', 'amal-malki' ); ?></p>
+		<h2 class="section-title contact-title"><?php echo esc_html( $sec_title ); ?></h2>
+		<p class="contact-subtitle"><?php echo nl2br( esc_html( $sec_sub ) ); ?></p>
 
 		<form class="contact-form" id="contactForm" novalidate>
 			<?php wp_nonce_field( 'amal_contact_form', 'amal_nonce' ); ?>
@@ -39,7 +47,10 @@
 			</div>
 
 			<button type="submit" class="btn btn--primary btn--wide">
-				<?php _e( 'إرسال الطلب', 'amal-malki' ); ?>
+				<?php 
+				$btn_text = function_exists('get_field') && get_field('contact_btn_text') ? get_field('contact_btn_text') : __( 'إرسال الطلب', 'amal-malki' );
+				echo esc_html( $btn_text ); 
+				?>
 			</button>
 
 			<div class="form-feedback" aria-live="polite"></div>

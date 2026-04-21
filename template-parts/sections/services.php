@@ -5,9 +5,17 @@
  * @package AmalMalki
  */
 
+$show_services = function_exists('get_field') && get_field('show_services_section') !== null ? get_field('show_services_section') : true;
+if ( ! $show_services ) { return; }
+
+$services_title = function_exists('get_field') ? get_field('services_section_title') : null;
+$services_count = function_exists('get_field') ? get_field('services_post_count') : 8;
+
+$sec_title = $services_title ?: __( 'خدماتنا', 'amal-malki' );
+
 $args = [
 	'post_type'      => 'service',
-	'posts_per_page' => 8,
+	'posts_per_page' => $services_count ? (int)$services_count : 8,
 	'post_status'    => 'publish',
 	'orderby'        => 'menu_order',
 	'order'          => 'ASC',
@@ -19,7 +27,7 @@ $services = new WP_Query( $args );
 <section id="services" class="services-section" aria-label="<?php esc_attr_e( 'خدماتنا', 'amal-malki' ); ?>">
 	<div class="container">
 
-		<h2 class="section-title services-title"><?php _e( 'خدماتنا', 'amal-malki' ); ?></h2>
+		<h2 class="section-title services-title"><?php echo esc_html( $sec_title ); ?></h2>
 
 		<?php if ( $services->have_posts() ) : ?>
 

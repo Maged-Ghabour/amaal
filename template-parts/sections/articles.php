@@ -5,9 +5,17 @@
  * @package AmalMalki
  */
 
+$show_articles = function_exists('get_field') && get_field('show_articles_section') !== null ? get_field('show_articles_section') : true;
+if ( ! $show_articles ) { return; }
+
+$articles_title = function_exists('get_field') ? get_field('articles_section_title') : null;
+$articles_count = function_exists('get_field') ? get_field('articles_post_count') : 5;
+
+$sec_title = $articles_title ?: __( 'مقالات ذات صله', 'amal-malki' );
+
 $args = [
 	'post_type'      => 'post',
-	'posts_per_page' => 5,
+	'posts_per_page' => $articles_count ? (int)$articles_count : 5,
 	'post_status'    => 'publish',
 ];
 $articles = new WP_Query( $args );
@@ -16,7 +24,7 @@ $articles = new WP_Query( $args );
 <section id="articles" class="articles-section" aria-label="<?php esc_attr_e( 'المقالات', 'amal-malki' ); ?>">
 	<div class="container">
 
-		<h2 class="section-title"><?php _e( 'مقالات ذات صله', 'amal-malki' ); ?></h2>
+		<h2 class="section-title"><?php echo esc_html( $sec_title ); ?></h2>
 
 		<?php if ( $articles->have_posts() ) : ?>
 			<div class="articles-grid">

@@ -11,6 +11,9 @@
  * @package AmalMalki
  */
 
+$show_why_us = function_exists('get_field') && get_field('show_why_us_section') !== null ? get_field('show_why_us_section') : true;
+if ( ! $show_why_us ) { return; }
+
 $why_us_title = function_exists('get_field') && get_field('why_us_title') ? get_field('why_us_title') : __('لماذا نحن؟', 'amal-malki');
 $why_us_subtitle = function_exists('get_field') && get_field('why_us_subtitle') ? get_field('why_us_subtitle') : __('لأننا لا نُقدِّم خدمة قانونية تقليدية... بل نبني تجربة متكاملة قائمة على الاحتراف والسرعة والدقة', 'amal-malki');
 
@@ -21,7 +24,7 @@ $card_bg_2 = function_exists('get_field') && get_field('why_us_card_bg_2') ? get
 $card_text = function_exists('get_field') && get_field('why_us_card_text') ? get_field('why_us_card_text') : '#ffffff';
 
 $features = [];
-for ($i = 1; $i <= 7; $i++) {
+for ($i = 1; $i <= 10; $i++) {
 	$f_title = function_exists('get_field') ? get_field("why_us_f{$i}_title") : '';
 	$f_text = function_exists('get_field') ? get_field("why_us_f{$i}_text") : '';
 	if ($f_title) {

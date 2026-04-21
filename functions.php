@@ -150,6 +150,7 @@ function amal_acf_fields()
 			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
 		],
 		'fields' => [
+			['key' => 'field_show_hero', 'label' => __('إظهار القسم؟', 'amal-malki'), 'name' => 'show_hero_section', 'type' => 'true_false', 'default_value' => 1, 'ui' => 1],
 			['key' => 'field_hero_title', 'label' => __('العنوان الرئيسي', 'amal-malki'), 'name' => 'hero_title', 'type' => 'text'],
 			['key' => 'field_hero_subtitle', 'label' => __('النص الفرعي', 'amal-malki'), 'name' => 'hero_subtitle', 'type' => 'textarea'],
 			['key' => 'field_hero_btn_text', 'label' => __('نص الزر', 'amal-malki'), 'name' => 'hero_btn_text', 'type' => 'text'],
@@ -167,14 +168,35 @@ function amal_acf_fields()
 			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
 		],
 		'fields' => [
-			['key' => 'field_vision_text', 'label' => __('رؤيتنا', 'amal-malki'), 'name' => 'vision_text', 'type' => 'textarea'],
-			['key' => 'field_mission_text', 'label' => __('رسالتنا', 'amal-malki'), 'name' => 'mission_text', 'type' => 'textarea'],
+			['key' => 'field_show_about', 'label' => __('إظهار القسم؟', 'amal-malki'), 'name' => 'show_about_section', 'type' => 'true_false', 'default_value' => 1, 'ui' => 1],
+			['key' => 'field_about_title_1', 'label' => __('العنوان الرئيسي (السطر الأول)', 'amal-malki'), 'name' => 'about_main_title_1', 'type' => 'text'],
+			['key' => 'field_about_title_2', 'label' => __('العنوان الرئيسي (السطر الثاني)', 'amal-malki'), 'name' => 'about_main_title_2', 'type' => 'text'],
+			['key' => 'field_vision_title', 'label' => __('عنوان الرؤية', 'amal-malki'), 'name' => 'vision_title', 'type' => 'text'],
+			['key' => 'field_vision_text', 'label' => __('نص الرؤية', 'amal-malki'), 'name' => 'vision_text', 'type' => 'textarea'],
+			['key' => 'field_mission_title', 'label' => __('عنوان الرسالة', 'amal-malki'), 'name' => 'mission_title', 'type' => 'text'],
+			['key' => 'field_mission_text', 'label' => __('نص الرسالة', 'amal-malki'), 'name' => 'mission_text', 'type' => 'textarea'],
 			['key' => 'field_about_image', 'label' => __('صورة القسم', 'amal-malki'), 'name' => 'about_image', 'type' => 'image'],
+		],
+	]);
+
+	// Services Section Fields
+	acf_add_local_field_group([
+		'key' => 'group_services',
+		'title' => __('Services Section', 'amal-malki'),
+		'location' => [
+			[['param' => 'page_type', 'operator' => '==', 'value' => 'front_page']],
+			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
+		],
+		'fields' => [
+			['key' => 'field_show_services', 'label' => __('إظهار القسم؟', 'amal-malki'), 'name' => 'show_services_section', 'type' => 'true_false', 'default_value' => 1, 'ui' => 1],
+			['key' => 'field_services_title', 'label' => __('عنوان القسم', 'amal-malki'), 'name' => 'services_section_title', 'type' => 'text'],
+			['key' => 'field_services_count', 'label' => __('عدد الخدمات المعروضة', 'amal-malki'), 'name' => 'services_post_count', 'type' => 'number', 'default_value' => 8],
 		],
 	]);
 
 	// Why Us Section Fields
 	$why_us_fields = [
+		['key' => 'field_show_why_us', 'label' => __('إظهار القسم؟', 'amal-malki'), 'name' => 'show_why_us_section', 'type' => 'true_false', 'default_value' => 1, 'ui' => 1],
 		['key' => 'field_why_us_title', 'label' => __('العنوان', 'amal-malki'), 'name' => 'why_us_title', 'type' => 'text'],
 		['key' => 'field_why_us_subtitle', 'label' => __('النص الفرعي', 'amal-malki'), 'name' => 'why_us_subtitle', 'type' => 'textarea'],
 		['key' => 'field_why_us_bg_color', 'label' => __('لون خلفية القسم', 'amal-malki'), 'name' => 'why_us_bg_color', 'type' => 'color_picker'],
@@ -185,7 +207,7 @@ function amal_acf_fields()
 		['key' => 'field_why_us_top_row', 'label' => __('عدد الكروت في الصف الأول', 'amal-malki'), 'name' => 'why_us_top_row', 'type' => 'number', 'default_value' => 4, 'min' => 1, 'max' => 6],
 		['key' => 'field_why_us_bottom_row', 'label' => __('عدد الكروت في الصف الثاني', 'amal-malki'), 'name' => 'why_us_bottom_row', 'type' => 'number', 'default_value' => 3, 'min' => 1, 'max' => 6],
 	];
-	for ($i = 1; $i <= 7; $i++) {
+	for ($i = 1; $i <= 10; $i++) {
 		$why_us_fields[] = ['key' => 'field_why_us_f'.$i.'_title', 'label' => "ميزة $i - العنوان", 'name' => "why_us_f{$i}_title", 'type' => 'text'];
 		$why_us_fields[] = ['key' => 'field_why_us_f'.$i.'_text', 'label' => "ميزة $i - النص", 'name' => "why_us_f{$i}_text", 'type' => 'textarea'];
 	}
@@ -198,6 +220,37 @@ function amal_acf_fields()
 			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
 		],
 		'fields' => $why_us_fields,
+	]);
+
+	// Articles Section Fields
+	acf_add_local_field_group([
+		'key' => 'group_articles',
+		'title' => __('Articles Section', 'amal-malki'),
+		'location' => [
+			[['param' => 'page_type', 'operator' => '==', 'value' => 'front_page']],
+			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
+		],
+		'fields' => [
+			['key' => 'field_show_articles', 'label' => __('إظهار القسم؟', 'amal-malki'), 'name' => 'show_articles_section', 'type' => 'true_false', 'default_value' => 1, 'ui' => 1],
+			['key' => 'field_articles_title', 'label' => __('عنوان القسم', 'amal-malki'), 'name' => 'articles_section_title', 'type' => 'text'],
+			['key' => 'field_articles_count', 'label' => __('عدد المقالات المعروضة', 'amal-malki'), 'name' => 'articles_post_count', 'type' => 'number', 'default_value' => 5],
+		],
+	]);
+
+	// Contact Section Fields
+	acf_add_local_field_group([
+		'key' => 'group_contact',
+		'title' => __('Contact Section', 'amal-malki'),
+		'location' => [
+			[['param' => 'page_type', 'operator' => '==', 'value' => 'front_page']],
+			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
+		],
+		'fields' => [
+			['key' => 'field_show_contact', 'label' => __('إظهار القسم؟', 'amal-malki'), 'name' => 'show_contact_section', 'type' => 'true_false', 'default_value' => 1, 'ui' => 1],
+			['key' => 'field_contact_title', 'label' => __('عنوان القسم', 'amal-malki'), 'name' => 'contact_section_title', 'type' => 'text'],
+			['key' => 'field_contact_subtitle', 'label' => __('النص الفرعي', 'amal-malki'), 'name' => 'contact_section_subtitle', 'type' => 'textarea'],
+			['key' => 'field_contact_btn_text', 'label' => __('نص زر الإرسال', 'amal-malki'), 'name' => 'contact_btn_text', 'type' => 'text'],
+		],
 	]);
 }
 add_action('acf/init', 'amal_acf_fields');

@@ -5,6 +5,9 @@
  * @package AmalMalki
  */
 
+$show_hero = function_exists('get_field') && get_field('show_hero_section') !== null ? get_field('show_hero_section') : true;
+if ( ! $show_hero ) { return; }
+
 // ACF fields with fallback defaults
 $hero_title = function_exists('get_field') ? get_field('hero_title') : null;
 $hero_subtitle = function_exists('get_field') ? get_field('hero_subtitle') : null;
