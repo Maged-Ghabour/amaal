@@ -213,6 +213,19 @@ function amal_security_headers() {
 }
 add_action( 'send_headers', 'amal_security_headers' );
 
+// ─── Maintenance Mode ───────────────────────────────────────────────────────────
+function amal_maintenance_mode() {
+	if ( get_theme_mod( 'enable_maintenance_mode', false ) ) {
+		if ( ! current_user_can( 'edit_themes' ) || ! is_user_logged_in() ) {
+			if ( file_exists( AMAL_DIR . '/maintenance.php' ) ) {
+				require_once AMAL_DIR . '/maintenance.php';
+				exit();
+			}
+		}
+	}
+}
+add_action( 'template_redirect', 'amal_maintenance_mode' );
+
 // ─── Include Files ────────────────────────────────────────────────────────────
 $includes = [
 	'/inc/template-tags.php',    // custom template helpers
