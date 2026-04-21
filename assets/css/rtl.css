@@ -1,0 +1,27 @@
+/* ===================================================================
+   RTL OVERRIDES – loaded automatically for Arabic
+   =================================================================== */
+
+body { direction: rtl; text-align: right; }
+
+.about-main-title::after {
+  margin-inline-start: 0;
+  margin-inline-end: auto;
+}
+
+.service-card__link {
+  flex-direction: row-reverse;
+}
+
+.header-inner {
+  flex-direction: row-reverse;
+}
+
+/* Nav drawer opens from right in RTL */
+.nav-drawer {
+  inset-inline-end: -100%;
+  inset-inline-start: auto;
+}
+.nav-drawer.open {
+  inset-inline-end: 0;
+}

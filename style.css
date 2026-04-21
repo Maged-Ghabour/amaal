@@ -1,0 +1,17 @@
+/*
+Theme Name: Amal Malki Legal
+Theme URI: https://amalmalki.com
+Author: Custom Development
+Description: Custom WordPress theme for Amal Malki Law & Legal Consultancy - Arabic RTL theme with multilingual support
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: amal-malki
+Tags: rtl-language, right-to-left, arabic, legal, professional
+*/
+
+/* Main styles are in assets/css/main.css */
+/* This file is required by WordPress for theme identification */
