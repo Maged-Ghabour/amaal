@@ -94,6 +94,17 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
 		],
 	]);
 
+	$wp_customize->add_setting('enable_scroll_to_top', [
+		'default' => true,
+		'sanitize_callback' => 'rest_sanitize_boolean',
+	]);
+
+	$wp_customize->add_control('enable_scroll_to_top', [
+		'label' => __('تفعيل زر الصعود للأعلى', 'amal-malki'),
+		'section' => 'amal_general',
+		'type' => 'checkbox',
+	]);
+
 	// ── Section: Maintenance Mode ──────────────────────────────
 	$wp_customize->add_section('amal_maintenance', [
 		'title' => __('وضع الصيانة', 'amal-malki'),

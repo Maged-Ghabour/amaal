@@ -41,7 +41,8 @@
   --space-2xl: 8rem;
 
   /* Layout */
-  --container-max: 1400px; /* زدت العرض هنا ليصبح أكبر */
+  --container-max: 1400px;
+  /* زدت العرض هنا ليصبح أكبر */
   --container-pad: 1.5rem;
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -184,10 +185,13 @@ svg {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.6;
     transform: scale(0.95);
@@ -195,8 +199,13 @@ svg {
 }
 
 @keyframes loadingBar {
-  0% { left: -50%; }
-  100% { left: 100%; }
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
 
 .section-title {
@@ -573,7 +582,7 @@ svg {
 }
 
 .service-card__thumb {
-  height: 250px;
+  height: 130px;
   overflow: hidden;
 }
 
@@ -1045,6 +1054,45 @@ address {
 .reveal.visible {
   opacity: 1;
   transform: none;
+}
+
+/* ─── Scroll to Top Button ──────────────────────────────────────── */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--color-gold);
+  color: var(--color-dark);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+[dir="rtl"] .scroll-to-top {
+  right: auto;
+  left: 30px; /* In RTL, place on bottom-left */
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background: var(--color-white);
+  transform: translateY(-5px);
 }
 
 /* ─── 14. RESPONSIVE ────────────────────────────────────────────── */
