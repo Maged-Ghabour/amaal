@@ -1056,45 +1056,6 @@ address {
   transform: none;
 }
 
-/* ─── Scroll to Top Button ──────────────────────────────────────── */
-.scroll-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background: var(--color-gold);
-  color: var(--color-dark);
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
-}
-
-[dir="rtl"] .scroll-to-top {
-  right: auto;
-  left: 30px; /* In RTL, place on bottom-left */
-}
-
-.scroll-to-top.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.scroll-to-top:hover {
-  background: var(--color-white);
-  transform: translateY(-5px);
-}
-
 /* ─── 14. RESPONSIVE ────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .services-grid {
