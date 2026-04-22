@@ -41,7 +41,7 @@
   --space-2xl: 8rem;
 
   /* Layout */
-  --container-max: 1200px;
+  --container-max: 1400px; /* زدت العرض هنا ليصبح أكبر */
   --container-pad: 1.5rem;
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -115,6 +115,88 @@ svg {
   max-width: var(--container-max);
   margin-inline: auto;
   padding-inline: var(--container-pad);
+}
+
+.container-fluid {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* ─── Preloader ─────────────────────────────────────────────────── */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: var(--color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.preloader-content img {
+  max-width: 150px;
+  height: auto;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.preloader-text {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.preloader-bar {
+  width: 80px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.preloader-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: var(--color-gold);
+  border-radius: 4px;
+  animation: loadingBar 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes loadingBar {
+  0% { left: -50%; }
+  100% { left: 100%; }
 }
 
 .section-title {
@@ -804,6 +886,7 @@ svg {
   gap: 0.75rem;
   justify-content: center;
   align-items: center;
+  margin: 2rem 0;
 }
 
 .footer-brand img {
