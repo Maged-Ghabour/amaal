@@ -189,12 +189,14 @@ svg {
   top: 0;
   inset-inline: 0;
   z-index: 1000;
-  background: var(--color-dark); /* خلفية داكنة افتراضية للصفحات الداخلية */
+  background: var(--color-dark);
+  /* خلفية داكنة افتراضية للصفحات الداخلية */
   transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
 .front-page .site-header {
-  background: transparent; /* شفافة فقط في الصفحة الرئيسية */
+  background: transparent;
+  /* شفافة فقط في الصفحة الرئيسية */
 }
 
 .site-header.scrolled,
@@ -605,6 +607,7 @@ svg {
   .why-us-flex-grid {
     gap: var(--space-md);
   }
+
   .why-us-card {
     /* If --cols is set, divide space dynamically. Fallback is 3. */
     width: calc((100% / var(--cols, 3)) - (var(--space-md) * (var(--cols, 3) - 1) / var(--cols, 3)));
@@ -792,21 +795,19 @@ svg {
 }
 
 .footer-inner {
-  padding-block: var(--space-xl) var(--space-lg);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--space-xl);
-  align-items: start;
+  padding-block: var(--space-lg) var(--space-lg);
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-brand img {
-  height: 70px;
+  height: 90px;
   width: auto;
 }
 

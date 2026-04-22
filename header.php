@@ -11,6 +11,18 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
+<!-- Preloader -->
+<div id="preloader">
+	<div class="preloader-content">
+		<?php if ( has_custom_logo() ) : ?>
+			<?php the_custom_logo(); ?>
+		<?php else : ?>
+			<span class="preloader-text"><?php bloginfo( 'name' ); ?></span>
+		<?php endif; ?>
+		<div class="preloader-bar"></div>
+	</div>
+</div>
+
 <div id="page" class="site">
 
 	<!-- ═══════════════════════════════════════════
