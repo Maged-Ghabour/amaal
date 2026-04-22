@@ -60,6 +60,23 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
 		]);
 	}
 
+	// ── Section: General Settings ──────────────────────────────
+	$wp_customize->add_section('amal_general', [
+		'title' => __('الإعدادات العامة', 'amal-malki'),
+		'panel' => 'amal_options',
+	]);
+
+	$wp_customize->add_setting('enable_preloader', [
+		'default' => true,
+		'sanitize_callback' => 'rest_sanitize_boolean',
+	]);
+
+	$wp_customize->add_control('enable_preloader', [
+		'label' => __('تفعيل شاشة التحميل (Preloader)', 'amal-malki'),
+		'section' => 'amal_general',
+		'type' => 'checkbox',
+	]);
+
 	// ── Section: Maintenance Mode ──────────────────────────────
 	$wp_customize->add_section('amal_maintenance', [
 		'title' => __('وضع الصيانة', 'amal-malki'),

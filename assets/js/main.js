@@ -6,16 +6,7 @@
 (function () {
   'use strict';
 
-  /* ── Preloader ──────────────────────────────────────────────── */
-  window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-      preloader.classList.add('fade-out');
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 500); // Wait for transition
-    }
-  });
+
 
   /* ── Sticky Header ──────────────────────────────────────────── */
   const header = document.getElementById('masthead');

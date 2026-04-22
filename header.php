@@ -12,6 +12,7 @@
 <?php wp_body_open(); ?>
 
 <!-- Preloader -->
+<?php if ( get_theme_mod( 'enable_preloader', true ) ) : ?>
 <div id="preloader">
 	<div class="preloader-content">
 		<?php if ( has_custom_logo() ) : ?>
@@ -22,6 +23,19 @@
 		<div class="preloader-bar"></div>
 	</div>
 </div>
+<script>
+	// Inline script for robust preloader hiding to prevent stuck states
+	window.addEventListener('load', function() {
+		var preloader = document.getElementById('preloader');
+		if (preloader) {
+			preloader.classList.add('fade-out');
+			setTimeout(function() {
+				preloader.style.display = 'none';
+			}, 500);
+		}
+	});
+</script>
+<?php endif; ?>
 
 <div id="page" class="site">
 
