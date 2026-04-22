@@ -6,10 +6,14 @@
 /* ─── Archive / Blog Grid ─────────────────────────────────────── */
 .archive-main,
 .single-main,
-.service-single-main,
 .error-404-main {
   padding-block: calc(80px + var(--space-xl)) var(--space-xl);
   min-height: 70vh;
+}
+
+.service-single-main {
+  padding-top: 0;
+  padding-bottom: var(--space-xl);
 }
 
 .posts-grid {
@@ -110,11 +114,14 @@
 /* ─── Single Service ──────────────────────────────────────────── */
 .service-hero {
   position: relative;
-  height: 50vh;
-  min-height: 300px;
+  height: 60vh;
+  min-height: 400px;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
+  text-align: center;
   overflow: hidden;
+  padding-top: 80px; /* To account for sticky header */
 }
 
 .service-hero__bg {
@@ -122,25 +129,27 @@
   inset: 0;
   background-size: cover;
   background-position: center;
+  transform: scale(1.05); /* Slight zoom for premium feel */
 }
 
 .service-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(26,14,5,0.9) 0%, rgba(26,14,5,0.4) 60%, transparent 100%);
+  background: linear-gradient(180deg, rgba(77, 32, 27, 0.4) 0%, rgba(35, 27, 66, 0.9) 100%);
 }
 
 .service-hero__content {
   position: relative;
   z-index: 2;
-  padding-bottom: var(--space-md);
+  padding-bottom: var(--space-xl);
 }
 
 .service-hero__title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-family: 'DIN Next LT Arabic', var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   color: var(--color-white);
   font-weight: 700;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 .service-content-wrap {
@@ -152,27 +161,43 @@
 }
 
 .service-cta-box {
-  background: var(--color-dark);
+  background: linear-gradient(135deg, var(--color-dark), #34193A);
   color: var(--color-white);
   border-radius: var(--radius-md);
-  padding: var(--space-md);
+  padding: var(--space-lg);
   text-align: center;
   position: sticky;
-  top: 100px;
+  top: 120px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .service-cta-box h3 {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-family: 'DIN Next LT Arabic', var(--font-serif);
+  font-size: 1.5rem;
   color: var(--color-gold);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .service-cta-box p {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.75);
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.service-cta-box .btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.service-content.entry-content {
+  font-family: 'DIN Next LT Arabic', var(--font-sans);
+  background: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.03);
 }
 
 /* ─── 404 Page ────────────────────────────────────────────────── */
