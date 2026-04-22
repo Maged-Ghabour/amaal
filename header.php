@@ -6,6 +6,11 @@
 	<meta name="description" content="<?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
+	<style>
+		:root {
+			--container-max: <?php echo esc_attr( get_theme_mod( 'container_max_width', 1400 ) ); ?>px;
+		}
+	</style>
 </head>
 
 <body <?php body_class(); ?>>

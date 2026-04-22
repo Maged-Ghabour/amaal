@@ -77,6 +77,23 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
 		'type' => 'checkbox',
 	]);
 
+	$wp_customize->add_setting('container_max_width', [
+		'default' => 1400,
+		'sanitize_callback' => 'absint',
+	]);
+
+	$wp_customize->add_control('container_max_width', [
+		'label' => __('عرض الحاوية الأقصى (بالبيكسل)', 'amal-malki'),
+		'description' => __('أدخل عرض الحاوية الأقصى (مثال: 1200، 1400، 1600).', 'amal-malki'),
+		'section' => 'amal_general',
+		'type' => 'number',
+		'input_attrs' => [
+			'min' => 1000,
+			'max' => 2000,
+			'step' => 10,
+		],
+	]);
+
 	// ── Section: Maintenance Mode ──────────────────────────────
 	$wp_customize->add_section('amal_maintenance', [
 		'title' => __('وضع الصيانة', 'amal-malki'),
