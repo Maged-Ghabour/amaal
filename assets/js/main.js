@@ -129,6 +129,25 @@
     }
   });
 
+  /* ── Scroll to Top ─────────────────────────────────────────── */
+  const scrollTopBtn = document.getElementById('scrollToTopBtn');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('active');
+      } else {
+        scrollTopBtn.classList.remove('active');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
   function showFeedback(msg, type) {
     if (!feedback) return;
     feedback.textContent   = msg;
