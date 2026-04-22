@@ -140,11 +140,17 @@
       }
     });
 
-    scrollTopBtn.addEventListener('click', () => {
+    scrollTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Smooth scroll for modern browsers
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
+      // Fallback for older browsers
+      if (document.documentElement.scrollTo) {
+        document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     });
   }
 
