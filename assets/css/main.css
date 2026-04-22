@@ -4,6 +4,14 @@
    =================================================================== */
 
 /* ─── 1. CSS Variables ──────────────────────────────────────────── */
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('../fonts/DINNextLTArabic-Regular-3.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Brand Colors */
   --color-gold: #C9A84C;
@@ -12,7 +20,6 @@
   --color-dark: #1A0E05;
   --color-dark-mid: #2D1F0F;
   --color-dark-footer: linear-gradient(180deg, #4D201B 0%, #411429 28.35%, #34193A 75%, #231B42 100%);
-  ;
   --color-white: #FFFFFF;
   --color-off-white: #F8F5F0;
   --color-text: #2C1A0A;
@@ -22,8 +29,8 @@
 
 
   /* Typography */
-  --font-serif: 'Noto Serif Arabic', 'Georgia', serif;
-  --font-sans: 'Noto Sans Arabic', 'Tahoma', sans-serif;
+  --font-serif: 'DIN Next LT Arabic', 'Noto Serif Arabic', 'Georgia', serif;
+  --font-sans: 'DIN Next LT Arabic', 'Noto Sans Arabic', 'Tahoma', sans-serif;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -92,6 +99,18 @@ ol {
 }
 
 /* ─── 3. Utility Classes ────────────────────────────────────────── */
+/* إصلاح حجم SVG في المتجر بشكل عام */
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-section svg {
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
 .container {
   max-width: var(--container-max);
   margin-inline: auto;
@@ -170,11 +189,16 @@ ol {
   top: 0;
   inset-inline: 0;
   z-index: 1000;
-  background: transparent;
+  background: var(--color-dark); /* خلفية داكنة افتراضية للصفحات الداخلية */
   transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
-.site-header.scrolled {
+.front-page .site-header {
+  background: transparent; /* شفافة فقط في الصفحة الرئيسية */
+}
+
+.site-header.scrolled,
+.front-page .site-header.scrolled {
   background: rgba(26, 14, 5, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -303,6 +327,7 @@ ol {
 .hero-overlay {
   position: absolute;
   inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* طبقة تعتيم لقراءة النص */
 }
 
 .hero-content {
@@ -743,9 +768,8 @@ ol {
 /* ─── 12. FOOTER ────────────────────────────────────────────────── */
 .site-footer {
   color: var(--color-white);
-  background-color: var(--color-white);
+  background-color: var(--color-dark);
   background-image: var(--color-dark-footer);
-
 }
 
 .footer-inner {
