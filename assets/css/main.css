@@ -129,7 +129,7 @@ svg {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: var(--color-dark);
+  background: linear-gradient(180deg, #4D201B 0%, #411429 28.35%, #34193A 75%, #231B42 100%);
   display: flex;
   align-items: center;
   justify-content: center;
