@@ -280,21 +280,25 @@ svg {
   top: 0;
   inset-inline: 0;
   z-index: 1000;
-  background: var(--color-dark);
-  /* خلفية داكنة افتراضية للصفحات الداخلية */
-  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  background: rgba(26, 14, 5, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
 }
 
 .front-page .site-header {
-  background: transparent;
-  /* شفافة فقط في الصفحة الرئيسية */
+  background: rgba(26, 14, 5, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .site-header.scrolled,
 .front-page .site-header.scrolled {
-  background: rgba(26, 14, 5, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(26, 14, 5, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
 }
 
 .header-inner {
@@ -311,7 +315,7 @@ svg {
 }
 
 .site-branding img {
-  height: 60px;
+  height: 80px;
   width: auto;
 }
 
@@ -1077,22 +1081,22 @@ address {
 }
 
 .hero-content {
-  animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+  /* No animation on the container - only children animate */
 }
 
 .hero-title {
   animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 .hero-subtitle {
   animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
-  animation-delay: 0.55s;
+  animation-delay: 0.45s;
 }
 
 .hero-cta {
   animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
-  animation-delay: 0.85s;
+  animation-delay: 0.75s;
 }
 
 /* Intersection Observer reveal */
