@@ -6,7 +6,9 @@
  */
 
 $show_hero = function_exists('get_field') && get_field('show_hero_section') !== null ? get_field('show_hero_section') : true;
-if ( ! $show_hero ) { return; }
+if (!$show_hero) {
+	return;
+}
 
 // ACF fields with fallback defaults
 $hero_title = function_exists('get_field') ? get_field('hero_title') : null;
@@ -37,7 +39,7 @@ $social_tiktok = get_theme_mod('social_tiktok', '#');
 	<div class="hero-overlay" aria-hidden="true"></div>
 
 	<!-- Social Pills (top left) -->
-	<div class="hero-social" aria-label="<?php esc_attr_e('روابط التواصل الاجتماعي', 'amal-malki'); ?>">
+	<!-- <div class="hero-social" aria-label="<?php esc_attr_e('روابط التواصل الاجتماعي', 'amal-malki'); ?>">
 		<a href="<?php echo esc_url($social_instagram); ?>" class="social-pill" target="_blank"
 			rel="noopener noreferrer" aria-label="Instagram">
 			<?php echo amal_get_social_icon('instagram'); ?>
@@ -46,7 +48,7 @@ $social_tiktok = get_theme_mod('social_tiktok', '#');
 			aria-label="TikTok">
 			<?php echo amal_get_social_icon('tiktok'); ?>
 		</a>
-	</div>
+	</div> -->
 
 	<!-- Hero Content -->
 	<div class="hero-content container">
