@@ -56,16 +56,7 @@
 				<span class="hamburger-line"></span>
 			</button>
 
-			<!-- Language Badge -->
-			<div class="lang-badge">
-				<?php
-				// Polylang integration – falls back to plain text
-				if ( function_exists( 'pll_the_languages' ) ) :
-					pll_the_languages( [ 'show_flags' => 0, 'show_names' => 1 ] );
-				else : ?>
-					<a href="#" class="lang-link">AR</a>
-				<?php endif; ?>
-			</div>
+
 
 			<!-- Logo -->
 			<div class="site-branding">

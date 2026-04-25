@@ -218,15 +218,7 @@ svg {
   position: relative;
 }
 
-.section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: var(--color-gold);
-  margin: 0.75rem auto 0;
-  border-radius: 2px;
-}
+
 
 /* ─── 4. Buttons ────────────────────────────────────────────────── */
 .btn {
@@ -280,7 +272,7 @@ svg {
   top: 0;
   inset-inline: 0;
   z-index: 1000;
-  background: rgba(26, 14, 5, 0.45);
+  background: linear-gradient(220.86deg, rgba(77, 32, 27, 0.7) 23.19%, rgba(65, 20, 41, 0.7) 59.82%, rgba(52, 25, 58, 0.7) 120.11%, rgba(35, 27, 66, 0.7) 152.42%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -288,14 +280,14 @@ svg {
 }
 
 .front-page .site-header {
-  background: rgba(26, 14, 5, 0.35);
+  background: linear-gradient(220.86deg, rgba(77, 32, 27, 0.7) 23.19%, rgba(65, 20, 41, 0.7) 59.82%, rgba(52, 25, 58, 0.7) 120.11%, rgba(35, 27, 66, 0.7) 152.42%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
 .site-header.scrolled,
 .front-page .site-header.scrolled {
-  background: rgba(26, 14, 5, 0.88);
+  background: linear-gradient(220.86deg, rgba(77, 32, 27, 0.7) 23.19%, rgba(65, 20, 41, 0.7) 59.82%, rgba(52, 25, 58, 0.7) 120.11%, rgba(35, 27, 66, 0.7) 152.42%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom-color: rgba(255, 255, 255, 0.05);
@@ -543,7 +535,6 @@ svg {
 .about-block-label {
   font-family: var(--font-serif);
   font-size: 1.1rem;
-  font-weight: 700;
   color: #2D1F0F;
   margin-bottom: 0.5rem;
 }
@@ -565,7 +556,6 @@ svg {
 /* ─── 8. SERVICES ───────────────────────────────────────────────── */
 .services-section {
   padding-block: var(--space-xl);
-  background: var(--color-off-white);
 }
 
 .services-grid {
