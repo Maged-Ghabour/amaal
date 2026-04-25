@@ -714,8 +714,41 @@ svg {
 }
 
 @media (max-width: 767px) {
+  .why-us-section {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+  }
+
+  .why-us-section .section-title {
+    font-size: 1.75rem;
+  }
+
+  .why-us-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .why-us-header {
+    margin-bottom: var(--space-md);
+  }
+
+  .why-us-flex-grid {
+    gap: var(--space-xs, 0.75rem);
+  }
+
   .why-us-card {
     width: 100%;
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .why-us-card__title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .why-us-card__text {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 }
 
@@ -936,6 +969,7 @@ svg {
 
 .footer-subtitle {
   color: var(--color-gold);
+  margin-top: -1rem;
 }
 
 .footer-nav-list li {
