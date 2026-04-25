@@ -1071,7 +1071,7 @@ address {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(60px);
+    transform: translateY(100px);
   }
 
   to {
@@ -1080,23 +1080,35 @@ address {
   }
 }
 
+@keyframes heroSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-content {
-  /* No animation on the container - only children animate */
+  animation: heroSlideUp 2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.3s;
 }
 
 .hero-title {
-  animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
-  animation-delay: 0.1s;
+  animation: fadeInUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.5s;
 }
 
 .hero-subtitle {
-  animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
-  animation-delay: 0.45s;
+  animation: fadeInUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.85s;
 }
 
 .hero-cta {
-  animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
-  animation-delay: 0.75s;
+  animation: fadeInUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 1.15s;
 }
 
 /* Intersection Observer reveal */
