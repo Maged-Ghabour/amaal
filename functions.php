@@ -372,3 +372,26 @@ foreach ($includes as $file) {
 		require_once $path;
 	}
 }
+
+// ─── Performance & SEO ────────────────────────────────────────────────────────
+function amal_performance_headers() {
+    echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
+    echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+}
+add_action('wp_head', 'amal_performance_headers', 1);
+
+add_filter( 'get_the_archive_title', function ( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_home() ) {
+        $title = get_the_title( get_option('page_for_posts', true) );
+        if ( ! $title ) $title = __('المدونة', 'amal-malki');
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    }
+    return $title;
+});
