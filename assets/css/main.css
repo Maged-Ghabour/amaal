@@ -544,7 +544,7 @@ svg {
   font-family: var(--font-serif);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-gold);
+  color: #2D1F0F;
   margin-bottom: 0.5rem;
 }
 
@@ -1085,6 +1085,7 @@ address {
     opacity: 0;
     transform: translateY(120px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
