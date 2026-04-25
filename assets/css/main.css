@@ -1092,23 +1092,23 @@ address {
 }
 
 .hero-content {
-  animation: heroSlideUp 4s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: 0.5s;
+  animation: heroSlideUp 5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.6s;
 }
 
 .hero-title {
-  animation: fadeInUp 3.5s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: 1s;
+  animation: fadeInUp 4.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 1.2s;
 }
 
 .hero-subtitle {
-  animation: fadeInUp 3.5s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: 1.8s;
+  animation: fadeInUp 4.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 2.2s;
 }
 
 .hero-cta {
-  animation: fadeInUp 3.5s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: 2.5s;
+  animation: fadeInUp 4.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 3.2s;
 }
 
 /* Intersection Observer reveal */
