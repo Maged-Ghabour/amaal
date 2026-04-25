@@ -1067,7 +1067,7 @@ address {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(60px);
   }
 
   to {
@@ -1077,19 +1077,22 @@ address {
 }
 
 .hero-content {
-  animation: fadeInUp 0.9s ease both;
+  animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
 }
 
 .hero-title {
-  animation-delay: 0.1s;
+  animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: 0.2s;
 }
 
 .hero-subtitle {
-  animation-delay: 0.25s;
+  animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: 0.55s;
 }
 
 .hero-cta {
-  animation-delay: 0.4s;
+  animation: fadeInUp 1.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+  animation-delay: 0.85s;
 }
 
 /* Intersection Observer reveal */

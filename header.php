@@ -25,7 +25,6 @@
 		<?php else : ?>
 			<span class="preloader-text"><?php bloginfo( 'name' ); ?></span>
 		<?php endif; ?>
-		<div class="preloader-bar"></div>
 	</div>
 </div>
 <script>
