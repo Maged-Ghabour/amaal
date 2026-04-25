@@ -936,7 +936,7 @@ svg {
 }
 
 .footer-nav-list a {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.2s;
 }
@@ -946,7 +946,7 @@ svg {
 }
 
 .footer-hours-label {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.25rem;
 }
@@ -961,14 +961,14 @@ address {
 }
 
 .footer-contact-label {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.5);
   margin-top: 0.75rem;
   margin-bottom: 0.2rem;
 }
 
 .footer-contact-value {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.85);
 }
 
