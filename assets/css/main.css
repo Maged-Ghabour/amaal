@@ -922,6 +922,7 @@ svg {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
+  color: var(--color-white);
 }
 
 .footer-col-title {
@@ -930,6 +931,11 @@ svg {
   font-weight: 700;
   color: var(--color-gold);
   margin-bottom: 1rem;
+}
+
+
+.footer-subtitle {
+  color: var(--color-gold);
 }
 
 .footer-nav-list li {
