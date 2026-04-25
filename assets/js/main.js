@@ -56,9 +56,13 @@
     link.addEventListener('click', closeNav);
   });
 
-  /* ── Reveal on Scroll ───────────────────────────────────────── */
+  /* ── Reveal on Scroll ───────────────────────────────────────────── */
   const reveals = document.querySelectorAll(
-    '.service-card, .feature-card, .article-card, .about-block'
+    '.service-card, .feature-card, .article-card, .about-block, ' +
+    '.why-us-card, .section-title, .about-section, .services-section, ' +
+    '.why-us-section, .articles-section, .contact-section, ' +
+    '.footer-brand, .footer-col, .contact-form, .about-inner, ' +
+    '.service-content-wrap, .single-container'
   );
 
   if ('IntersectionObserver' in window) {
@@ -71,12 +75,12 @@
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.08, rootMargin: '0px 0px -60px 0px' }
     );
 
     reveals.forEach((el, i) => {
       el.classList.add('reveal');
-      el.style.transitionDelay = `${(i % 4) * 0.1}s`;
+      el.style.transitionDelay = `${(i % 4) * 0.12}s`;
       revealObserver.observe(el);
     });
   }

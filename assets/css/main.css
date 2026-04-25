@@ -305,8 +305,8 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
-  padding-block: 0;
+  height: auto;
+  padding-block: 1rem;
 }
 
 /* Logo */
@@ -1102,8 +1102,8 @@ address {
 /* Intersection Observer reveal */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(80px);
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: opacity, transform;
 }
 
