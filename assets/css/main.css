@@ -231,6 +231,7 @@ svg {
   text-align: center;
   margin-bottom: var(--space-lg);
   position: relative;
+  font-weight: 300;
 }
 
 
@@ -787,7 +788,7 @@ svg {
 .why-us-card__title {
   font-family: var(--font-serif);
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 0.85rem;
 }
 
@@ -1001,7 +1002,7 @@ svg {
 .footer-col-title {
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 300;
   color: var(--color-white);
   margin-bottom: 1rem;
 }
@@ -1010,7 +1011,7 @@ svg {
 .footer-subtitle {
   color: rgba(157, 115, 72, 1);
   margin-top: -1rem;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 1.2rem;
 }
 
@@ -1020,7 +1021,7 @@ svg {
 
 .footer-nav-list a {
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.2s;
 }
@@ -1031,7 +1032,7 @@ svg {
 
 .footer-hours-label {
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.25rem;
 }
@@ -1039,7 +1040,7 @@ svg {
 .footer-hours {
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
-  font-weight: 900;
+  font-weight: 400;
 }
 
 address {
