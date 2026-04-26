@@ -650,8 +650,7 @@ svg {
   font-weight: 600;
   color: var(--color-text-muted);
   width: max-content;
-  margin-top: auto;
-  margin-inline-start: auto;
+  margin: 0.7rem 0;
 }
 
 .service-card__link:hover {
@@ -660,6 +659,7 @@ svg {
 
 .service-card__arrow {
   font-size: 1rem;
+  margin-top: 10px;
 }
 
 /* ─── 9. WHY US ─────────────────────────────────────────────────── */
