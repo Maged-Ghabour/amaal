@@ -434,7 +434,7 @@ svg {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding-block: var(--space-xl) var(--space-xl);
+  padding-block: 0 var(--space-xl);
   color: var(--color-white);
 }
 
@@ -468,7 +468,7 @@ svg {
   border-radius: 15px !important;
   padding: 0.8rem 4.5rem !important;
   font-size: 1.25rem !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
