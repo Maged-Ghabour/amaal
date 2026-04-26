@@ -644,7 +644,6 @@ svg {
   font-weight: 600;
   color: var(--color-text-muted);
   width: max-content;
-  margin-inline-start: auto;
 }
 
 .service-card__link:hover {
