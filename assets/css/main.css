@@ -614,6 +614,7 @@ svg {
 
 .service-card__title a {
   color: inherit;
+  font-size: 1.2rem;
 }
 
 .service-card__title a:hover {
