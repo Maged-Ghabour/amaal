@@ -103,10 +103,10 @@
 				<div class="footer-social">
 					<?php
 					$socials = [
-						'instagram' => ['url' => get_theme_mod('social_instagram', '#'), 'label' => 'Instagram'],
-						'twitter' => ['url' => get_theme_mod('social_twitter', '#'), 'label' => 'Twitter / X'],
-						'facebook' => ['url' => get_theme_mod('social_facebook', '#'), 'label' => 'Facebook'],
 						'snapchat' => ['url' => get_theme_mod('social_snapchat', '#'), 'label' => 'Snapchat'],
+						'facebook' => ['url' => get_theme_mod('social_facebook', '#'), 'label' => 'Facebook'],
+						'twitter'  => ['url' => get_theme_mod('social_twitter', '#'),  'label' => 'Twitter / X'],
+						'instagram' => ['url' => get_theme_mod('social_instagram', '#'), 'label' => 'Instagram'],
 					];
 					foreach ($socials as $key => $item): ?>
 						<a href="<?php echo esc_url($item['url']); ?>"
