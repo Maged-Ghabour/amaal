@@ -273,24 +273,16 @@ svg {
   inset-inline: 0;
   z-index: 1000;
   background: linear-gradient(220.86deg, rgba(77, 32, 27, 0.7) 23.19%, rgba(65, 20, 41, 0.7) 59.82%, rgba(52, 25, 58, 0.7) 120.11%, rgba(35, 27, 66, 0.7) 152.42%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease;
+  transition: background 0.4s ease;
 }
 
 .front-page .site-header {
   background: linear-gradient(220.86deg, rgba(77, 32, 27, 0.7) 23.19%, rgba(65, 20, 41, 0.7) 59.82%, rgba(52, 25, 58, 0.7) 120.11%, rgba(35, 27, 66, 0.7) 152.42%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
 }
 
 .site-header.scrolled,
 .front-page .site-header.scrolled {
   background: linear-gradient(220.86deg, rgba(77, 32, 27, 0.7) 23.19%, rgba(65, 20, 41, 0.7) 59.82%, rgba(52, 25, 58, 0.7) 120.11%, rgba(35, 27, 66, 0.7) 152.42%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom-color: rgba(255, 255, 255, 0.05);
 }
 
 .header-inner {
