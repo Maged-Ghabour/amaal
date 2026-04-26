@@ -577,6 +577,8 @@ svg {
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -606,6 +608,9 @@ svg {
 
 .service-card__body {
   padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .service-card__title {
@@ -639,11 +644,14 @@ svg {
 .service-card__link {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
   gap: 0.4rem;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-text-muted);
   width: max-content;
+  margin-top: auto;
+  margin-inline-start: auto;
 }
 
 .service-card__link:hover {
