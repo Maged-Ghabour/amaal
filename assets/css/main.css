@@ -569,7 +569,7 @@ svg {
 }
 
 .service-card {
-  background: var(--color-white);
+  background: rgba(245, 245, 245, 1);
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: var(--transition);
