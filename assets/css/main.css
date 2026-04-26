@@ -973,22 +973,7 @@ svg {
   }
 
   .footer-columns .footer-col:nth-child(3) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .footer-columns .footer-col:nth-child(3) address {
-    width: 100%;
-  }
-
-  .footer-columns .footer-col:nth-child(3) .footer-contact-value {
-    justify-content: flex-end;
-  }
-
-  .footer-columns .footer-col:nth-child(3) .footer-social {
-    justify-content: flex-end;
-    width: 100%;
+    justify-self: end;
   }
 }
 
