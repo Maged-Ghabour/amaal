@@ -430,7 +430,7 @@ svg {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding-block: var(--space-2xl) var(--space-xl);
+  padding-block: var(--space-xl) var(--space-xl);
   color: var(--color-white);
 }
 
@@ -562,6 +562,10 @@ svg {
   background: var(--color-off-white);
 }
 
+.services-section .section-title {
+  color: rgba(45, 31, 15, 1);
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -572,7 +576,6 @@ svg {
   background: var(--color-white);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
   transition: var(--transition);
 }
 
@@ -1138,7 +1141,8 @@ address {
 .scroll-to-top {
   position: fixed;
   bottom: 30px;
-  left: 30px; /* Position on left for RTL */
+  left: 30px;
+  /* Position on left for RTL */
   width: 50px;
   height: 50px;
   background: var(--color-gold);
@@ -1194,4 +1198,23 @@ address {
     width: 45px;
     height: 45px;
   }
-}
+}
+
+.scroll-to-top {
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: #c5a059 !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+  z-index: 99999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  cursor: pointer !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
