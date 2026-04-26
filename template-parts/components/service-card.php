@@ -22,7 +22,7 @@
 		<p class="service-card__excerpt"><?php the_excerpt(); ?></p>
 		<a href="<?php the_permalink(); ?>" class="service-card__link">
 			<?php _e( 'تواصل معنا', 'amal-malki' ); ?>
-			<span class="service-card__arrow" aria-hidden="true">&#8592;</span>
+			<span class="service-card__arrow" aria-hidden="true">&#8601;</span>
 		</a>
 	</div>
 

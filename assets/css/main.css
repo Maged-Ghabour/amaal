@@ -642,11 +642,13 @@ svg {
   gap: 0.4rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-gold);
+  color: var(--color-text-muted);
+  width: max-content;
+  margin-inline-start: auto;
 }
 
 .service-card__link:hover {
-  color: var(--color-gold-dark);
+  color: var(--color-gold);
 }
 
 .service-card__arrow {
