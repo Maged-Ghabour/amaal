@@ -964,6 +964,23 @@ svg {
   color: var(--color-white);
 }
 
+@media (min-width: 992px) {
+  .footer-columns .footer-col:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-columns .footer-col:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .footer-columns .footer-col:nth-child(3) .footer-social {
+    justify-content: flex-end;
+  }
+}
+
 .footer-col-title {
   font-family: var(--font-serif);
   font-size: 1.5rem;
@@ -984,6 +1001,7 @@ svg {
 
 .footer-nav-list a {
   font-size: 1.2rem;
+  font-weight: bold;
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.2s;
 }
