@@ -538,8 +538,8 @@ svg {
 
 .about-block-label {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
-  color: #2D1F0F;
+  font-size: 1.4rem;
+  color: #2d1f0fc4;
   margin-bottom: 0.5rem;
 }
 
