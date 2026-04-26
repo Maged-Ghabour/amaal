@@ -12,6 +12,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('../fonts/alfont_com_AlFont_com_din-next-lt-w23-black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Brand Colors */
   --color-gold: #C9A84C;
@@ -977,7 +985,7 @@ svg {
 .footer-col-title {
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 900;
   color: var(--color-white);
   margin-bottom: 1rem;
 }
@@ -996,7 +1004,7 @@ svg {
 
 .footer-nav-list a {
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 900;
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.2s;
 }
