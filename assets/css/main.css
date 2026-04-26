@@ -275,7 +275,7 @@ svg {
 
 /* ─── 5. HEADER ─────────────────────────────────────────────────── */
 .site-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   inset-inline: 0;
   z-index: 1000;
