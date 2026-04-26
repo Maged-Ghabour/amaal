@@ -743,6 +743,8 @@ svg {
     flex: none;
     padding: 1.25rem 1rem;
     border-radius: var(--radius-sm);
+    background: linear-gradient(180deg, #4D201B 0%, #411429 28.35%, #34193A 75%, #231B42 100%);
+
   }
 
   .why-us-card__title {
