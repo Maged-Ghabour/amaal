@@ -2,7 +2,10 @@
    RTL OVERRIDES – loaded automatically for Arabic
    =================================================================== */
 
-body { direction: rtl; text-align: right; }
+body {
+  direction: rtl;
+  text-align: right;
+}
 
 .about-main-title::after {
   margin-inline-start: 0;
@@ -10,7 +13,7 @@ body { direction: rtl; text-align: right; }
 }
 
 .service-card__link {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .header-inner {
@@ -22,6 +25,7 @@ body { direction: rtl; text-align: right; }
   inset-inline-end: -100%;
   inset-inline-start: auto;
 }
+
 .nav-drawer.open {
   inset-inline-end: 0;
 }
