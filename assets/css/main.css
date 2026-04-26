@@ -546,7 +546,7 @@ svg {
 .about-block-text {
   color: var(--color-text-muted);
   line-height: 1.8;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 
 .about-image img {
@@ -611,7 +611,7 @@ svg {
 .service-card__title {
   font-family: var(--font-serif);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-text);
   margin-bottom: 0.5rem;
 }
