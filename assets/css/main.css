@@ -1002,7 +1002,7 @@ svg {
 .footer-col-title {
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 900;
   color: var(--color-white);
   margin-bottom: 1rem;
 }
@@ -1011,7 +1011,7 @@ svg {
 .footer-subtitle {
   color: rgba(157, 115, 72, 1);
   margin-top: -1rem;
-  font-weight: 300;
+  font-weight: 900;
   font-size: 1.2rem;
 }
 
@@ -1021,7 +1021,7 @@ svg {
 
 .footer-nav-list a {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 900;
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.2s;
 }
@@ -1032,7 +1032,7 @@ svg {
 
 .footer-hours-label {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 900;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.25rem;
 }
@@ -1040,7 +1040,7 @@ svg {
 .footer-hours {
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
-  font-weight: 400;
+  font-weight: 900;
 }
 
 address {
