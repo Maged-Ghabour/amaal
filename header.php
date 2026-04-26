@@ -20,12 +20,7 @@
 <?php if ( get_theme_mod( 'enable_preloader', true ) ) : ?>
 <div id="preloader">
 	<div class="preloader-content">
-		<?php if ( has_custom_logo() ) : ?>
-			<?php the_custom_logo(); ?>
-		<?php else : ?>
-			<span class="preloader-text"><?php bloginfo( 'name' ); ?></span>
-		<?php endif; ?>
-		<div class="preloader-bar"></div>
+		<img src="https://aamal-sa.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-25-at-4.33.44-PM-1.png" alt="Aamal Preloader" />
 	</div>
 </div>
 <script>
@@ -57,16 +52,7 @@
 				<span class="hamburger-line"></span>
 			</button>
 
-			<!-- Language Badge -->
-			<div class="lang-badge">
-				<?php
-				// Polylang integration – falls back to plain text
-				if ( function_exists( 'pll_the_languages' ) ) :
-					pll_the_languages( [ 'show_flags' => 0, 'show_names' => 1 ] );
-				else : ?>
-					<a href="#" class="lang-link">AR</a>
-				<?php endif; ?>
-			</div>
+
 
 			<!-- Logo -->
 			<div class="site-branding">
