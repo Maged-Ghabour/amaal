@@ -12,7 +12,9 @@
  */
 
 $show_why_us = function_exists('get_field') && get_field('show_why_us_section') !== null ? get_field('show_why_us_section') : true;
-if ( ! $show_why_us ) { return; }
+if (!$show_why_us) {
+	return;
+}
 
 $why_us_title = function_exists('get_field') && get_field('why_us_title') ? get_field('why_us_title') : __('لماذا نحن؟', 'amal-malki');
 $why_us_subtitle = function_exists('get_field') && get_field('why_us_subtitle') ? get_field('why_us_subtitle') : __('لأننا لا نُقدِّم خدمة قانونية تقليدية... بل نبني تجربة متكاملة قائمة على الاحتراف والسرعة والدقة', 'amal-malki');
@@ -60,16 +62,18 @@ $bottom_row_count = function_exists('get_field') && get_field('why_us_bottom_row
 		</div>
 
 		<div class="why-us-flex-grid">
-			<?php foreach ($features as $index => $feature): 
+			<?php foreach ($features as $index => $feature):
 				$is_top_row = ($index < $top_row_count);
 				$cards_per_row = $is_top_row ? $top_row_count : $bottom_row_count;
-			?>
+				?>
 				<div class="why-us-card"
-					style="--cols: <?php echo esc_attr($cards_per_row); ?>; background: linear-gradient(135deg, <?php echo esc_attr($card_bg_1); ?>, <?php echo esc_attr($card_bg_2); ?>);">
+					style="--cols: <?php echo esc_attr($cards_per_row); ?>; background: linear-gradient(180deg, #4D201B 0%, #411429 28.35%, #34193A 75%, #231B42 100%);">
 					<h3 class="why-us-card__title" style="color: <?php echo esc_attr($card_text); ?>;">
-						<?php echo esc_html($feature['title']); ?></h3>
+						<?php echo esc_html($feature['title']); ?>
+					</h3>
 					<p class="why-us-card__text" style="color: <?php echo esc_attr($card_text); ?>; opacity: 0.85;">
-						<?php echo esc_html($feature['text']); ?></p>
+						<?php echo esc_html($feature['text']); ?>
+					</p>
 				</div>
 			<?php endforeach; ?>
 		</div>

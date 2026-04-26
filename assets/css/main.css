@@ -685,13 +685,13 @@ svg {
 .why-us-card {
   padding: 2rem 1.5rem;
   border-radius: var(--radius-sm);
-  text-align: start;
+  text-align: center;
   box-shadow: var(--shadow-card);
   transition: var(--transition);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
 
 @media (min-width: 992px) {
@@ -966,9 +966,9 @@ svg {
 
 .footer-col-title {
   font-family: var(--font-serif);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-gold);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-white);
   margin-bottom: 1rem;
 }
 
@@ -1036,14 +1036,14 @@ address {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: var(--color-white);
+  border: none;
+  color: #a1744e;
   transition: var(--transition);
 }
 
 .social-icon:hover {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
+  background: transparent;
+  color: var(--color-white);
   transform: translateY(-3px);
 }
 
