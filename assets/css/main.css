@@ -502,6 +502,11 @@ svg {
   background: var(--color-white);
 }
 
+.about-section .section-title {
+  font-weight: 500;
+  color: rgba(195, 138, 71, 1);
+}
+
 .about-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
