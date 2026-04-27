@@ -103,12 +103,14 @@
 				<div class="footer-social">
 					<?php
 					$socials = [
-						'snapchat' => ['url' => get_theme_mod('social_snapchat', '#'), 'label' => 'Snapchat'],
-						'facebook' => ['url' => get_theme_mod('social_facebook', '#'), 'label' => 'Facebook'],
+						'snapchat' => ['url' => get_theme_mod('social_snapchat', ''), 'label' => 'Snapchat'],
+						'facebook' => ['url' => get_theme_mod('social_facebook', ''), 'label' => 'Facebook'],
 						'twitter'  => ['url' => get_theme_mod('social_twitter', 'https://x.com/mostshar_sa'),  'label' => 'Twitter / X'],
-						'instagram' => ['url' => get_theme_mod('social_instagram', '#'), 'label' => 'Instagram'],
+						'instagram' => ['url' => get_theme_mod('social_instagram', ''), 'label' => 'Instagram'],
 					];
-					foreach ($socials as $key => $item): ?>
+					foreach ($socials as $key => $item): 
+						if (empty($item['url']) || $item['url'] === '#') continue;
+					?>
 						<a href="<?php echo esc_url($item['url']); ?>"
 							class="social-icon social-icon--<?php echo esc_attr($key); ?>"
 							aria-label="<?php echo esc_attr($item['label']); ?>" target="_blank" rel="noopener noreferrer">
