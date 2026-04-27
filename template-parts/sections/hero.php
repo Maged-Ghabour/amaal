@@ -21,7 +21,7 @@ $hero_bg = function_exists('get_field') ? get_field('hero_bg') : null;
 $title = $hero_title ?: __('هنا تُدار الحلول', 'amal-malki');
 $subtitle = $hero_subtitle ?: __('من الاستشارة إلى الحل، نرافقك قانونياً برؤية دقيقة واحتراف يصنع الفارق', 'amal-malki');
 $btn_text = $hero_btn_text ?: __('اطلب استشارة', 'amal-malki');
-$btn_url = $hero_btn_url ?: home_url('/#contact');
+$btn_url = $hero_btn_url ?: 'https://wa.me/9660541415099';
 
 // Background URL logic: First ACF, then Customizer, then default fallback.
 $customizer_bg = get_theme_mod('hero_default_bg', '');

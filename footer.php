@@ -32,7 +32,7 @@
 						echo '<ul class="footer-nav-list">';
 						echo '<li><a href="' . esc_url(home_url('/من-نحن')) . '">' . __('من نحن', 'amal-malki') . '</a></li>';
 						echo '<li><a href="' . esc_url(home_url('/#services')) . '">' . __('الخدمات', 'amal-malki') . '</a></li>';
-						echo '<li><a href="' . esc_url(home_url('/#contact')) . '">' . __('تواصل معنا', 'amal-malki') . '</a></li>';
+						echo '<li><a href="https://wa.me/9660541415099" target="_blank" rel="noopener noreferrer">' . __('تواصل معنا', 'amal-malki') . '</a></li>';
 						echo '<li><a href="' . esc_url(home_url('/blog')) . '">' . __('المدونة', 'amal-malki') . '</a></li>';
 						echo '</ul>';
 					},
@@ -105,7 +105,7 @@
 					$socials = [
 						'snapchat' => ['url' => get_theme_mod('social_snapchat', '#'), 'label' => 'Snapchat'],
 						'facebook' => ['url' => get_theme_mod('social_facebook', '#'), 'label' => 'Facebook'],
-						'twitter'  => ['url' => get_theme_mod('social_twitter', '#'),  'label' => 'Twitter / X'],
+						'twitter'  => ['url' => get_theme_mod('social_twitter', 'https://x.com/mostshar_sa'),  'label' => 'Twitter / X'],
 						'instagram' => ['url' => get_theme_mod('social_instagram', '#'), 'label' => 'Instagram'],
 					];
 					foreach ($socials as $key => $item): ?>

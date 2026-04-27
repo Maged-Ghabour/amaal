@@ -41,7 +41,7 @@ get_header();
 			<div class="service-widget service-cta-widget">
 				<h3 class="widget-title"><?php _e( 'احصل على استشارة', 'amal-malki' ); ?></h3>
 				<p><?php _e( 'نحن هنا لمساعدتك في كافة الأمور القانونية المتعلقة بهذه الخدمة.', 'amal-malki' ); ?></p>
-				<a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn--gold btn--full">
+				<a href="https://wa.me/9660541415099" target="_blank" rel="noopener noreferrer" class="btn btn--gold btn--full">
 					<?php _e( 'تواصل معنا الآن', 'amal-malki' ); ?>
 				</a>
 			</div>

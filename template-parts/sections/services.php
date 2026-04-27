@@ -58,7 +58,7 @@ $services = new WP_Query( $args );
 						<div class="service-card__body">
 							<h3 class="service-card__title"><?php echo esc_html( $svc['title'] ); ?></h3>
 							<p class="service-card__excerpt"><?php echo esc_html( $svc['excerpt'] ); ?></p>
-							<a href="#contact" class="service-card__link">
+							<a href="https://wa.me/9660541415099" target="_blank" rel="noopener noreferrer" class="service-card__link">
 								<?php _e( 'تواصل معنا', 'amal-malki' ); ?>
 								<span class="service-card__arrow" aria-hidden="true">
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
