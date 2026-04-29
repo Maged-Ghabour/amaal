@@ -88,6 +88,22 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
 		'settings' => 'preloader_image',
 	]));
 
+	$wp_customize->add_setting('preloader_image_size', [
+		'default' => 400,
+		'sanitize_callback' => 'absint',
+	]);
+
+	$wp_customize->add_control('preloader_image_size', [
+		'label' => __('حجم صورة شاشة التحميل (بالبيكسل)', 'amal-malki'),
+		'section' => 'amal_general',
+		'type' => 'number',
+		'input_attrs' => [
+			'min' => 50,
+			'max' => 1000,
+			'step' => 10,
+		],
+	]);
+
 	$wp_customize->add_setting('container_max_width', [
 		'default' => 1400,
 		'sanitize_callback' => 'absint',
