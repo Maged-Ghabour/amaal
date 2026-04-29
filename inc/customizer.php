@@ -77,6 +77,17 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
 		'type' => 'checkbox',
 	]);
 
+	$wp_customize->add_setting('preloader_image', [
+		'default' => 'https://aamal-sa.com/wp-content/uploads/2026/04/image-13-Picsart-AiImageEnhancer.png',
+		'sanitize_callback' => 'esc_url_raw',
+	]);
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'preloader_image', [
+		'label' => __('صورة شاشة التحميل (Preloader)', 'amal-malki'),
+		'section' => 'amal_general',
+		'settings' => 'preloader_image',
+	]));
+
 	$wp_customize->add_setting('container_max_width', [
 		'default' => 1400,
 		'sanitize_callback' => 'absint',
