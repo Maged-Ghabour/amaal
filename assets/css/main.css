@@ -315,8 +315,14 @@ svg {
 }
 
 .site-branding img {
-  height: 120px;
+  height: 90px;
   width: auto;
+}
+
+@media (max-width: 768px) {
+  .site-branding img {
+    height: 65px;
+  }
 }
 
 .site-name-link {
