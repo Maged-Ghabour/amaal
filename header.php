@@ -24,7 +24,7 @@
 			$preloader_img = get_theme_mod('preloader_image', 'https://aamal-sa.com/wp-content/uploads/2026/04/image-13-Picsart-AiImageEnhancer.png'); 
 			$preloader_size = get_theme_mod('preloader_image_size', 400);
 		?>
-		<img src="<?php echo esc_url($preloader_img); ?>" alt="Aamal Preloader" style="max-width: min(80vw, <?php echo esc_attr($preloader_size); ?>px);" />
+		<img src="<?php echo esc_url($preloader_img); ?>" alt="Aamal Preloader" style="max-width: min(70vw, <?php echo esc_attr($preloader_size); ?>px);" />
 	</div>
 </div>
 <script>
