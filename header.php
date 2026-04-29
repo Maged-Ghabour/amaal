@@ -20,7 +20,7 @@
 <?php if ( get_theme_mod( 'enable_preloader', true ) ) : ?>
 <div id="preloader">
 	<div class="preloader-content">
-		<img src="https://aamal-sa.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-25-at-4.33.44-PM-1.png" alt="Aamal Preloader" />
+		<img src="https://aamal-sa.com/wp-content/uploads/2026/04/image-13-Picsart-AiImageEnhancer.png" alt="Aamal Preloader" />
 	</div>
 </div>
 <script>
