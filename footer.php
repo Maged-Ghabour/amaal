@@ -43,7 +43,7 @@
 			<!-- Col 2: Working Hours -->
 			<div class="footer-col">
 				<h4 class="footer-col-title"><?php _e('ساعات العمل', 'amal-malki'); ?></h4>
-				<p class="footer-hours-label"><?php _e('من الأحد إلى الإثنين', 'amal-malki'); ?></p>
+				<p class="footer-hours-label"><?php _e('من الأحد إلى الخميس', 'amal-malki'); ?></p>
 				<p class="footer-hours"><?php _e('9:00 ص - 6:00 م', 'amal-malki'); ?></p>
 			</div>
 
@@ -105,12 +105,13 @@
 					$socials = [
 						'snapchat' => ['url' => get_theme_mod('social_snapchat', ''), 'label' => 'Snapchat'],
 						'facebook' => ['url' => get_theme_mod('social_facebook', ''), 'label' => 'Facebook'],
-						'twitter'  => ['url' => get_theme_mod('social_twitter', 'https://x.com/mostshar_sa'),  'label' => 'Twitter / X'],
+						'twitter' => ['url' => get_theme_mod('social_twitter', 'https://x.com/mostshar_sa'), 'label' => 'Twitter / X'],
 						'instagram' => ['url' => get_theme_mod('social_instagram', ''), 'label' => 'Instagram'],
 					];
-					foreach ($socials as $key => $item): 
-						if (empty($item['url']) || $item['url'] === '#') continue;
-					?>
+					foreach ($socials as $key => $item):
+						if (empty($item['url']) || $item['url'] === '#')
+							continue;
+						?>
 						<a href="<?php echo esc_url($item['url']); ?>"
 							class="social-icon social-icon--<?php echo esc_attr($key); ?>"
 							aria-label="<?php echo esc_attr($item['label']); ?>" target="_blank" rel="noopener noreferrer">
@@ -149,10 +150,12 @@
 <?php endif; ?>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/9660541415099" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="<?php esc_attr_e('تواصل معنا عبر الواتساب', 'amal-malki'); ?>">
+<a href="https://wa.me/9660541415099" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+	aria-label="<?php esc_attr_e('تواصل معنا عبر الواتساب', 'amal-malki'); ?>">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
 		<!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-		<path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 414.4c-32.8 0-65-8.8-93.1-25.5l-6.7-4-69.2 18.2 18.5-67.4-4.4-7c-18.4-29.2-28.1-63.2-28.1-98.2 0-101.5 82.6-184.1 184.2-184.1 49.2 0 95.4 19.2 130.1 53.9s53.8 81 53.8 130.2c0 101.5-82.6 184.2-184.2 184.2zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+		<path
+			d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 414.4c-32.8 0-65-8.8-93.1-25.5l-6.7-4-69.2 18.2 18.5-67.4-4.4-7c-18.4-29.2-28.1-63.2-28.1-98.2 0-101.5 82.6-184.1 184.2-184.1 49.2 0 95.4 19.2 130.1 53.9s53.8 81 53.8 130.2c0 101.5-82.6 184.2-184.2 184.2zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
 	</svg>
 </a>
 
