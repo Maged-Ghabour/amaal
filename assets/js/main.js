@@ -6,8 +6,6 @@
 (function () {
   'use strict';
 
-
-
   /* ── Sticky Header ──────────────────────────────────────────── */
   const header = document.getElementById('masthead');
   if (header) {
@@ -62,7 +60,7 @@
     '.why-us-card, .section-title, .about-section, .services-section, ' +
     '.why-us-section, .articles-section, .contact-section, ' +
     '.footer-brand, .footer-col, .contact-form, .about-inner, ' +
-    '.service-content-wrap, .single-container'
+    '.service-content-wrap, .single-container, .amal-contact-section'
   );
 
   if ('IntersectionObserver' in window) {
@@ -98,106 +96,85 @@
     });
   });
 
-  /* ── New Contact Form – Dynamic Sub-Type Select ────────────── */
-  const newForm = document.getElementById('amalContactForm');
+  /* ── Contact Form (AJAX) ────────────────────────────────────── */
+  const contactForm = document.getElementById('amalContactForm');
+  const feedback    = contactForm?.querySelector('.acf-feedback');
+  const caseSelect  = document.getElementById('acf_case_type');
+  const subWrap     = document.getElementById('acf_subtype_wrap');
+  const subSelect   = document.getElementById('acf_case_subtype');
 
-  if (newForm) {
-    const caseTypeSelect  = newForm.querySelector('#acf_case_type');
-    const subTypeWrap     = newForm.querySelector('#acf_subtype_wrap');
-    const subTypeSelect   = newForm.querySelector('#acf_case_subtype');
-    const submitBtn       = newForm.querySelector('#amalContactSubmit');
-    const feedbackEl      = newForm.querySelector('.acf-feedback');
-    const btnText         = submitBtn?.querySelector('.btn-text');
-    const btnIcon         = submitBtn?.querySelector('.btn-icon');
-    const btnSpinner      = submitBtn?.querySelector('.btn-spinner');
+  // Handle Dynamic Sub-Type Selection
+  caseSelect?.addEventListener('change', function() {
+    const val = this.value;
+    const data = window.amalCaseTypes ? window.amalCaseTypes[val] : null;
 
-    // ── Dynamic sub-type select ────────────────────────────────
-    const caseData = window.amalCaseTypes || {};
-
-    caseTypeSelect?.addEventListener('change', function () {
-      const key = this.value;
-      // Clear old options
-      subTypeSelect.innerHTML = '<option value="">اختر المسار</option>';
-
-      if (key && caseData[key] && caseData[key].subs.length) {
-        // Populate sub options
-        caseData[key].subs.forEach((sub, idx) => {
-          const opt = document.createElement('option');
-          opt.value = sub;
-          opt.textContent = (idx + 1) + '. ' + sub;
-          subTypeSelect.appendChild(opt);
-        });
-        // Show with animation
-        subTypeWrap.style.display = '';
-        subTypeWrap.style.animation = 'none';
-        subTypeWrap.offsetHeight; // reflow
-        subTypeWrap.style.animation = '';
-      } else {
-        subTypeWrap.style.display = 'none';
-      }
-    });
-
-    // ── AJAX Submit ────────────────────────────────────────────
-    newForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // Validate required
-      const name      = newForm.querySelector('#acf_name').value.trim();
-      const phone     = newForm.querySelector('#acf_phone').value.trim();
-      const caseType  = newForm.querySelector('#acf_case_type').value;
-
-      if (!name || !phone || !caseType) {
-        showAcfFeedback('يرجى ملء جميع الحقول المطلوبة (الاسم، الهاتف، نوع القضية).', 'error');
-        return;
-      }
-
-      // Loading state
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        if (btnText)    btnText.style.display    = 'none';
-        if (btnIcon)    btnIcon.style.display    = 'none';
-        if (btnSpinner) btnSpinner.style.display = 'inline-flex';
-      }
-
-      const body = new FormData(newForm);
-      body.append('action', 'amal_contact');
-
-      try {
-        const res  = await fetch(
-          (window.amalData && amalData.ajaxUrl) || '/wp-admin/admin-ajax.php',
-          { method: 'POST', body }
-        );
-        const data = await res.json();
-
-        if (data.success) {
-          newForm.reset();
-          if (subTypeWrap) subTypeWrap.style.display = 'none';
-          showAcfFeedback(data.data?.message || 'تم إرسال طلبك بنجاح! سنتواصل معك قريباً.', 'success');
-        } else {
-          showAcfFeedback(data.data?.message || 'حدث خطأ. يرجى المحاولة مجدداً.', 'error');
-        }
-      } catch {
-        showAcfFeedback('حدث خطأ في الاتصال. يرجى المحاولة مجدداً.', 'error');
-      } finally {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          if (btnText)    btnText.style.display    = '';
-          if (btnIcon)    btnIcon.style.display    = '';
-          if (btnSpinner) btnSpinner.style.display = 'none';
-        }
-      }
-    });
-
-    function showAcfFeedback(msg, type) {
-      if (!feedbackEl) return;
-      feedbackEl.textContent = msg;
-      feedbackEl.className   = 'acf-feedback ' + type;
-      feedbackEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      setTimeout(() => {
-        feedbackEl.textContent = '';
-        feedbackEl.className   = 'acf-feedback';
-      }, 7000);
+    if (data && data.subs && data.subs.length > 0) {
+      subSelect.innerHTML = '<option value="">اختر المسار</option>';
+      data.subs.forEach(sub => {
+        const opt = document.createElement('option');
+        opt.value = sub;
+        opt.textContent = sub;
+        subSelect.appendChild(opt);
+      });
+      subWrap.style.display = 'block';
+      subSelect.required = true;
+    } else {
+      subWrap.style.display = 'none';
+      subSelect.required = false;
+      subSelect.innerHTML = '<option value="">اختر المسار</option>';
     }
+  });
+
+  contactForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = document.getElementById('amalContactSubmit');
+    const btnText   = submitBtn?.querySelector('.btn-text');
+    const spinner   = submitBtn?.querySelector('.btn-spinner');
+    const icon      = submitBtn?.querySelector('.btn-icon');
+    if (!submitBtn) return;
+
+    submitBtn.disabled = true;
+    if (btnText) btnText.style.opacity = '0.7';
+    if (spinner) spinner.style.display = 'inline-block';
+    if (icon)    icon.style.display = 'none';
+
+    const body = new FormData(contactForm);
+    body.append('action', 'amal_contact');
+
+    try {
+      const res  = await fetch(amalData?.ajaxUrl || '/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body,
+      });
+      const data = await res.json();
+      if (data.success) {
+        contactForm.reset();
+        if (subWrap) subWrap.style.display = 'none';
+        showFeedback(data.data?.message || 'تم إرسال طلبك بنجاح!', 'success');
+      } else {
+        showFeedback(data.data?.message || 'حدث خطأ. يرجى المحاولة مجدداً.', 'error');
+      }
+    } catch (err) {
+      showFeedback('حدث خطأ في الاتصال. يرجى المحاولة مجدداً.', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      if (btnText) btnText.style.opacity = '1';
+      if (spinner) spinner.style.display = 'none';
+      if (icon)    icon.style.display = 'inline-block';
+    }
+  });
+
+  function showFeedback(msg, type) {
+    if (!feedback) return;
+    feedback.textContent = msg;
+    feedback.className   = `acf-feedback ${type}`;
+    if (window.innerWidth < 768) {
+      feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    setTimeout(() => {
+      feedback.textContent = '';
+      feedback.className   = 'acf-feedback';
+    }, 8000);
   }
 
   /* ── Scroll to Top ─────────────────────────────────────────── */
@@ -213,23 +190,14 @@
 
     scrollTopBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      // Smooth scroll for modern browsers
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
-      // Fallback for older browsers
       if (document.documentElement.scrollTo) {
         document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
       }
     });
-  }
-
-  function showFeedback(msg, type) {
-    if (!feedback) return;
-    feedback.textContent   = msg;
-    feedback.className     = `form-feedback ${type}`;
-    setTimeout(() => { feedback.textContent = ''; feedback.className = 'form-feedback'; }, 6000);
   }
 
 })();
