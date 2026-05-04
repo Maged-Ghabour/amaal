@@ -947,6 +947,372 @@ svg {
   color: #c62828;
 }
 
+/* ─── 11b. AMAL CONTACT FORM ────────────────────────────────────── */
+.amal-contact-section {
+  padding-block: var(--space-2xl);
+  background: linear-gradient(180deg, #4D201B 0%, #411429 28.35%, #34193A 75%, #231B42 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background circles */
+.amal-contact-section::before,
+.amal-contact-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.amal-contact-section::before {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(195,138,71,0.08) 0%, transparent 70%);
+  top: -150px; right: -150px;
+}
+.amal-contact-section::after {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(195,138,71,0.05) 0%, transparent 70%);
+  bottom: -100px; left: -100px;
+}
+
+/* Top accent divider */
+.amal-contact-accent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.amal-contact-accent .accent-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(195,138,71,0.5), transparent);
+  max-width: 200px;
+}
+.amal-contact-accent .accent-icon {
+  width: 28px; height: 28px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+/* Section title */
+.amal-contact-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 400;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.amal-contact-subtitle {
+  text-align: center;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Card wrapper */
+.amal-contact-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(195,138,71,0.2);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  max-width: 860px;
+  margin-inline: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  position: relative;
+  z-index: 1;
+}
+
+/* Gold top-border accent on card */
+.amal-contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 2rem; right: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  border-radius: 2px;
+}
+
+/* Form rows */
+.acf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.acf-row--single {
+  grid-template-columns: 1fr;
+}
+
+/* Form group */
+.acf-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.acf-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  font-family: var(--font-sans);
+  letter-spacing: 0.02em;
+}
+
+.acf-req {
+  color: var(--color-gold);
+  margin-inline-start: 2px;
+}
+
+/* Inputs & Textarea */
+.acf-group input[type="text"],
+.acf-group input[type="tel"],
+.acf-group input[type="email"],
+.acf-group textarea {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-white);
+  direction: rtl;
+  transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+  outline: none;
+}
+
+.acf-group input::placeholder,
+.acf-group textarea::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.acf-group input:focus,
+.acf-group textarea:focus {
+  border-color: var(--color-gold);
+  background: rgba(195,138,71,0.07);
+  box-shadow: 0 0 0 3px rgba(195,138,71,0.15);
+}
+
+.acf-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Select wrapper */
+.acf-select-wrap {
+  position: relative;
+}
+
+.acf-select-wrap select {
+  width: 100%;
+  padding: 0.85rem 2.5rem 0.85rem 1.1rem;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-white);
+  direction: rtl;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+  outline: none;
+}
+
+.acf-select-wrap select option {
+  background: #2D1F0F;
+  color: var(--color-white);
+}
+
+.acf-select-wrap select:focus {
+  border-color: var(--color-gold);
+  background: rgba(195,138,71,0.07);
+  box-shadow: 0 0 0 3px rgba(195,138,71,0.15);
+}
+
+.acf-select-wrap .select-arrow {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  width: 18px; height: 18px;
+  color: rgba(255,255,255,0.4);
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.acf-select-wrap select:focus ~ .select-arrow {
+  color: var(--color-gold);
+}
+
+/* Subtype reveal animation */
+#acf_subtype_wrap {
+  animation: acfSlideDown 0.35s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes acfSlideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Checkboxes */
+.acf-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.acf-check-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.8);
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.acf-check-label:hover {
+  color: var(--color-gold);
+}
+
+.acf-check-label input[type="checkbox"] {
+  display: none;
+}
+
+.acf-check-box {
+  width: 20px; height: 20px;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.05);
+  flex-shrink: 0;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.acf-check-label input:checked ~ .acf-check-box {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.acf-check-label input:checked ~ .acf-check-box::after {
+  content: '';
+  width: 5px; height: 9px;
+  border: 2px solid #1A0E05;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translateY(-1px);
+  display: block;
+}
+
+/* Submit button */
+.acf-submit-wrap {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.acf-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 3.5rem;
+  background: linear-gradient(135deg, var(--color-gold) 0%, #E8C96A 50%, var(--color-gold) 100%);
+  background-size: 200% auto;
+  color: #1A0E05;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-position 0.4s ease, transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 6px 24px rgba(195,138,71,0.4);
+  min-width: 220px;
+}
+
+.acf-submit-btn:hover:not(:disabled) {
+  background-position: right center;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(195,138,71,0.5);
+}
+
+.acf-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.acf-submit-btn .btn-icon {
+  width: 18px; height: 18px;
+  transition: transform 0.25s;
+}
+
+.acf-submit-btn:hover .btn-icon {
+  transform: translateX(-3px);
+}
+
+.acf-submit-btn .spin-icon {
+  width: 20px; height: 20px;
+  animation: acfSpin 0.8s linear infinite;
+}
+
+@keyframes acfSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Feedback message */
+.acf-feedback {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.95rem;
+  min-height: 1.5em;
+  border-radius: var(--radius-sm);
+  padding: 0;
+  transition: all 0.3s;
+}
+
+.acf-feedback.success {
+  color: #4caf88;
+  background: rgba(76,175,136,0.1);
+  border: 1px solid rgba(76,175,136,0.25);
+  padding: 0.85rem 1rem;
+}
+
+.acf-feedback.error {
+  color: #f28b82;
+  background: rgba(242,139,130,0.1);
+  border: 1px solid rgba(242,139,130,0.25);
+  padding: 0.85rem 1rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .amal-contact-card {
+    padding: 1.5rem 1.25rem;
+  }
+  .acf-row {
+    grid-template-columns: 1fr;
+  }
+  .acf-submit-btn {
+    width: 100%;
+  }
+  .acf-checkboxes {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
 /* ─── 12. FOOTER ────────────────────────────────────────────────── */
 .site-footer {
   color: var(--color-white);

@@ -1,8 +1,14 @@
 </div><!-- #content -->
 
 <!-- ═══════════════════════════════════════════
-		 FOOTER
+     CONTACT FORM SECTION (before footer)
+═══════════════════════════════════════════ -->
+<?php get_template_part( 'template-parts/sections/contact-cta' ); ?>
+
+<!-- ═══════════════════════════════════════════
+	     FOOTER
 	═══════════════════════════════════════════ -->
+
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="footer-inner container">
 

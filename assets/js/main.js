@@ -98,40 +98,107 @@
     });
   });
 
-  /* ── Contact Form (AJAX) ────────────────────────────────────── */
-  const form     = document.getElementById('contactForm');
-  const feedback = form?.querySelector('.form-feedback');
+  /* ── New Contact Form – Dynamic Sub-Type Select ────────────── */
+  const newForm = document.getElementById('amalContactForm');
 
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  if (newForm) {
+    const caseTypeSelect  = newForm.querySelector('#acf_case_type');
+    const subTypeWrap     = newForm.querySelector('#acf_subtype_wrap');
+    const subTypeSelect   = newForm.querySelector('#acf_case_subtype');
+    const submitBtn       = newForm.querySelector('#amalContactSubmit');
+    const feedbackEl      = newForm.querySelector('.acf-feedback');
+    const btnText         = submitBtn?.querySelector('.btn-text');
+    const btnIcon         = submitBtn?.querySelector('.btn-icon');
+    const btnSpinner      = submitBtn?.querySelector('.btn-spinner');
 
-    const submitBtn = form.querySelector('[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.textContent = amalData?.sending || 'جاري الإرسال...';
+    // ── Dynamic sub-type select ────────────────────────────────
+    const caseData = window.amalCaseTypes || {};
 
-    const body = new FormData(form);
-    body.append('action', 'amal_contact');
+    caseTypeSelect?.addEventListener('change', function () {
+      const key = this.value;
+      // Clear old options
+      subTypeSelect.innerHTML = '<option value="">اختر المسار</option>';
 
-    try {
-      const res  = await fetch(amalData?.ajaxUrl || '/wp-admin/admin-ajax.php', {
-        method: 'POST',
-        body,
-      });
-      const data = await res.json();
-
-      if (data.success) {
-        form.reset();
-        showFeedback('تم إرسال طلبك بنجاح! سنتواصل معك قريباً.', 'success');
+      if (key && caseData[key] && caseData[key].subs.length) {
+        // Populate sub options
+        caseData[key].subs.forEach((sub, idx) => {
+          const opt = document.createElement('option');
+          opt.value = sub;
+          opt.textContent = (idx + 1) + '. ' + sub;
+          subTypeSelect.appendChild(opt);
+        });
+        // Show with animation
+        subTypeWrap.style.display = '';
+        subTypeWrap.style.animation = 'none';
+        subTypeWrap.offsetHeight; // reflow
+        subTypeWrap.style.animation = '';
       } else {
-        showFeedback(data.data?.message || 'حدث خطأ. يرجى المحاولة مجدداً.', 'error');
+        subTypeWrap.style.display = 'none';
       }
-    } catch {
-      showFeedback('حدث خطأ في الاتصال. يرجى المحاولة مجدداً.', 'error');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = amalData?.submit || 'إرسال الطلب';
+    });
+
+    // ── AJAX Submit ────────────────────────────────────────────
+    newForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Validate required
+      const name      = newForm.querySelector('#acf_name').value.trim();
+      const phone     = newForm.querySelector('#acf_phone').value.trim();
+      const caseType  = newForm.querySelector('#acf_case_type').value;
+
+      if (!name || !phone || !caseType) {
+        showAcfFeedback('يرجى ملء جميع الحقول المطلوبة (الاسم، الهاتف، نوع القضية).', 'error');
+        return;
+      }
+
+      // Loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        if (btnText)    btnText.style.display    = 'none';
+        if (btnIcon)    btnIcon.style.display    = 'none';
+        if (btnSpinner) btnSpinner.style.display = 'inline-flex';
+      }
+
+      const body = new FormData(newForm);
+      body.append('action', 'amal_contact');
+
+      try {
+        const res  = await fetch(
+          (window.amalData && amalData.ajaxUrl) || '/wp-admin/admin-ajax.php',
+          { method: 'POST', body }
+        );
+        const data = await res.json();
+
+        if (data.success) {
+          newForm.reset();
+          if (subTypeWrap) subTypeWrap.style.display = 'none';
+          showAcfFeedback(data.data?.message || 'تم إرسال طلبك بنجاح! سنتواصل معك قريباً.', 'success');
+        } else {
+          showAcfFeedback(data.data?.message || 'حدث خطأ. يرجى المحاولة مجدداً.', 'error');
+        }
+      } catch {
+        showAcfFeedback('حدث خطأ في الاتصال. يرجى المحاولة مجدداً.', 'error');
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          if (btnText)    btnText.style.display    = '';
+          if (btnIcon)    btnIcon.style.display    = '';
+          if (btnSpinner) btnSpinner.style.display = 'none';
+        }
+      }
+    });
+
+    function showAcfFeedback(msg, type) {
+      if (!feedbackEl) return;
+      feedbackEl.textContent = msg;
+      feedbackEl.className   = 'acf-feedback ' + type;
+      feedbackEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      setTimeout(() => {
+        feedbackEl.textContent = '';
+        feedbackEl.className   = 'acf-feedback';
+      }, 7000);
     }
-  });
+  }
 
   /* ── Scroll to Top ─────────────────────────────────────────── */
   const scrollTopBtn = document.getElementById('scrollToTopBtn');
