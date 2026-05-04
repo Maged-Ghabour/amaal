@@ -4,7 +4,9 @@
  *
  * @package AmalMalki
  */
-$show_contact = function_exists('get_field') && get_field('show_contact_section') !== null ? get_field('show_contact_section') : true;
+$show_contact = function_exists('get_field') ? get_field('show_contact_section') : true;
+// Default to true if the field is not set (null)
+if ( $show_contact === null ) { $show_contact = true; }
 if ( ! $show_contact ) { return; }
 
 $contact_title    = function_exists('get_field') ? get_field('contact_section_title')    : null;

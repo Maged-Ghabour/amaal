@@ -17,7 +17,6 @@ get_header();
 	<?php get_template_part( 'template-parts/sections/services' ); ?>
 	<?php get_template_part( 'template-parts/sections/why-us' ); ?>
 	<?php get_template_part( 'template-parts/sections/articles' ); ?>
-	<?php get_template_part( 'template-parts/sections/contact-cta' ); ?>
 
 </main><!-- #primary -->
 
