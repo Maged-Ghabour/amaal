@@ -3,6 +3,7 @@
 <!-- ═══════════════════════════════════════════
 		 FOOTER
 	═══════════════════════════════════════════ -->
+<!-- DEBUG: Contact CTA Inclusion -->
 <?php get_template_part('template-parts/sections/contact-cta'); ?>
 
 <footer id="colophon" class="site-footer" role="contentinfo">

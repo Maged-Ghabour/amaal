@@ -4,10 +4,9 @@
  *
  * @package AmalMalki
  */
-$show_contact = function_exists('get_field') ? get_field('show_contact_section') : true;
-// Default to true if the field is not set (null)
-if ( $show_contact === null ) { $show_contact = true; }
-if ( ! $show_contact ) { return; }
+ */
+// Always show for now to debug
+$show_contact = true;
 
 $contact_title    = function_exists('get_field') ? get_field('contact_section_title')    : null;
 $contact_subtitle = function_exists('get_field') ? get_field('contact_section_subtitle') : null;
@@ -97,7 +96,7 @@ $case_types_json = wp_json_encode( array_map( fn($v) => ['label' => $v['label'],
 <!-- ═══════════════════════════════════════
      CONTACT FORM SECTION
 ═══════════════════════════════════════ -->
-<section id="contact" class="amal-contact-section reveal" aria-label="<?php esc_attr_e( 'تواصل معنا', 'amal-malki' ); ?>">
+<section id="contact" class="amal-contact-section" aria-label="<?php esc_attr_e( 'تواصل معنا', 'amal-malki' ); ?>">
     <div class="container">
 
         <!-- Decorative top accent -->
