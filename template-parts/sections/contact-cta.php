@@ -4,7 +4,6 @@
  *
  * @package AmalMalki
  */
- */
 // Always show for now to debug
 $show_contact = true;
 
