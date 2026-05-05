@@ -4,7 +4,13 @@
  *
  * @package AmalMalki
  */
-$show_contact = true;
+$show_contact = function_exists('get_field') && get_field('show_contact_section') !== null
+    ? get_field('show_contact_section')
+    : true;
+
+if ( ! $show_contact ) {
+    return;
+}
 
 /* ── مساعد: يتحقق من صحة قيمة ACF (4 أحرف كحد أدنى) ── */
 function amal_valid_acf( $key, $fallback ) {
