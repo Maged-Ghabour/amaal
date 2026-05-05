@@ -950,29 +950,24 @@ svg {
 /* ─── 11b. AMAL CONTACT FORM ────────────────────────────────────── */
 .amal-contact-section {
   padding-block: var(--space-2xl);
-  background: linear-gradient(180deg, #4D201B 0%, #411429 28.35%, #34193A 75%, #231B42 100%);
+  background: transparent;
   position: relative;
   overflow: hidden;
 }
 
-/* Decorative background circles */
+/* Subtle top/bottom separator lines */
 .amal-contact-section::before,
 .amal-contact-section::after {
   content: '';
   position: absolute;
-  border-radius: 50%;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(195,138,71,0.25), transparent);
   pointer-events: none;
 }
-.amal-contact-section::before {
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(195,138,71,0.08) 0%, transparent 70%);
-  top: -150px; right: -150px;
-}
-.amal-contact-section::after {
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(195,138,71,0.05) 0%, transparent 70%);
-  bottom: -100px; left: -100px;
-}
+.amal-contact-section::before { top: 0; }
+.amal-contact-section::after  { bottom: 0; }
 
 /* Top accent divider */
 .amal-contact-accent {
@@ -997,45 +992,80 @@ svg {
 /* Section title */
 .amal-contact-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
   font-weight: 400;
   color: var(--color-white);
   text-align: center;
   margin-bottom: 2.5rem;
-  line-height: 1.7;
+  line-height: 1.8;
+  opacity: 0.92;
 }
 
 .amal-contact-subtitle {
   text-align: center;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 2rem;
   font-size: 1rem;
 }
 
-/* Card wrapper */
+/* Card wrapper — gradient lives HERE only */
 .amal-contact-card {
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(195,138,71,0.2);
+  background: linear-gradient(160deg, #4D201B 0%, #411429 30%, #34193A 70%, #231B42 100%);
+  border: 1px solid rgba(195,138,71,0.22);
   border-radius: var(--radius-lg);
-  padding: 2.5rem;
+  padding: 3rem 2.5rem;
   max-width: 860px;
   margin-inline: auto;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  box-shadow:
+    0 24px 64px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(195,138,71,0.08) inset;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft glow spots inside card */
+.amal-contact-card::before,
+.amal-contact-card::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.amal-contact-card::before {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, rgba(195,138,71,0.07) 0%, transparent 70%);
+  top: -120px; right: -120px;
+}
+.amal-contact-card::after {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(195,138,71,0.05) 0%, transparent 70%);
+  bottom: -80px; left: -80px;
+}
+
+/* Gold top-border accent on card */
+.amal-contact-card .acf-row,
+.amal-contact-card .acf-submit-wrap,
+.amal-contact-card .acf-feedback,
+.amal-contact-card form {
   position: relative;
   z-index: 1;
 }
 
-/* Gold top-border accent on card */
-.amal-contact-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 2rem; right: 2rem;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-  border-radius: 2px;
+/* Gold top-border on card */
+.amal-contact-card > .amal-contact-form {
+  position: relative;
 }
+.amal-contact-card > *:first-child::before {
+  content: none;
+}
+/* Gold hairline at very top of card */
+.amal-contact-card {
+  border-top: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+/* Override – use box-shadow top glow instead */
 
 /* Form rows */
 .acf-row {
