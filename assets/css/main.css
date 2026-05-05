@@ -955,58 +955,6 @@ svg {
   overflow: hidden;
 }
 
-/* Subtle top/bottom separator lines */
-.amal-contact-section::before,
-.amal-contact-section::after {
-  content: '';
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(195,138,71,0.25), transparent);
-  pointer-events: none;
-}
-.amal-contact-section::before { top: 0; }
-.amal-contact-section::after  { bottom: 0; }
-
-/* Top accent divider */
-.amal-contact-accent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-.amal-contact-accent .accent-line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(195,138,71,0.5), transparent);
-  max-width: 200px;
-}
-.amal-contact-accent .accent-icon {
-  width: 28px; height: 28px;
-  color: var(--color-gold);
-  flex-shrink: 0;
-}
-
-/* Section title */
-.amal-contact-title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.15rem, 3vw, 1.55rem);
-  font-weight: 400;
-  color: var(--color-dark);
-  text-align: center;
-  margin-bottom: 2.5rem;
-  line-height: 1.8;
-  opacity: 0.92;
-}
-
-.amal-contact-subtitle {
-  text-align: center;
-  color: var(--color-text-muted);
-  margin-bottom: 2rem;
-  font-size: 1rem;
-}
 
 /* Card wrapper — gradient lives HERE only */
 .amal-contact-card {

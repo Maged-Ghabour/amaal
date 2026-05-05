@@ -107,18 +107,9 @@ $case_types_json = wp_json_encode( array_map( fn($v) => ['label' => $v['label'],
 <section id="contact" class="amal-contact-section" aria-label="<?php esc_attr_e( 'تواصل معنا', 'amal-malki' ); ?>">
     <div class="container">
 
-        <!-- Decorative top accent -->
-        <div class="amal-contact-accent" aria-hidden="true">
-            <div class="accent-line"></div>
-            <svg class="accent-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 4L28.5 14.5L40 16.2L31.8 24.2L33.8 36L24 30.5L14.2 36L16.2 24.2L8 16.2L19.5 14.5L24 4Z" fill="currentColor"/>
-            </svg>
-            <div class="accent-line"></div>
-        </div>
-
-        <h2 class="amal-contact-title"><?php echo esc_html( $sec_title ); ?></h2>
+        <h2 class="section-title"><?php echo esc_html( $sec_title ); ?></h2>
         <?php if ( $sec_sub ): ?>
-            <p class="amal-contact-subtitle"><?php echo nl2br( esc_html( $sec_sub ) ); ?></p>
+            <p class="why-us-subtitle" style="color: var(--color-text-muted); margin-bottom: 2rem;"><?php echo nl2br( esc_html( $sec_sub ) ); ?></p>
         <?php endif; ?>
 
         <div class="amal-contact-card">
