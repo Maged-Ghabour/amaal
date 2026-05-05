@@ -4,14 +4,17 @@
  *
  * @package AmalMalki
  */
-// Always show for now to debug
 $show_contact = true;
 
-$contact_title    = function_exists('get_field') ? get_field('contact_section_title')    : null;
-$contact_subtitle = function_exists('get_field') ? get_field('contact_section_subtitle') : null;
+/* ── مساعد: يتحقق من صحة قيمة ACF (4 أحرف كحد أدنى) ── */
+function amal_valid_acf( $key, $fallback ) {
+    if ( ! function_exists('get_field') ) return $fallback;
+    $val = get_field( $key );
+    return ( ! empty($val) && mb_strlen( trim($val) ) >= 4 ) ? $val : $fallback;
+}
 
-$sec_title = $contact_title    ?: __( 'يرجى تعبئة البيانات التالية، وسيتم التواصل معكم في أقرب وقت ممكن:', 'amal-malki' );
-$sec_sub   = $contact_subtitle ?: '';
+$sec_title = amal_valid_acf( 'contact_section_title',    __( 'يرجى تعبئة البيانات التالية، وسيتم التواصل معكم في أقرب وقت ممكن:', 'amal-malki' ) );
+$sec_sub   = amal_valid_acf( 'contact_section_subtitle', '' );
 
 /* ── القضايا الرئيسية وفروعها ── */
 $case_types = [
@@ -215,11 +218,7 @@ $case_types_json = wp_json_encode( array_map( fn($v) => ['label' => $v['label'],
                 <div class="acf-submit-wrap">
                     <button type="submit" class="acf-submit-btn" id="amalContactSubmit">
                         <span class="btn-text"><?php
-                            $acf_btn   = function_exists('get_field') ? get_field('contact_btn_text') : '';
-                            $btn_text  = ( ! empty($acf_btn) && mb_strlen(trim($acf_btn)) >= 3 )
-                                         ? $acf_btn
-                                         : __( 'أرسل طلبك الآن', 'amal-malki' );
-                            echo esc_html( $btn_text );
+                            echo esc_html( amal_valid_acf( 'contact_btn_text', __( 'أرسل طلبك الآن', 'amal-malki' ) ) );
                         ?></span>
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
