@@ -215,7 +215,10 @@ $case_types_json = wp_json_encode( array_map( fn($v) => ['label' => $v['label'],
                 <div class="acf-submit-wrap">
                     <button type="submit" class="acf-submit-btn" id="amalContactSubmit">
                         <span class="btn-text"><?php
-                            $btn_text = function_exists('get_field') && get_field('contact_btn_text') ? get_field('contact_btn_text') : __( 'إرسال الطلب', 'amal-malki' );
+                            $acf_btn   = function_exists('get_field') ? get_field('contact_btn_text') : '';
+                            $btn_text  = ( ! empty($acf_btn) && mb_strlen(trim($acf_btn)) >= 3 )
+                                         ? $acf_btn
+                                         : __( 'أرسل طلبك الآن', 'amal-malki' );
                             echo esc_html( $btn_text );
                         ?></span>
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
