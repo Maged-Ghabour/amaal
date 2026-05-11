@@ -4,7 +4,12 @@
 		 FOOTER
 	═══════════════════════════════════════════ -->
 <!-- DEBUG: Contact CTA Inclusion -->
-<?php get_template_part('template-parts/sections/contact-cta'); ?>
+<?php 
+// Show contact CTA on all pages except the blog (posts index, archives, single posts)
+if ( ! ( is_home() || is_archive() || is_singular('post') ) ) : 
+    get_template_part('template-parts/sections/contact-cta'); 
+endif; 
+?>
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="footer-inner container">

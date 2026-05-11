@@ -263,20 +263,20 @@ function amal_acf_fields()
 		],
 		'fields' => [
 			['key' => 'field_show_certs', 'label' => __('إظهار القسم؟', 'amal-malki'), 'name' => 'show_certifications_section', 'type' => 'true_false', 'default_value' => 1, 'ui' => 1],
-			['key' => 'field_certs_title', 'label' => __('عنوان القسم', 'amal-malki'), 'name' => 'certifications_title', 'type' => 'text'],
-			['key' => 'field_certs_subtitle', 'label' => __('النص الفرعي', 'amal-malki'), 'name' => 'certifications_subtitle', 'type' => 'textarea'],
+			['key' => 'field_certs_title', 'label' => __('عنوان القسم', 'amal-malki'), 'name' => 'certifications_title', 'type' => 'text', 'default_value' => 'اعتماداتنا القانونية'],
+			['key' => 'field_certs_subtitle', 'label' => __('النص الفرعي', 'amal-malki'), 'name' => 'certifications_subtitle', 'type' => 'textarea', 'default_value' => 'نفتخر بحصولنا على عدة اعتمادات وشهادات تعزز مصداقيتنا أمام عملائنا وشركائنا'],
 
 			// Card 1
 			['key' => 'field_cert_card1_image', 'label' => __('البطاقة 1 – الصورة / الشعار', 'amal-malki'), 'name' => 'cert_card1_image', 'type' => 'image', 'return_format' => 'array'],
-			['key' => 'field_cert_card1_label', 'label' => __('البطاقة 1 – التسمية (مثل: رقم العضوية)', 'amal-malki'), 'name' => 'cert_card1_label', 'type' => 'text'],
-			['key' => 'field_cert_card1_number', 'label' => __('البطاقة 1 – الرقم', 'amal-malki'), 'name' => 'cert_card1_number', 'type' => 'text'],
-			['key' => 'field_cert_card1_text', 'label' => __('البطاقة 1 – النص الوصفي', 'amal-malki'), 'name' => 'cert_card1_text', 'type' => 'textarea'],
+			['key' => 'field_cert_card1_label', 'label' => __('البطاقة 1 – التسمية (مثل: رقم العضوية)', 'amal-malki'), 'name' => 'cert_card1_label', 'type' => 'text', 'default_value' => 'رقم العضوية:'],
+			['key' => 'field_cert_card1_number', 'label' => __('البطاقة 1 – الرقم', 'amal-malki'), 'name' => 'cert_card1_number', 'type' => 'text', 'default_value' => '692595'],
+			['key' => 'field_cert_card1_text', 'label' => __('البطاقة 1 – النص الوصفي', 'amal-malki'), 'name' => 'cert_card1_text', 'type' => 'textarea', 'default_value' => 'عضوية أساسية فعّالة تابعة للمحامية أمل سعيد أحمد المالكي، تتيح تقديم الخدمات القانونية والاستشارات باحترافية وموثوقية، مع عضوية سارية حتى عام 2027 وترخيص مهني معتمد حتى عام 2030.'],
 
 			// Card 2
 			['key' => 'field_cert_card2_image', 'label' => __('البطاقة 2 – الصورة / الشعار', 'amal-malki'), 'name' => 'cert_card2_image', 'type' => 'image', 'return_format' => 'array'],
-			['key' => 'field_cert_card2_label', 'label' => __('البطاقة 2 – التسمية (مثل: رقم الترخيص)', 'amal-malki'), 'name' => 'cert_card2_label', 'type' => 'text'],
-			['key' => 'field_cert_card2_number', 'label' => __('البطاقة 2 – الرقم', 'amal-malki'), 'name' => 'cert_card2_number', 'type' => 'text'],
-			['key' => 'field_cert_card2_text', 'label' => __('البطاقة 2 – النص الوصفي', 'amal-malki'), 'name' => 'cert_card2_text', 'type' => 'textarea'],
+			['key' => 'field_cert_card2_label', 'label' => __('البطاقة 2 – التسمية (مثل: رقم الترخيص)', 'amal-malki'), 'name' => 'cert_card2_label', 'type' => 'text', 'default_value' => 'رقم الترخيص:'],
+			['key' => 'field_cert_card2_number', 'label' => __('البطاقة 2 – الرقم', 'amal-malki'), 'name' => 'cert_card2_number', 'type' => 'text', 'default_value' => '472438'],
+			['key' => 'field_cert_card2_text', 'label' => __('البطاقة 2 – النص الوصفي', 'amal-malki'), 'name' => 'cert_card2_text', 'type' => 'textarea', 'default_value' => 'محامية مرخصة رسميًا من وزارة العدل بالمملكة العربية السعودية لمزاولة مهنة المحاماة وتقديم الاستشارات القانونية، بخبرة قانونية معتمدة وترخيص ساري حتى عام 2030 في مجال التمثيل القانوني والاستشارات.'],
 		],
 	]);
 }
