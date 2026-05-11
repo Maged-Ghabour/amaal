@@ -881,10 +881,11 @@ svg {
 }
 
 .cert-card__text {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
   line-height: 1.8;
-  max-width: 440px;
+  font-size: 1.4rem;
+  color: rgba(78, 35, 22, 1);
+  font-weight: 300;
+  width: 100%;
 }
 
 /* Responsive – Certifications */
