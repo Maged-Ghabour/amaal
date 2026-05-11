@@ -252,6 +252,33 @@ function amal_acf_fields()
 			['key' => 'field_contact_btn_text', 'label' => __('نص زر الإرسال', 'amal-malki'), 'name' => 'contact_btn_text', 'type' => 'text'],
 		],
 	]);
+
+	// Certifications Section Fields – اعتماداتنا القانونية
+	acf_add_local_field_group([
+		'key' => 'group_certifications',
+		'title' => __('Certifications Section – اعتماداتنا القانونية', 'amal-malki'),
+		'location' => [
+			[['param' => 'page_type', 'operator' => '==', 'value' => 'front_page']],
+			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
+		],
+		'fields' => [
+			['key' => 'field_show_certs', 'label' => __('إظهار القسم؟', 'amal-malki'), 'name' => 'show_certifications_section', 'type' => 'true_false', 'default_value' => 1, 'ui' => 1],
+			['key' => 'field_certs_title', 'label' => __('عنوان القسم', 'amal-malki'), 'name' => 'certifications_title', 'type' => 'text'],
+			['key' => 'field_certs_subtitle', 'label' => __('النص الفرعي', 'amal-malki'), 'name' => 'certifications_subtitle', 'type' => 'textarea'],
+
+			// Card 1
+			['key' => 'field_cert_card1_image', 'label' => __('البطاقة 1 – الصورة / الشعار', 'amal-malki'), 'name' => 'cert_card1_image', 'type' => 'image', 'return_format' => 'array'],
+			['key' => 'field_cert_card1_label', 'label' => __('البطاقة 1 – التسمية (مثل: رقم العضوية)', 'amal-malki'), 'name' => 'cert_card1_label', 'type' => 'text'],
+			['key' => 'field_cert_card1_number', 'label' => __('البطاقة 1 – الرقم', 'amal-malki'), 'name' => 'cert_card1_number', 'type' => 'text'],
+			['key' => 'field_cert_card1_text', 'label' => __('البطاقة 1 – النص الوصفي', 'amal-malki'), 'name' => 'cert_card1_text', 'type' => 'textarea'],
+
+			// Card 2
+			['key' => 'field_cert_card2_image', 'label' => __('البطاقة 2 – الصورة / الشعار', 'amal-malki'), 'name' => 'cert_card2_image', 'type' => 'image', 'return_format' => 'array'],
+			['key' => 'field_cert_card2_label', 'label' => __('البطاقة 2 – التسمية (مثل: رقم الترخيص)', 'amal-malki'), 'name' => 'cert_card2_label', 'type' => 'text'],
+			['key' => 'field_cert_card2_number', 'label' => __('البطاقة 2 – الرقم', 'amal-malki'), 'name' => 'cert_card2_number', 'type' => 'text'],
+			['key' => 'field_cert_card2_text', 'label' => __('البطاقة 2 – النص الوصفي', 'amal-malki'), 'name' => 'cert_card2_text', 'type' => 'textarea'],
+		],
+	]);
 }
 add_action('acf/init', 'amal_acf_fields');
 

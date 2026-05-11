@@ -15,6 +15,7 @@ get_header();
 	<?php get_template_part( 'template-parts/sections/hero' ); ?>
 	<?php get_template_part( 'template-parts/sections/about' ); ?>
 	<?php get_template_part( 'template-parts/sections/services' ); ?>
+	<?php get_template_part( 'template-parts/sections/certifications' ); ?>
 	<?php get_template_part( 'template-parts/sections/why-us' ); ?>
 	<?php get_template_part( 'template-parts/sections/articles' ); ?>
 

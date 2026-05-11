@@ -25,7 +25,7 @@
 			<!-- Col 1: Important Links -->
 			<div class="footer-col">
 				<h4 class="footer-col-title"><?php _e('روابط مهمة', 'amal-malki'); ?></h4>
-				<h5 class="footer-subtitle">آمال المالكي للمحاماة والإستشارات القانونية</h5>
+				<h5 class="footer-subtitle"><a href="<?php echo esc_url(home_url('/مكتب-محاماة-معتمد/')); ?>">آمال المالكي للمحاماة والإستشارات القانونية</a></h5>
 				<?php
 				wp_nav_menu([
 					'theme_location' => 'footer-1',
@@ -33,7 +33,8 @@
 					'menu_class' => 'footer-nav-list',
 					'fallback_cb' => function () {
 						echo '<ul class="footer-nav-list">';
-						echo '<li><a href="' . esc_url(home_url('/من-نحن')) . '">' . __('من نحن', 'amal-malki') . '</a></li>';
+						echo '<li><a href="' . esc_url('https://aamal-sa.com/مكتب-محاماة-معتمد/') . '">' . __('من نحن', 'amal-malki') . '</a></li>';
+						echo '<li><a href="' . esc_url(home_url('/المستشارة-آمال-المالكي')) . '">' . __('نبذه عنا', 'amal-malki') . '</a></li>';
 						echo '<li><a href="' . esc_url(home_url('/#services')) . '">' . __('الخدمات', 'amal-malki') . '</a></li>';
 						echo '<li><a href="https://wa.me/9660541415099" target="_blank" rel="noopener noreferrer">' . __('تواصل معنا', 'amal-malki') . '</a></li>';
 						echo '<li><a href="' . esc_url(home_url('/blog')) . '">' . __('المدونة', 'amal-malki') . '</a></li>';
