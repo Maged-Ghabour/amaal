@@ -81,13 +81,11 @@ $card2_text = function_exists('get_field') && get_field('cert_card2_text')
 						alt="<?php esc_attr_e('شعار الهيئة السعودية للمحامين', 'amal-malki'); ?>"
 						loading="lazy">
 				</div>
-				<div class="cert-card__info">
-					<p class="cert-card__label">
-						<?php echo esc_html($card1_label); ?>
-						<strong><?php echo esc_html($card1_number); ?></strong>
-					</p>
-					<p class="cert-card__text"><?php echo esc_html($card1_text); ?></p>
-				</div>
+				<p class="cert-card__label">
+					<?php echo esc_html($card1_label); ?>
+					<strong><?php echo esc_html($card1_number); ?></strong>
+				</p>
+				<p class="cert-card__text"><?php echo esc_html($card1_text); ?></p>
 			</div>
 
 			<!-- Card 2 -->
@@ -97,13 +95,11 @@ $card2_text = function_exists('get_field') && get_field('cert_card2_text')
 						alt="<?php esc_attr_e('شعار وزارة العدل', 'amal-malki'); ?>"
 						loading="lazy">
 				</div>
-				<div class="cert-card__info">
-					<p class="cert-card__label">
-						<?php echo esc_html($card2_label); ?>
-						<strong><?php echo esc_html($card2_number); ?></strong>
-					</p>
-					<p class="cert-card__text"><?php echo esc_html($card2_text); ?></p>
-				</div>
+				<p class="cert-card__label">
+					<?php echo esc_html($card2_label); ?>
+					<strong><?php echo esc_html($card2_number); ?></strong>
+				</p>
+				<p class="cert-card__text"><?php echo esc_html($card2_text); ?></p>
 			</div>
 
 		</div><!-- .certifications-grid -->
