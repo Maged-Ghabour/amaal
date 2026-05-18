@@ -137,6 +137,7 @@ endif;
 						'facebook' => ['url' => get_theme_mod('social_facebook', ''), 'label' => 'Facebook'],
 						'twitter' => ['url' => get_theme_mod('social_twitter', 'https://x.com/mostshar_sa'), 'label' => 'Twitter / X'],
 						'instagram' => ['url' => get_theme_mod('social_instagram', ''), 'label' => 'Instagram'],
+						'tiktok' => ['url' => get_theme_mod('social_tiktok', ''), 'label' => 'TikTok'],
 						'linkedin' => ['url' => get_theme_mod('social_linkedin', ''), 'label' => 'LinkedIn'],
 					];
 					foreach ($socials as $key => $item):

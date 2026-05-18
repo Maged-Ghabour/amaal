@@ -36,8 +36,11 @@ $img_alt = $about_image ? esc_attr($about_image['alt']) : '';
 
 		<!-- Image Column -->
 		<div class="about-image">
-			<img src="<?php echo esc_url($img_url); ?>" alt="<?php echo esc_attr($img_alt); ?>" loading="lazy"
-				width="500" height="600">
+			<?php if ($about_image && isset($about_image['ID'])) : ?>
+				<?php echo wp_get_attachment_image($about_image['ID'], 'large', false, ['loading' => 'lazy']); ?>
+			<?php else : ?>
+				<img src="<?php echo esc_url($img_url); ?>" alt="<?php echo esc_attr($img_alt); ?>" loading="lazy" width="500" height="600">
+			<?php endif; ?>
 		</div>
 		<!-- Text Column -->
 		<div class="about-text">
