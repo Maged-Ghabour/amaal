@@ -25,12 +25,12 @@ if ($partners_query->have_posts()) :
 ?>
 <section id="partners" class="partners-section section-padding">
     <div class="container">
-        <div class="section-header text-center">
+        <div class="partners-header">
             <?php if ($title) : ?>
                 <h2 class="section-title"><?php echo esc_html($title); ?></h2>
             <?php endif; ?>
             <?php if ($subtitle) : ?>
-                <p class="section-subtitle"><?php echo esc_html($subtitle); ?></p>
+                <p class="partners-subtitle"><?php echo nl2br(esc_html($subtitle)); ?></p>
             <?php endif; ?>
         </div>
 

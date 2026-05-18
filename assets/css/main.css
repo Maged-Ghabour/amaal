@@ -1867,6 +1867,19 @@ address {
   background: var(--color-off-white);
 }
 
+.partners-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.partners-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .partners-section .section-title {
   color: var(--color-dark);
 }
@@ -1881,14 +1894,11 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: grayscale(100%);
-  opacity: 0.6;
   transition: var(--transition);
 }
 
 .partner-slide:hover {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.05);
 }
 
 .partner-logo {
