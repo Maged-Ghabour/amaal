@@ -62,6 +62,9 @@ function amal_enqueue_assets()
 		null
 	);
 
+	// Swiper CSS
+	wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css', [], '10.0.0');
+
 	// Main stylesheet
 	wp_enqueue_style(
 		'amal-main',
@@ -87,6 +90,9 @@ function amal_enqueue_assets()
 			AMAL_VERSION
 		);
 	}
+
+	// Swiper JS
+	wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', [], '10.0.0', true);
 
 	// Main JS (defer)
 	wp_enqueue_script(
@@ -130,6 +136,21 @@ function amal_register_post_types()
 		'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
 		'menu_icon' => 'dashicons-hammer',
 		'rewrite' => ['slug' => 'services'],
+	]);
+
+	// Partners CPT
+	register_post_type('partner', [
+		'labels' => [
+			'name' => __('شركاء النجاح', 'amal-malki'),
+			'singular_name' => __('شريك', 'amal-malki'),
+			'add_new_item' => __('إضافة شريك جديد', 'amal-malki'),
+			'edit_item' => __('تعديل الشريك', 'amal-malki'),
+		],
+		'public' => false,
+		'show_ui' => true,
+		'show_in_nav_menus' => false,
+		'supports' => ['title', 'thumbnail'],
+		'menu_icon' => 'dashicons-groups',
 	]);
 
 }
@@ -277,6 +298,21 @@ function amal_acf_fields()
 			['key' => 'field_cert_card2_label', 'label' => __('البطاقة 2 – التسمية (مثل: رقم الترخيص)', 'amal-malki'), 'name' => 'cert_card2_label', 'type' => 'text', 'default_value' => 'رقم الترخيص:'],
 			['key' => 'field_cert_card2_number', 'label' => __('البطاقة 2 – الرقم', 'amal-malki'), 'name' => 'cert_card2_number', 'type' => 'text', 'default_value' => '472438'],
 			['key' => 'field_cert_card2_text', 'label' => __('البطاقة 2 – النص الوصفي', 'amal-malki'), 'name' => 'cert_card2_text', 'type' => 'textarea', 'default_value' => 'محامية مرخصة رسميًا من وزارة العدل بالمملكة العربية السعودية لمزاولة مهنة المحاماة وتقديم الاستشارات القانونية، بخبرة قانونية معتمدة وترخيص ساري حتى عام 2030 في مجال التمثيل القانوني والاستشارات.'],
+		],
+	]);
+
+	// Partners Section Fields
+	acf_add_local_field_group([
+		'key' => 'group_partners',
+		'title' => __('Partners Section – شركاء النجاح', 'amal-malki'),
+		'location' => [
+			[['param' => 'page_type', 'operator' => '==', 'value' => 'front_page']],
+			[['param' => 'page_template', 'operator' => '==', 'value' => 'front-page.php']]
+		],
+		'fields' => [
+			['key' => 'field_show_partners', 'label' => __('إظهار القسم؟', 'amal-malki'), 'name' => 'show_partners_section', 'type' => 'true_false', 'default_value' => 1, 'ui' => 1],
+			['key' => 'field_partners_title', 'label' => __('عنوان القسم', 'amal-malki'), 'name' => 'partners_section_title', 'type' => 'text', 'default_value' => 'شركاء النجاح'],
+			['key' => 'field_partners_subtitle', 'label' => __('النص الفرعي', 'amal-malki'), 'name' => 'partners_section_subtitle', 'type' => 'textarea', 'default_value' => 'نعتز بثقة شركائنا الذين نرافقهم في رحلة نجاحهم'],
 		],
 	]);
 }

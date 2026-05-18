@@ -21,13 +21,14 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
 		'panel' => 'amal_options',
 	]);
 
-	$socials = ['instagram', 'tiktok', 'twitter', 'facebook', 'snapchat'];
+	$socials = ['instagram', 'tiktok', 'twitter', 'facebook', 'snapchat', 'linkedin'];
 	$labels = [
 		'instagram' => 'Instagram',
 		'tiktok' => 'TikTok',
 		'twitter' => 'Twitter / X',
 		'facebook' => 'Facebook',
 		'snapchat' => 'Snapchat',
+		'linkedin' => 'LinkedIn',
 	];
 
 	foreach ($socials as $s) {
@@ -48,6 +49,7 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
 	$footer_fields = [
 		'footer_address' => ['label' => __('العنوان', 'amal-malki'), 'default' => 'برج الرياض، الرياض', 'type' => 'text'],
 		'footer_phone' => ['label' => __('الجوال', 'amal-malki'), 'default' => '+966 00000000', 'type' => 'text'],
+		'footer_whatsapp' => ['label' => __('الواتساب', 'amal-malki'), 'default' => '+96600000000', 'type' => 'text'],
 		'footer_email' => ['label' => __('البريد الإلكتروني', 'amal-malki'), 'default' => 'mail@mail.com', 'type' => 'email'],
 	];
 

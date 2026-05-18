@@ -1860,3 +1860,45 @@ address {
     height: 28px;
   }
 }
+
+/* ─── Partners Section ─────────────────────────────────────────── */
+.partners-section {
+  padding-block: var(--space-xl);
+  background: var(--color-off-white);
+}
+
+.partners-section .section-title {
+  color: var(--color-dark);
+}
+
+.partners-swiper {
+  padding-block: 2rem;
+  overflow: hidden;
+}
+
+.partner-slide {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+.partner-slide:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.partner-logo {
+  max-height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+.partner-name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+}
