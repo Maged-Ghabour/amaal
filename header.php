@@ -23,8 +23,18 @@
 		<?php 
 			$preloader_img = get_theme_mod('preloader_image', 'https://aamal-sa.com/wp-content/uploads/2026/04/image-13-Picsart-AiImageEnhancer.png'); 
 			$preloader_size = get_theme_mod('preloader_image_size', 400);
+			$preloader_id = attachment_url_to_postid($preloader_img);
+			
+			if ( $preloader_id ) {
+				echo wp_get_attachment_image($preloader_id, 'medium', false, [
+					'alt' => 'Aamal Preloader',
+					'style' => 'max-width: min(70vw, ' . esc_attr($preloader_size) . 'px);',
+					'loading' => 'eager'
+				]);
+			} else {
 		?>
-		<img src="<?php echo esc_url($preloader_img); ?>" alt="Aamal Preloader" style="max-width: min(70vw, <?php echo esc_attr($preloader_size); ?>px);" />
+		<img src="<?php echo esc_url($preloader_img); ?>" alt="Aamal Preloader" style="max-width: min(70vw, <?php echo esc_attr($preloader_size); ?>px);" loading="eager" />
+		<?php } ?>
 	</div>
 </div>
 <script>

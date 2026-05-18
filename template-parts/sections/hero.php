@@ -26,7 +26,22 @@ $btn_url = $hero_btn_url ?: 'https://wa.me/9660541415099';
 // Background URL logic: First ACF, then Customizer, then default fallback.
 $customizer_bg = get_theme_mod('hero_default_bg', '');
 $default_bg = AMAL_ASSETS . '/images/hero-bg.jpg';
-$bg_url = $hero_bg ? esc_url($hero_bg['url']) : ($customizer_bg ? esc_url($customizer_bg) : $default_bg);
+
+if ($hero_bg && isset($hero_bg['sizes']['hero-bg'])) {
+	$bg_url = esc_url($hero_bg['sizes']['hero-bg']);
+} elseif ($hero_bg && isset($hero_bg['url'])) {
+	$bg_url = esc_url($hero_bg['url']);
+} elseif ($customizer_bg) {
+	$bg_id = attachment_url_to_postid($customizer_bg);
+	if ($bg_id) {
+		$resized_url = wp_get_attachment_image_url($bg_id, 'hero-bg');
+		$bg_url = $resized_url ? esc_url($resized_url) : esc_url($customizer_bg);
+	} else {
+		$bg_url = esc_url($customizer_bg);
+	}
+} else {
+	$bg_url = esc_url($default_bg);
+}
 
 $social_instagram = get_theme_mod('social_instagram', '#');
 $social_tiktok = get_theme_mod('social_tiktok', '#');
