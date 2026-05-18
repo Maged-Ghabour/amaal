@@ -483,3 +483,30 @@ add_filter( 'get_the_archive_title', function ( $title ) {
     }
     return $title;
 });
+
+function amal_deregister_scripts(){
+    wp_deregister_script('wp-embed');
+}
+add_action('wp_footer', 'amal_deregister_scripts');
+
+function amal_cleanup_head() {
+    remove_action('wp_head', 'wp_generator'); // Remove WP version
+    remove_action('wp_head', 'rsd_link'); // Remove RSD link
+    remove_action('wp_head', 'wlwmanifest_link'); // Remove wlwmanifest
+    remove_action('wp_head', 'wp_shortlink_wp_head'); // Remove shortlink
+    remove_action('wp_head', 'rest_output_link_wp_head'); // Remove REST API link
+    remove_action('wp_head', 'wp_oembed_add_discovery_links'); // Remove oEmbed discovery
+    remove_action('wp_head', 'wp_oembed_add_host_js'); // Remove oEmbed JS
+}
+add_action('init', 'amal_cleanup_head');
+
+function amal_remove_unneeded_styles() {
+    wp_dequeue_style('classic-theme-styles');
+    if (is_front_page()) {
+        wp_dequeue_style('wp-block-library');
+        wp_dequeue_style('wp-block-library-theme');
+        wp_dequeue_style('wc-blocks-style'); // If WooCommerce is there
+        wp_dequeue_style('global-styles');
+    }
+}
+add_action('wp_enqueue_scripts', 'amal_remove_unneeded_styles', 100);
