@@ -70,6 +70,28 @@ get_header();
 				</ul>
 			</div>
 
+			<!-- Related Articles Widget -->
+			<?php 
+			if ( function_exists('get_field') ) {
+				$related_articles = get_field('service_related_articles');
+				if ( $related_articles ) : ?>
+					<div class="service-widget service-list-widget">
+						<h3 class="widget-title"><?php _e( 'مقالات ذات صلة', 'amal-malki' ); ?></h3>
+						<ul class="sidebar-services-list">
+							<?php foreach ( $related_articles as $related_post ) : ?>
+								<li>
+									<a href="<?php echo esc_url( get_permalink( $related_post->ID ) ); ?>">
+										<?php echo esc_html( get_the_title( $related_post->ID ) ); ?>
+										<span class="icon-arrow">←</span>
+									</a>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+				<?php endif; 
+			}
+			?>
+
 		</aside>
 	</div>
 

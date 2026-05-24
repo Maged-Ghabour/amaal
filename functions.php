@@ -315,6 +315,26 @@ function amal_acf_fields()
 			['key' => 'field_partners_subtitle', 'label' => __('النص الفرعي', 'amal-malki'), 'name' => 'partners_section_subtitle', 'type' => 'textarea', 'default_value' => 'نعتز بثقة شركائنا الذين نرافقهم في رحلة نجاحهم'],
 		],
 	]);
+
+	// Related Articles for Services
+	acf_add_local_field_group([
+		'key' => 'group_service_articles',
+		'title' => __('مقالات ذات صلة بالخدمة', 'amal-malki'),
+		'location' => [
+			[['param' => 'post_type', 'operator' => '==', 'value' => 'service']]
+		],
+		'fields' => [
+			[
+				'key' => 'field_service_related_articles',
+				'label' => __('اختر المقالات المرتبطة بهذه الخدمة', 'amal-malki'),
+				'name' => 'service_related_articles',
+				'type' => 'relationship',
+				'post_type' => ['post'],
+				'return_format' => 'object',
+				'ui' => 1,
+			],
+		],
+	]);
 }
 add_action('acf/init', 'amal_acf_fields');
 
