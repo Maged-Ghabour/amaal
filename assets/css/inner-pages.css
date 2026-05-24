@@ -5,14 +5,13 @@
 
 /* ─── Archive / Blog Grid ─────────────────────────────────────── */
 .archive-main,
-.single-main,
 .error-404-main {
   padding-block: var(--space-xl);
   min-height: 70vh;
 }
 
-
-.service-single-main {
+.service-single-main,
+.single-main {
   padding-bottom: var(--space-xl);
   min-height: 70vh;
 }
