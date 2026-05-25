@@ -202,6 +202,24 @@
 
   /* ── Swiper Initializations ──────────────────────────────────── */
   if (typeof Swiper !== 'undefined') {
+    /* ── Hero Swiper ── */
+    const heroSwiper = new Swiper('.hero-swiper', {
+      slidesPerView: 1,
+      loop: true,
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.hero-pagination',
+        clickable: true,
+      },
+      speed: 800,
+    });
+
+    /* ── Partners Swiper ── */
     const partnersSwiper = new Swiper('.partners-swiper', {
       slidesPerView: 2,
       spaceBetween: 30,

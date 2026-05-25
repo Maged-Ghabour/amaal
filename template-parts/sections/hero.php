@@ -53,29 +53,41 @@ $social_tiktok = get_theme_mod('social_tiktok', '#');
 	<!-- Dark overlay -->
 	<div class="hero-overlay" aria-hidden="true"></div>
 
-	<!-- Social Pills (top left) -->
-	<!-- <div class="hero-social" aria-label="<?php esc_attr_e('روابط التواصل الاجتماعي', 'amal-malki'); ?>">
-		<a href="<?php echo esc_url($social_instagram); ?>" class="social-pill" target="_blank"
-			rel="noopener noreferrer" aria-label="Instagram">
-			<?php echo amal_get_social_icon('instagram'); ?>
-		</a>
-		<a href="<?php echo esc_url($social_tiktok); ?>" class="social-pill" target="_blank" rel="noopener noreferrer"
-			aria-label="TikTok">
-			<?php echo amal_get_social_icon('tiktok'); ?>
-		</a>
-	</div> -->
+	<!-- Hero Swiper -->
+	<div class="swiper hero-swiper">
+		<div class="swiper-wrapper">
 
-	<!-- Hero Content -->
-	<div class="hero-content container">
-		<h1 class="hero-title">
-			<?php echo esc_html($title); ?>
-		</h1>
-		<p class="hero-subtitle">
-			<?php echo esc_html($subtitle); ?>
-		</p>
-		<a href="<?php echo esc_url($btn_url); ?>" class="btn btn--primary hero-cta">
-			<?php echo esc_html($btn_text); ?>
-		</a>
-	</div>
+			<!-- Slide 1: Banner Image -->
+			<div class="swiper-slide hero-slide hero-slide--banner">
+				<div class="hero-banner-wrap">
+					<img
+						src="<?php echo esc_url(get_template_directory_uri() . '/assets/public/aamal-sa.png'); ?>"
+						alt="<?php esc_attr_e('أعمال السعودية', 'amal-malki'); ?>"
+						class="hero-banner-img"
+						loading="eager"
+					>
+				</div>
+			</div>
+
+			<!-- Slide 2: Text Content -->
+			<div class="swiper-slide hero-slide hero-slide--content">
+				<div class="hero-content container">
+					<h1 class="hero-title">
+						<?php echo esc_html($title); ?>
+					</h1>
+					<p class="hero-subtitle">
+						<?php echo esc_html($subtitle); ?>
+					</p>
+					<a href="<?php echo esc_url($btn_url); ?>" class="btn btn--primary hero-cta">
+						<?php echo esc_html($btn_text); ?>
+					</a>
+				</div>
+			</div>
+
+		</div><!-- .swiper-wrapper -->
+
+		<!-- Pagination dots -->
+		<div class="swiper-pagination hero-pagination"></div>
+	</div><!-- .hero-swiper -->
 
 </section><!-- #hero -->
