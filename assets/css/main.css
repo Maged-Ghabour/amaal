@@ -447,24 +447,21 @@ svg {
 ══════════════════════════════════════════════════ */
 .hs-slide--banner {
   background: transparent;
-  flex-direction: column;
 }
 
 .hs-banner-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  inset: 0;
+  padding-top: 80px;
   width: 100%;
   height: 100%;
-  padding-top: 80px;
-  padding-inline: 0;
 }
 
 .hs-banner-img {
   width: 100%;
   height: 100%;
-  max-height: calc(100vh - 80px);
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
