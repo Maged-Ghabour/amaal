@@ -446,7 +446,7 @@ svg {
    خلفية داكنة مستقلة تماماً
 ══════════════════════════════════════════════════ */
 .hs-slide--banner {
-  background: linear-gradient(145deg, #1a0e06 0%, #2d1412 35%, #1e0d28 70%, #0f0a20 100%);
+  background: transparent;
   flex-direction: column;
 }
 
@@ -455,18 +455,16 @@ svg {
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   padding-top: 80px;
-  padding-inline: var(--container-pad);
+  padding-inline: 0;
 }
 
 .hs-banner-img {
   width: 100%;
-  max-width: 860px;
-  max-height: 75vh;
-  height: auto;
+  height: 100%;
+  max-height: calc(100vh - 80px);
   object-fit: contain;
-  filter: drop-shadow(0 24px 64px rgba(0, 0, 0, 0.6));
-  border-radius: var(--radius-md);
   display: block;
 }
 
@@ -564,8 +562,7 @@ svg {
 /* ── Mobile ── */
 @media (max-width: 767px) {
   .hs-banner-img {
-    max-height: 60vh;
-    border-radius: var(--radius-sm);
+    max-height: calc(100vh - 80px);
   }
 
   .hs-slide--hero {
