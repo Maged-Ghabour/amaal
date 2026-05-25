@@ -558,6 +558,13 @@ svg {
 
 /* ── Mobile ── */
 @media (max-width: 767px) {
+  .hero-swiper-outer {
+    position: relative;
+    height: 75vh;
+    min-height: 513px;
+    overflow: hidden;
+  }
+
   .hs-banner-img {
     object-fit: contain;
     padding: 1rem;
