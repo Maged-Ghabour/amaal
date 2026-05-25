@@ -11,21 +11,21 @@ if (!$show_hero) {
 }
 
 // ACF fields with fallback defaults
-$hero_title = function_exists('get_field') ? get_field('hero_title') : null;
+$hero_title    = function_exists('get_field') ? get_field('hero_title')    : null;
 $hero_subtitle = function_exists('get_field') ? get_field('hero_subtitle') : null;
 $hero_btn_text = function_exists('get_field') ? get_field('hero_btn_text') : null;
-$hero_btn_url = function_exists('get_field') ? get_field('hero_btn_url') : null;
-$hero_bg = function_exists('get_field') ? get_field('hero_bg') : null;
+$hero_btn_url  = function_exists('get_field') ? get_field('hero_btn_url')  : null;
+$hero_bg       = function_exists('get_field') ? get_field('hero_bg')       : null;
 
 // Defaults
-$title = $hero_title ?: __('هنا تُدار الحلول', 'amal-malki');
+$title    = $hero_title    ?: __('هنا تُدار الحلول', 'amal-malki');
 $subtitle = $hero_subtitle ?: __('من الاستشارة إلى الحل، نرافقك قانونياً برؤية دقيقة واحتراف يصنع الفارق', 'amal-malki');
 $btn_text = $hero_btn_text ?: __('اطلب استشارة', 'amal-malki');
-$btn_url = $hero_btn_url ?: 'https://wa.me/9660541415099';
+$btn_url  = $hero_btn_url  ?: 'https://wa.me/9660541415099';
 
-// Background URL logic: First ACF, then Customizer, then default fallback.
+// Background URL logic
 $customizer_bg = get_theme_mod('hero_default_bg', '');
-$default_bg = AMAL_ASSETS . '/images/hero-bg.jpg';
+$default_bg    = AMAL_ASSETS . '/images/hero-bg.jpg';
 
 if ($hero_bg && isset($hero_bg['sizes']['hero-bg'])) {
 	$bg_url = esc_url($hero_bg['sizes']['hero-bg']);
@@ -43,35 +43,35 @@ if ($hero_bg && isset($hero_bg['sizes']['hero-bg'])) {
 	$bg_url = esc_url($default_bg);
 }
 
-$social_instagram = get_theme_mod('social_instagram', '#');
-$social_tiktok = get_theme_mod('social_tiktok', '#');
+$banner_url = esc_url(get_template_directory_uri() . '/assets/public/aamal-sa.png');
 ?>
 
-<section id="hero" class="hero-section" style="background-image: url('<?php echo esc_url($bg_url); ?>');"
-	aria-label="<?php esc_attr_e('القسم الرئيسي', 'amal-malki'); ?>">
-
-	<!-- Dark overlay -->
-	<div class="hero-overlay" aria-hidden="true"></div>
-
-	<!-- Hero Swiper -->
+<!-- ═══════════════════════════════════════════════════════════
+     HERO SWIPER  –  كلا السلايدين مستقلان تماماً
+════════════════════════════════════════════════════════════ -->
+<div class="hero-swiper-outer" aria-label="<?php esc_attr_e('القسم الرئيسي', 'amal-malki'); ?>">
 	<div class="swiper hero-swiper">
 		<div class="swiper-wrapper">
 
-			<!-- Slide 1: Banner Image -->
-			<div class="swiper-slide hero-slide hero-slide--banner">
-				<div class="hero-banner-wrap">
+			<!-- ── Slide 1 : Banner (aamal-sa.png) ────────────────── -->
+			<div class="swiper-slide hs-slide hs-slide--banner">
+				<div class="hs-banner-inner">
 					<img
-						src="<?php echo esc_url(get_template_directory_uri() . '/assets/public/aamal-sa.png'); ?>"
+						src="<?php echo $banner_url; ?>"
 						alt="<?php esc_attr_e('أعمال السعودية', 'amal-malki'); ?>"
-						class="hero-banner-img"
+						class="hs-banner-img"
 						loading="eager"
 					>
 				</div>
 			</div>
 
-			<!-- Slide 2: Text Content -->
-			<div class="swiper-slide hero-slide hero-slide--content">
-				<div class="hero-content container">
+			<!-- ── Slide 2 : Hero Section الأصلية ─────────────────── -->
+			<div class="swiper-slide hs-slide hs-slide--hero"
+				style="background-image: url('<?php echo $bg_url; ?>');">
+				<!-- Overlay -->
+				<div class="hs-overlay" aria-hidden="true"></div>
+				<!-- Content -->
+				<div class="hs-content container">
 					<h1 class="hero-title">
 						<?php echo esc_html($title); ?>
 					</h1>
@@ -88,6 +88,6 @@ $social_tiktok = get_theme_mod('social_tiktok', '#');
 
 		<!-- Pagination dots -->
 		<div class="swiper-pagination hero-pagination"></div>
-	</div><!-- .hero-swiper -->
 
-</section><!-- #hero -->
+	</div><!-- .hero-swiper -->
+</div><!-- .hero-swiper-outer -->
