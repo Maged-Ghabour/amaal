@@ -201,51 +201,21 @@
   }
 
   /* ── Swiper Initializations ──────────────────────────────────── */
-  function initSwipers() {
-    if (typeof Swiper === 'undefined') return;
-
-    /* ── Hero Swiper ── */
-    if (document.querySelector('.hero-swiper')) {
-      new Swiper('.hero-swiper', {
-        slidesPerView: 1,
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.hero-pagination',
-          clickable: true,
-        },
-        allowTouchMove: true,
-        speed: 900,
-      });
-    }
-
-    /* ── Partners Swiper ── */
-    if (document.querySelector('.partners-swiper')) {
-      new Swiper('.partners-swiper', {
-        slidesPerView: 2,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        breakpoints: {
-          640: { slidesPerView: 3, spaceBetween: 40 },
-          768: { slidesPerView: 4, spaceBetween: 50 },
-          1024: { slidesPerView: 5, spaceBetween: 50 },
-        }
-      });
-    }
-  }
-
-  // Run after page fully loaded so Swiper can measure heights
-  if (document.readyState === 'complete') {
-    initSwipers();
-  } else {
-    window.addEventListener('load', initSwipers);
+  if (typeof Swiper !== 'undefined') {
+    const partnersSwiper = new Swiper('.partners-swiper', {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        640: { slidesPerView: 3, spaceBetween: 40 },
+        768: { slidesPerView: 4, spaceBetween: 50 },
+        1024: { slidesPerView: 5, spaceBetween: 50 },
+      }
+    });
   }
 
 })();
