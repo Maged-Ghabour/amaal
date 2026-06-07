@@ -49,7 +49,31 @@ endif;
 				?>
 			</div>
 
-			<!-- Col 2: Working Hours -->
+			<!-- Col 2: Our Services -->
+			<div class="footer-col">
+				<h4 class="footer-col-title"><?php _e('خدماتنا', 'amal-malki'); ?></h4>
+				<?php
+				wp_nav_menu([
+					'theme_location' => 'footer-services',
+					'container' => false,
+					'menu_class' => 'footer-nav-list',
+					'fallback_cb' => function () {
+						echo '<ul class="footer-nav-list">';
+						echo '<li><a href="' . esc_url(home_url('/صياغة-العقود/')) . '">' . __('صياغة العقود', 'amal-malki') . '</a></li>';
+						echo '<li><a href="' . esc_url(home_url('/تأسيس-الشركات/')) . '">' . __('تأسيس الشركات', 'amal-malki') . '</a></li>';
+						echo '<li><a href="' . esc_url(home_url('/إعداد-الدعاوى-القضائية/')) . '">' . __('إعداد الدعاوى القضائية', 'amal-malki') . '</a></li>';
+						echo '<li><a href="' . esc_url(home_url('/المذكرات-الجوابية/')) . '">' . __('المذكرات الجوابية', 'amal-malki') . '</a></li>';
+						echo '<li><a href="' . esc_url(home_url('/الاستشارة-القانونية-للشركات/')) . '">' . __('الاستشارة القانونية للشركات', 'amal-malki') . '</a></li>';
+						echo '<li><a href="' . esc_url(home_url('/خدمات-التوثيق/')) . '">' . __('خدمات التوثيق', 'amal-malki') . '</a></li>';
+						echo '<li><a href="' . esc_url(home_url('/حضور-الجلسات-القضائية/')) . '">' . __('حضور الجلسات القضائية', 'amal-malki') . '</a></li>';
+						echo '<li><a href="' . esc_url(home_url('/متابعة-قضايا-الاستئناف/')) . '">' . __('متابعة قضايا الاستئناف', 'amal-malki') . '</a></li>';
+						echo '</ul>';
+					},
+				]);
+				?>
+			</div>
+
+			<!-- Col 3: Working Hours -->
 			<div class="footer-col">
 				<h4 class="footer-col-title"><?php _e('ساعات العمل', 'amal-malki'); ?></h4>
 				<p class="footer-hours-label"><?php _e('من الأحد إلى الخميس', 'amal-malki'); ?></p>

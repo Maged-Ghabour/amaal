@@ -36,6 +36,7 @@ function amal_setup()
 	register_nav_menus([
 		'primary' => __('القائمة الرئيسية', 'amal-malki'),
 		'footer-1' => __('روابط مهمة', 'amal-malki'),
+		'footer-services' => __('خدماتنا (الفوتر)', 'amal-malki'),
 	]);
 
 	// Gutenberg wide/full alignment
