@@ -115,7 +115,7 @@ $bg_url = AMAL_ASSETS . '/public/' . rawurlencode('تأسيس شركات.png');
 			<div class="why-contract-wrap">
 				<!-- Image First (Right side in RTL) -->
 				<div class="why-contract-image">
-					<img src="<?php echo esc_url(AMAL_ASSETS . '/public/why us.png'); ?>" alt="لماذا تختارنا">
+					<img src="<?php echo esc_url(AMAL_ASSETS . '/public/whyus.png'); ?>" alt="لماذا تختارنا">
 				</div>
 				<!-- Content Second (Left side in RTL) -->
 				<div class="why-contract-content" style="padding-inline-end: 0; padding-inline-start: 1rem;">
