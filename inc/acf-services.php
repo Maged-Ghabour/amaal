@@ -22,12 +22,26 @@ function amal_register_service_acf_fields() {
 		['key' => 'field_cd_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099'],
 		['key' => 'field_cd_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
 
-		['key' => 'field_cd_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'],
-		['key' => 'field_cd_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'],
-		['key' => 'field_cd_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'أهمية صياغة العقود التجارية بدقة؟'],
-		['key' => 'field_cd_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'العقود ليست مجرد أوراق، بل هي حماية لاستثماراتك ومستقبلك التجاري. من خلال صياغة احترافية، نضمن لك:'],
-		['key' => 'field_cd_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'],
+		['key' => 'field_cd_stats_tab', 'label' => 'Stats Section', 'type' => 'tab'],
 	];
+	$default_stats = [
+		1 => ['num' => '+200', 'title' => 'عميل راضٍ', 'desc' => 'من الشركات والأفراد'],
+		2 => ['num' => '%98', 'title' => 'نسبة النجاح', 'desc' => 'في حسم النزاعات العمالية'],
+		3 => ['num' => '+15', 'title' => 'خبير قانوني', 'desc' => 'متخصصون في القضايا العمالية'],
+		4 => ['num' => '+10', 'title' => 'سنوات خبرة', 'desc' => 'في تقديم الاستشارات القانونية']
+	];
+	for ($i = 1; $i <= 4; $i++) {
+		$contract_fields[] = ['key' => "field_cd_stat_{$i}_icon", 'label' => "إحصائية {$i} - أيقونة", 'name' => "stat_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
+		$contract_fields[] = ['key' => "field_cd_stat_{$i}_number", 'label' => "إحصائية {$i} - الرقم", 'name' => "stat_{$i}_number", 'type' => 'text', 'default_value' => $default_stats[$i]['num']];
+		$contract_fields[] = ['key' => "field_cd_stat_{$i}_title", 'label' => "إحصائية {$i} - العنوان", 'name' => "stat_{$i}_title", 'type' => 'text', 'default_value' => $default_stats[$i]['title']];
+		$contract_fields[] = ['key' => "field_cd_stat_{$i}_desc", 'label' => "إحصائية {$i} - الوصف", 'name' => "stat_{$i}_desc", 'type' => 'text', 'default_value' => $default_stats[$i]['desc']];
+	}
+
+	$contract_fields[] = ['key' => 'field_cd_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'];
+	$contract_fields[] = ['key' => 'field_cd_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'];
+	$contract_fields[] = ['key' => 'field_cd_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'أهمية صياغة العقود التجارية بدقة؟'];
+	$contract_fields[] = ['key' => 'field_cd_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'العقود ليست مجرد أوراق، بل هي حماية لاستثماراتك ومستقبلك التجاري. من خلال صياغة احترافية، نضمن لك:'];
+	$contract_fields[] = ['key' => 'field_cd_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'];
 	
 	$default_why_lists = [
 		'حماية قانونية كاملة للحقوق والالتزامات.',
