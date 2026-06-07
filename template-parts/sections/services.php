@@ -43,23 +43,25 @@ $services = new WP_Query( $args );
 			<div class="services-grid">
 				<?php
 				$fallback_services = [
-					[ 'title' => __( 'إعداد الدعوى القضائية', 'amal-malki' ),  'excerpt' => __( 'إعداد مذكرات قضائية وصياغة الدعاوى بأعلى معايير المهنة القانونية.', 'amal-malki' ) ],
-					[ 'title' => __( 'المذكرات الجوابية', 'amal-malki' ),       'excerpt' => __( 'صياغة ردود احترافية تحمي موقفك القانوني أمام المحاكم.', 'amal-malki' ) ],
-					[ 'title' => __( 'حضور الجلسات القضائية', 'amal-malki' ),  'excerpt' => __( 'تمثيلك القانوني الكامل في جلسات المحاكم بكل مستوياتها.', 'amal-malki' ) ],
-					[ 'title' => __( 'متابعة قضايا الاستئناف', 'amal-malki' ), 'excerpt' => __( 'متابعة مسار قضيتك أمام محاكم الاستئناف للحصول على أفضل النتائج.', 'amal-malki' ) ],
-					[ 'title' => __( 'صياغة وتدقيق العقود', 'amal-malki' ),    'excerpt' => __( 'صياغة العقود ومراجعتها وتدقيقها لحماية حقوقك القانونية.', 'amal-malki' ) ],
-					[ 'title' => __( 'خدمات التوثيق', 'amal-malki' ),          'excerpt' => __( 'خدمات التوثيق الرسمي وإصدار الوكالات والمستندات القانونية.', 'amal-malki' ) ],
-					[ 'title' => __( 'الاستشارة القانونية', 'amal-malki' ),     'excerpt' => __( 'استشارات قانونية متخصصة تجمع بين الدقة والسرعة والاحترافية.', 'amal-malki' ) ],
-					[ 'title' => __( 'تأسيس الشركات', 'amal-malki' ),           'excerpt' => __( 'إجراءات تأسيس الشركات وتسجيلها وفق الأنظمة واللوائح السعودية.', 'amal-malki' ) ],
+					[ 'title' => __( 'إعداد الدعوى القضائية', 'amal-malki' ),  'excerpt' => __( 'إعداد مذكرات قضائية وصياغة الدعاوى بأعلى معايير المهنة القانونية.', 'amal-malki' ), 'url' => home_url('/إعداد-الدعاوى-القضائية/') ],
+					[ 'title' => __( 'المذكرات الجوابية', 'amal-malki' ),       'excerpt' => __( 'صياغة ردود احترافية تحمي موقفك القانوني أمام المحاكم.', 'amal-malki' ), 'url' => home_url('/المذكرات-الجوابية/') ],
+					[ 'title' => __( 'حضور الجلسات القضائية', 'amal-malki' ),  'excerpt' => __( 'تمثيلك القانوني الكامل في جلسات المحاكم بكل مستوياتها.', 'amal-malki' ), 'url' => home_url('/حضور-الجلسات-القضائية/') ],
+					[ 'title' => __( 'متابعة قضايا الاستئناف', 'amal-malki' ), 'excerpt' => __( 'متابعة مسار قضيتك أمام محاكم الاستئناف للحصول على أفضل النتائج.', 'amal-malki' ), 'url' => home_url('/متابعة-قضايا-الاستئناف/') ],
+					[ 'title' => __( 'صياغة وتدقيق العقود', 'amal-malki' ),    'excerpt' => __( 'صياغة العقود ومراجعتها وتدقيقها لحماية حقوقك القانونية.', 'amal-malki' ), 'url' => home_url('/صياغة-وتدقيق-العقود/') ],
+					[ 'title' => __( 'خدمات التوثيق', 'amal-malki' ),          'excerpt' => __( 'خدمات التوثيق الرسمي وإصدار الوكالات والمستندات القانونية.', 'amal-malki' ), 'url' => home_url('/خدمات-التوثيق/') ],
+					[ 'title' => __( 'الاستشارة القانونية', 'amal-malki' ),     'excerpt' => __( 'استشارات قانونية متخصصة تجمع بين الدقة والسرعة والاحترافية.', 'amal-malki' ), 'url' => home_url('/الاستشارة-القانونية/') ],
+					[ 'title' => __( 'تأسيس الشركات', 'amal-malki' ),           'excerpt' => __( 'إجراءات تأسيس الشركات وتسجيلها وفق الأنظمة واللوائح السعودية.', 'amal-malki' ), 'url' => home_url('/تأسيس-الشركات/') ],
 				];
 				foreach ( $fallback_services as $svc ) : ?>
 					<div class="service-card">
 						<div class="service-card__thumb service-card__thumb--placeholder"></div>
 						<div class="service-card__body">
-							<h3 class="service-card__title"><?php echo esc_html( $svc['title'] ); ?></h3>
+							<h3 class="service-card__title">
+								<a href="<?php echo esc_url($svc['url']); ?>"><?php echo esc_html( $svc['title'] ); ?></a>
+							</h3>
 							<p class="service-card__excerpt"><?php echo esc_html( $svc['excerpt'] ); ?></p>
-							<a href="https://wa.me/9660541415099" target="_blank" rel="noopener noreferrer" class="service-card__link">
-								<?php _e( 'تواصل معنا', 'amal-malki' ); ?>
+							<a href="<?php echo esc_url($svc['url']); ?>" class="service-card__link">
+								<?php _e( 'اقرأ المزيد', 'amal-malki' ); ?>
 								<span class="service-card__arrow" aria-hidden="true">
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 										<line x1="17" y1="7" x2="7" y2="17"/>
