@@ -165,7 +165,11 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/' . rawurlencode('صي�
 				<div class="step-item">
 					<div class="step-icon-wrap">
 						<div class="step-number"><?php echo $i; ?></div>
-						<div class="step-icon"></div>
+						<div class="step-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M20 6L9 17l-5-5"></path>
+							</svg>
+						</div>
 					</div>
 					<h4 class="step-title"><?php echo esc_html($st_title); ?></h4>
 					<p class="step-desc"><?php echo esc_html($st_desc); ?></p>
