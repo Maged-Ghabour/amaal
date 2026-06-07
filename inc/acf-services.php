@@ -354,5 +354,117 @@ function amal_register_service_acf_fields() {
 		],
 		'fields' => $notarization_fields,
 	]);
+	// ---------------------------------------------------------
+	// 7. Hearings / Representation Template
+	// ---------------------------------------------------------
+	$hearings_fields = [
+		['key' => 'field_hr_hero_tab', 'label' => 'Hero Section', 'type' => 'tab'],
+		['key' => 'field_hr_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'text'],
+		['key' => 'field_hr_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea'],
+		['key' => 'field_hr_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text'],
+		['key' => 'field_hr_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url'],
+		['key' => 'field_hr_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
+
+		['key' => 'field_hr_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'],
+		['key' => 'field_hr_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'],
+		['key' => 'field_hr_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text'],
+		['key' => 'field_hr_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text'],
+		['key' => 'field_hr_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'],
+	];
+	for ($i = 1; $i <= 5; $i++) {
+		$hearings_fields[] = ['key' => "field_hr_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text'];
+	}
+	$hearings_fields[] = ['key' => 'field_hr_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text'];
+	$hearings_fields[] = ['key' => 'field_hr_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url'];
+
+	$hearings_fields[] = ['key' => 'field_hr_types_tab', 'label' => 'Specialization Types', 'type' => 'tab'];
+	$hearings_fields[] = ['key' => 'field_hr_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text'];
+	$hearings_fields[] = ['key' => 'field_hr_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text'];
+	for ($i = 1; $i <= 3; $i++) {
+		$hearings_fields[] = ['key' => "field_hr_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
+		$hearings_fields[] = ['key' => "field_hr_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text'];
+		$hearings_fields[] = ['key' => "field_hr_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea'];
+	}
+
+	$hearings_fields[] = ['key' => 'field_hr_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
+	$hearings_fields[] = ['key' => 'field_hr_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text'];
+	$hearings_fields[] = ['key' => 'field_hr_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea'];
+	for ($i = 1; $i <= 3; $i++) {
+		$hearings_fields[] = ['key' => "field_hr_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text'];
+		$hearings_fields[] = ['key' => "field_hr_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea'];
+	}
+
+	$hearings_fields[] = ['key' => 'field_hr_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
+	$hearings_fields[] = ['key' => 'field_hr_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text'];
+	$hearings_fields[] = ['key' => 'field_hr_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text'];
+	for ($i = 1; $i <= 5; $i++) {
+		$hearings_fields[] = ['key' => "field_hr_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text'];
+		$hearings_fields[] = ['key' => "field_hr_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea'];
+	}
+
+	acf_add_local_field_group([
+		'key' => 'group_hearings',
+		'title' => 'إعدادات صفحة حضور الجلسات القضائية',
+		'location' => [
+			[['param' => 'page_template', 'operator' => '==', 'value' => 'template-hearings.php']]
+		],
+		'fields' => $hearings_fields,
+	]);
+	// ---------------------------------------------------------
+	// 8. Appeals / Cassation Template
+	// ---------------------------------------------------------
+	$appeals_fields = [
+		['key' => 'field_ap_hero_tab', 'label' => 'Hero Section', 'type' => 'tab'],
+		['key' => 'field_ap_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'text'],
+		['key' => 'field_ap_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea'],
+		['key' => 'field_ap_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text'],
+		['key' => 'field_ap_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url'],
+		['key' => 'field_ap_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
+
+		['key' => 'field_ap_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'],
+		['key' => 'field_ap_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'],
+		['key' => 'field_ap_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text'],
+		['key' => 'field_ap_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text'],
+		['key' => 'field_ap_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'],
+	];
+	for ($i = 1; $i <= 5; $i++) {
+		$appeals_fields[] = ['key' => "field_ap_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text'];
+	}
+	$appeals_fields[] = ['key' => 'field_ap_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text'];
+	$appeals_fields[] = ['key' => 'field_ap_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url'];
+
+	$appeals_fields[] = ['key' => 'field_ap_types_tab', 'label' => 'Specialization Types', 'type' => 'tab'];
+	$appeals_fields[] = ['key' => 'field_ap_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text'];
+	$appeals_fields[] = ['key' => 'field_ap_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text'];
+	for ($i = 1; $i <= 3; $i++) {
+		$appeals_fields[] = ['key' => "field_ap_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
+		$appeals_fields[] = ['key' => "field_ap_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text'];
+		$appeals_fields[] = ['key' => "field_ap_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea'];
+	}
+
+	$appeals_fields[] = ['key' => 'field_ap_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
+	$appeals_fields[] = ['key' => 'field_ap_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text'];
+	$appeals_fields[] = ['key' => 'field_ap_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea'];
+	for ($i = 1; $i <= 3; $i++) {
+		$appeals_fields[] = ['key' => "field_ap_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text'];
+		$appeals_fields[] = ['key' => "field_ap_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea'];
+	}
+
+	$appeals_fields[] = ['key' => 'field_ap_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
+	$appeals_fields[] = ['key' => 'field_ap_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text'];
+	$appeals_fields[] = ['key' => 'field_ap_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text'];
+	for ($i = 1; $i <= 5; $i++) {
+		$appeals_fields[] = ['key' => "field_ap_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text'];
+		$appeals_fields[] = ['key' => "field_ap_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea'];
+	}
+
+	acf_add_local_field_group([
+		'key' => 'group_appeals',
+		'title' => 'إعدادات صفحة متابعة قضايا الاستئناف',
+		'location' => [
+			[['param' => 'page_template', 'operator' => '==', 'value' => 'template-appeals.php']]
+		],
+		'fields' => $appeals_fields,
+	]);
 }
 add_action('acf/init', 'amal_register_service_acf_fields');
