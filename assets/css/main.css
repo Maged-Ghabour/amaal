@@ -458,9 +458,9 @@ svg {
 
 .hero-subtitle {
   font-family: 'DIN Next LT Arabic', var(--font-sans);
-  font-size: clamp(1.25rem, 3vw, 2.25rem);
-  line-height: 1.5;
-  max-width: 690px;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.6;
+  max-width: 950px;
   margin: 0 auto 3rem;
   opacity: 1;
   font-weight: 300;

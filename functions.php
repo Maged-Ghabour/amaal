@@ -9,7 +9,7 @@
 defined('ABSPATH') || exit;
 
 // ─── Constants ──────────────────────────────────────────────────────────────
-define('AMAL_VERSION', '1.0.0');
+define('AMAL_VERSION', time());
 define('AMAL_DIR', get_template_directory());
 define('AMAL_URI', get_template_directory_uri());
 define('AMAL_ASSETS', AMAL_URI . '/assets');
