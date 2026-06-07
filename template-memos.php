@@ -141,10 +141,17 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/' . rawurlencode('مذ�
 				?>
 				<div class="step-item">
 					<div class="step-icon-wrap">
-						<div class="step-number" style="top: 20px; right: 50%; width: 40px; height: 40px; font-size: 1.4rem;"><?php echo $i; ?></div>
-						<div class="step-icon" style="background: transparent; border: none; box-shadow: none;"></div>
+						<?php 
+						$st_icon = get_field("step_{$i}_icon");
+						if ($st_icon) : ?>
+							<div class="step-icon">
+								<img src="<?php echo esc_url($st_icon); ?>" alt="<?php echo esc_attr($st_title); ?>">
+							</div>
+						<?php else : ?>
+							<div class="step-number"><?php echo $i; ?></div>
+						<?php endif; ?>
 					</div>
-					<h4 class="step-title" style="margin-top: -10px;"><?php echo esc_html($st_title); ?></h4>
+					<h4 class="step-title"><?php echo esc_html($st_title); ?></h4>
 					<p class="step-desc"><?php echo esc_html($st_desc); ?></p>
 				</div>
 				<?php } ?>

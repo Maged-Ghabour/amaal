@@ -836,92 +836,75 @@
 
 .steps-flex {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  position: relative;
-}
-
-.steps-flex::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  right: 10%;
-  left: 10%;
-  height: 2px;
-  background-color: #f0e6d2;
-  z-index: 1;
-}
-
-@media (max-width: 992px) {
-  .steps-flex::before {
-    display: none;
-  }
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .step-item {
   flex: 1;
+  min-width: 250px;
+  max-width: 350px;
   text-align: center;
-  position: relative;
-  z-index: 2;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0px 4.17px 12.5px 0px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0,0,0,0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .step-icon-wrap {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .step-number {
-  position: absolute;
-  top: -15px;
-  right: 50%;
-  transform: translateX(50%);
   background-color: #4c2925;
   color: #fff;
-  width: 32px;
-  height: 32px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-family: var(--font-sans);
-  font-size: 1.1rem;
-  z-index: 3;
+  font-size: 1.8rem;
 }
 
 .step-icon {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-white);
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 16px;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem;
 }
 
-.step-icon svg {
+.step-icon svg, .step-icon img {
   width: 100%;
   height: 100%;
-  color: #4c2925;
+  object-fit: contain;
 }
 
 .step-title {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-dark);
+  color: #4D201B;
   margin-bottom: 0.5rem;
 }
 
 .step-desc {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  line-height: 1.5;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
 }
 
 @media (max-width: 992px) {
@@ -929,6 +912,10 @@
     flex-direction: column;
     gap: 2.5rem;
   }
+}
+
+.why-contract-desc {
+  color: #4D201B;
 }
 
 /* ─── FAQ Section ─────────────────────────────────────────────── */
