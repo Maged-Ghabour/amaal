@@ -1,9 +1,9 @@
 /* ===================================================================
-   AMAL MALKI – INNER PAGES & EXTRA STYLES
+   AMAL MALKI â€“ INNER PAGES & EXTRA STYLES
    (appended to main.css via WordPress enqueue or @import)
    =================================================================== */
 
-/* ─── Archive / Blog Grid ─────────────────────────────────────── */
+/* â”€â”€â”€ Archive / Blog Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .archive-main,
 .error-404-main {
   padding-block: var(--space-xl);
@@ -23,7 +23,7 @@
   margin-bottom: var(--space-lg);
 }
 
-/* ─── Pagination ──────────────────────────────────────────────── */
+/* â”€â”€â”€ Pagination â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .pagination .nav-links {
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@
 .pagination a:hover { border-color: var(--color-gold); color: var(--color-gold); }
 .pagination .current { background: var(--color-gold); border-color: var(--color-gold); color: var(--color-dark); font-weight: 700; }
 
-/* ─── Single Post ─────────────────────────────────────────────── */
+/* â”€â”€â”€ Single Post â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .single-container { max-width: 800px; }
 
 .single-title {
@@ -111,7 +111,7 @@
 .post-navigation a { font-weight: 600; color: var(--color-gold); font-size: 0.9rem; }
 .post-navigation a:hover { color: var(--color-gold-dark); }
 
-/* ─── Single Service ──────────────────────────────────────────── */
+/* â”€â”€â”€ Single Service â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .service-hero {
   position: relative;
   height: 60vh;
@@ -282,7 +282,7 @@
   line-height: 1.7;
 }
 
-/* ─── 404 Page ────────────────────────────────────────────────── */
+/* â”€â”€â”€ 404 Page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .error-404-wrap {
   display: flex;
   align-items: center;
@@ -314,7 +314,7 @@
   font-size: 1.05rem;
 }
 
-/* ─── Generic Page ────────────────────────────────────────────── */
+/* â”€â”€â”€ Generic Page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .page-hero {
   position: relative;
   height: 40vh;
@@ -368,7 +368,7 @@
   box-shadow: 0 5px 25px rgba(0,0,0,0.03);
 }
 
-/* ─── Responsive Inner Pages ──────────────────────────────────── */
+/* â”€â”€â”€ Responsive Inner Pages â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .posts-grid { grid-template-columns: 1fr; }
   .service-content-wrap { grid-template-columns: 1fr; }
@@ -376,7 +376,7 @@
   .page-article { padding: var(--space-md); }
 }
 
-/* ─── Modern Blog Redesign ────────────────────────────────────── */
+/* â”€â”€â”€ Modern Blog Redesign â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .blog-hero .page-hero__bg {
   background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop');
 }
@@ -560,4 +560,438 @@
   color: var(--color-dark);
   border-color: var(--color-gold);
   box-shadow: 0 4px 15px rgba(201, 168, 76, 0.4);
+}
+
+/* ─── Stats / Counters Section ────────────────────────────────── */
+.stats-section {
+  padding-block: var(--space-xl);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.stat-card {
+  background: var(--color-white);
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.stat-number {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.stat-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.stat-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Why Contract Section ────────────────────────────────────── */
+.why-contract-section {
+  padding-block: var(--space-xl);
+  background: var(--color-white);
+}
+
+.why-contract-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.why-contract-content {
+  padding-inline-end: 1rem;
+}
+
+.why-contract-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.why-contract-desc {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+.why-contract-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.why-contract-list li {
+  position: relative;
+  padding-inline-start: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.why-contract-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-dark-mid);
+  border-radius: 50%;
+}
+
+[dir="ltr"] .why-contract-list li::before {
+  right: auto;
+  left: 0;
+}
+
+.why-contract-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4c2925;
+  color: var(--color-white);
+  border: none;
+  padding: 0.85rem 2.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.why-contract-btn:hover {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.why-contract-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .why-contract-wrap {
+    grid-template-columns: 1fr;
+  }
+  .why-contract-content {
+    padding-inline-end: 0;
+  }
+  .why-contract-image {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ─── Contract Types Section ──────────────────────────────────── */
+.contract-types-section {
+  padding-block: var(--space-xl);
+  background: var(--color-off-white);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.badge-title {
+  display: inline-block;
+  background-color: #4c2925;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-family: var(--font-serif);
+  margin-top: -10px;
+  margin-bottom: 2.5rem;
+}
+
+.contract-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.contract-type-card {
+  background: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
+
+.contract-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contract-type-image {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 200px;
+}
+
+.contract-type-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contract-type-body {
+  padding: 1.25rem 0.5rem;
+  text-align: center;
+}
+
+.contract-type-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.contract-type-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .contract-types-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Steps Section ───────────────────────────────────────────── */
+.contract-steps-section {
+  padding-block: var(--space-xl);
+  background: var(--color-white);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.steps-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+}
+
+.steps-flex::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 10%;
+  left: 10%;
+  height: 2px;
+  background-color: #f0e6d2;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .steps-flex::before {
+    display: none;
+  }
+}
+
+.step-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.step-icon-wrap {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #4c2925;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  z-index: 3;
+}
+
+.step-icon {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.step-icon svg {
+  width: 100%;
+  height: 100%;
+  color: #4c2925;
+}
+
+.step-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.step-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .steps-flex {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+/* ─── FAQ Section ─────────────────────────────────────────────── */
+.contract-faq-section {
+  padding-block: var(--space-xl);
+  background: var(--color-off-white);
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  background-color: #4c2925;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: right;
+  transition: background 0.3s;
+}
+
+.faq-btn:hover {
+  background-color: var(--color-dark);
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: var(--color-white);
+}
+
+.faq-content p {
+  padding: 1.25rem 1.5rem;
+  color: var(--color-text);
+  margin: 0;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
 }

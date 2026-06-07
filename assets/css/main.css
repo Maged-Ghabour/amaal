@@ -418,7 +418,8 @@ svg {
 /* ─── 6. HERO ───────────────────────────────────────────────────── */
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -516,6 +517,12 @@ svg {
 .social-pill svg {
   width: 20px;
   height: 20px;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    background-attachment: scroll;
+  }
 }
 
 /* ─── 7. ABOUT ──────────────────────────────────────────────────── */
