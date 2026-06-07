@@ -61,13 +61,18 @@ function amal_register_service_acf_fields() {
 	$contract_fields[] = ['key' => 'field_cd_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'نحن في مكتب المستشار القانوني آمال المالكي نتبع منهجية واضحة وموثوقة:'];
 	
 	$default_steps = [
-		1 => ['title' => 'خبرة واسعة', 'desc' => 'فريقنا يتمتع بمعرفة عميقة بالأنظمة السعودية وتحديثاتها المستمرة.'],
-		2 => ['title' => 'صياغة مخصصة', 'desc' => 'لا نستخدم قوالب جاهزة؛ بل نصيغ كل عقد بناءً على احتياجات العميل وظروفه الخاصة.'],
-		3 => ['title' => 'دقة متناهية', 'desc' => 'مراجعة شاملة لضمان خلو العقد من أي ثغرات قانونية.']
+		1 => ['title' => 'الاستشارة الأولية ودراسة المتطلبات', 'desc' => 'نجتمع معك لفهم طبيعة الصفقة التجارية والأهداف المرجوة من العقد.'],
+		2 => ['title' => 'تحديد المخاطر والالتزامات', 'desc' => 'نحلل الجوانب القانونية والتجارية لتحديد المخاطر المحتملة والالتزامات الضرورية.'],
+		3 => ['title' => 'صياغة المسودة الأولى', 'desc' => 'يقوم خبراؤنا بصياغة المسودة الأولى للعقد مع مراعاة كافة الأنظمة المعمول بها.'],
+		4 => ['title' => 'المراجعة والتعديل المشترك', 'desc' => 'نناقش المسودة معك لإبداء الملاحظات والتعديلات اللازمة قبل الاعتماد النهائي.'],
+		5 => ['title' => 'التدقيق النهائي والتسليم', 'desc' => 'مراجعة لغوية وقانونية أخيرة لضمان خلو العقد من أي ثغرات وتسليمه جاهزاً للتوقيع.']
 	];
-	for ($i = 1; $i <= 3; $i++) {
-		$contract_fields[] = ['key' => "field_cd_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_steps[$i]['title']];
-		$contract_fields[] = ['key' => "field_cd_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_steps[$i]['desc']];
+	for ($i = 1; $i <= 5; $i++) {
+		$contract_fields[] = ['key' => "field_cd_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
+		$st_title = isset($default_steps[$i]) ? $default_steps[$i]['title'] : '';
+		$st_desc = isset($default_steps[$i]) ? $default_steps[$i]['desc'] : '';
+		$contract_fields[] = ['key' => "field_cd_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $st_title];
+		$contract_fields[] = ['key' => "field_cd_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $st_desc];
 	}
 
 	$contract_fields[] = ['key' => 'field_cd_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
@@ -150,6 +155,7 @@ function amal_register_service_acf_fields() {
 		3 => ['title' => 'إصدار السجل التجاري', 'desc' => 'استخراج السجل والتراخيص وبدء مزاولة العمل.']
 	];
 	for ($i = 1; $i <= 3; $i++) {
+		$company_fields[] = ['key' => "field_cf_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
 		$company_fields[] = ['key' => "field_cf_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_cf_steps[$i]['title']];
 		$company_fields[] = ['key' => "field_cf_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_cf_steps[$i]['desc']];
 	}
@@ -234,6 +240,7 @@ function amal_register_service_acf_fields() {
 		3 => ['title' => 'متابعة وتحديث', 'desc' => 'نواكب أي تحديثات في الأنظمة لضمان توافق الدعوى مع أحدث التشريعات.']
 	];
 	for ($i = 1; $i <= 3; $i++) {
+		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
 		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_lp_steps[$i]['title']];
 		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lp_steps[$i]['desc']];
 	}
@@ -318,6 +325,7 @@ function amal_register_service_acf_fields() {
 		3 => ['title' => 'سرعة الإنجاز', 'desc' => 'نلتزم بتسليم المذكرات قبل المواعيد المحددة لضمان تقديمها في الوقت المناسب.']
 	];
 	for ($i = 1; $i <= 3; $i++) {
+		$memos_fields[] = ['key' => "field_mm_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
 		$memos_fields[] = ['key' => "field_mm_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_mm_steps[$i]['title']];
 		$memos_fields[] = ['key' => "field_mm_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_mm_steps[$i]['desc']];
 	}
@@ -477,6 +485,7 @@ function amal_register_service_acf_fields() {
 		3 => ['title' => 'توثيق متوافق مع الأنظمة السعودية', 'desc' => 'التأكد من مطابقة جميع المواد وتوثيقها لكافة الأنظمة المعمول بها في السعودية.']
 	];
 	for ($i = 1; $i <= 3; $i++) {
+		$notarization_fields[] = ['key' => "field_ns_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
 		$notarization_fields[] = ['key' => "field_ns_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_ns_steps[$i]['title']];
 		$notarization_fields[] = ['key' => "field_ns_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ns_steps[$i]['desc']];
 	}
@@ -561,6 +570,7 @@ function amal_register_service_acf_fields() {
 		3 => ['title' => 'متابعة مستمرة وتحديثات فورية للقضايا', 'desc' => 'نحيط العميل بكافة مستجدات الجلسات ومسار القضية أولاً بأول.']
 	];
 	for ($i = 1; $i <= 3; $i++) {
+		$hearings_fields[] = ['key' => "field_hr_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
 		$hearings_fields[] = ['key' => "field_hr_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_hr_steps[$i]['title']];
 		$hearings_fields[] = ['key' => "field_hr_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_hr_steps[$i]['desc']];
 	}
@@ -645,6 +655,7 @@ function amal_register_service_acf_fields() {
 		3 => ['title' => 'الشفافية في تقييم القضايا', 'desc' => 'الشفافية التامة في تقييم مدى توافر أي أسباب لقبول النقض أو الاستئناف.']
 	];
 	for ($i = 1; $i <= 3; $i++) {
+		$appeals_fields[] = ['key' => "field_ap_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
 		$appeals_fields[] = ['key' => "field_ap_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_ap_steps[$i]['title']];
 		$appeals_fields[] = ['key' => "field_ap_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ap_steps[$i]['desc']];
 	}
