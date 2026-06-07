@@ -16,11 +16,15 @@
 	<?php endif; ?>
 
 	<div class="service-card__body">
+		<?php
+		$custom_link = function_exists('get_field') ? get_field('custom_service_link') : '';
+		$svc_link = $custom_link ? esc_url($custom_link) : get_permalink();
+		?>
 		<h3 class="service-card__title">
-			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			<a href="<?php echo $svc_link; ?>"><?php the_title(); ?></a>
 		</h3>
 		<p class="service-card__excerpt"><?php the_excerpt(); ?></p>
-		<a href="<?php the_permalink(); ?>" class="service-card__link">
+		<a href="<?php echo $svc_link; ?>" class="service-card__link">
 			<?php _e( 'اقرأ المزيد', 'amal-malki' ); ?>
 			<span class="service-card__arrow" aria-hidden="true">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

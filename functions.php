@@ -201,6 +201,24 @@ function amal_acf_fields()
 		],
 	]);
 
+	// Service CPT Fields
+	acf_add_local_field_group([
+		'key' => 'group_service_cpt',
+		'title' => __('إعدادات الخدمة', 'amal-malki'),
+		'location' => [
+			[['param' => 'post_type', 'operator' => '==', 'value' => 'service']]
+		],
+		'fields' => [
+			[
+				'key' => 'field_custom_service_link',
+				'label' => __('رابط الخدمة المخصص', 'amal-malki'),
+				'name' => 'custom_service_link',
+				'type' => 'url',
+				'instructions' => __('إذا كنت ترغب في توجيه هذه الخدمة إلى صفحة مخصصة (مثل صفحة صياغة العقود)، ضع الرابط هنا. وإلا سيتم استخدام الرابط الافتراضي للخدمة.', 'amal-malki'),
+			],
+		],
+	]);
+
 	// Services Section Fields
 	acf_add_local_field_group([
 		'key' => 'group_services',
