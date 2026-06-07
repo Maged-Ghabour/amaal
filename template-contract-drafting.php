@@ -97,7 +97,10 @@ $bg_url = AMAL_ASSETS . '/public/' . rawurlencode('صياغة عقود.png');
 	<section class="why-contract-section">
 		<div class="container">
 			<div class="why-contract-wrap">
-				<div class="why-contract-content">
+				<div class="why-contract-image">
+					<img src="<?php echo esc_url(AMAL_ASSETS . '/public/3qwd.png'); ?>" alt="محامي صياغة عقود تجارية">
+				</div>
+				<div class="why-contract-content" style="padding-inline-end: 0; padding-inline-start: 1rem;">
 					<h2 class="why-contract-title">لماذا تحتاج إلى محامي صياغة عقود تجارية؟</h2>
 					<p class="why-contract-desc">العقود ليست مجرد أوراق، بل هي درع قانوني يحمي استثماراتك. الاستعانة بمختص يضمن لك:</p>
 					<ul class="why-contract-list">
@@ -106,9 +109,6 @@ $bg_url = AMAL_ASSETS . '/public/' . rawurlencode('صياغة عقود.png');
 						<li>صياغة بنود واضحة للحقوق والالتزامات وتوزيع الأرباح والخسائر.</li>
 					</ul>
 					<a href="#" class="why-contract-btn">اعرف المزيد عن خدماتنا</a>
-				</div>
-				<div class="why-contract-image">
-					<img src="<?php echo esc_url(AMAL_ASSETS . '/public/3qwd.png'); ?>" alt="محامي صياغة عقود تجارية">
 				</div>
 			</div>
 		</div>

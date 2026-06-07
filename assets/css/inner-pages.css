@@ -995,3 +995,83 @@
   border-top: none;
   border-radius: 0 0 8px 8px;
 }
+
+/* ─── Formation Services Section ──────────────────────────────── */
+.formation-services-section {
+  padding-block: var(--space-xl);
+  background: var(--color-white);
+}
+
+.formation-services-section .section-title {
+  color: var(--color-gold);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.formation-services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.formation-service-card {
+  background: var(--color-white);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  width: calc(25% - 1.125rem);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.formation-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.formation-service-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+}
+
+.formation-service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.formation-service-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.75rem;
+}
+
+.formation-service-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .formation-service-card {
+    width: calc(33.333% - 1rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .formation-service-card {
+    width: calc(50% - 0.75rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .formation-service-card {
+    width: 100%;
+  }
+}
