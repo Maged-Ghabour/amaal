@@ -447,6 +447,7 @@ $includes = [
 	'/inc/template-tags.php',    // custom template helpers
 	'/inc/customizer.php',       // WordPress Customizer options
 	'/inc/contact-form.php',     // AJAX contact form handler
+	'/inc/acf-services.php',     // ACF fields for service pages
 ];
 
 foreach ($includes as $file) {
