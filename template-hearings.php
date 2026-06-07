@@ -26,7 +26,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 		<div class="hero-overlay" aria-hidden="true"></div>
 
 		<div class="hero-content container">
-			<h1 class="hero-title"><?php echo esc_html($title); ?></h1>
+			<h1 class="hero-title"><?php echo nl2br(esc_html($title)); ?></h1>
 			<p class="hero-subtitle"><?php echo esc_html($subtitle); ?></p>
 			<a href="<?php echo esc_url($btn_url); ?>" class="btn btn--primary hero-cta"><?php echo esc_html($btn_text); ?></a>
 		</div>
