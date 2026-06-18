@@ -16,18 +16,18 @@ function amal_register_service_acf_fields() {
 	// ---------------------------------------------------------
 	$contract_fields = [
 		['key' => 'field_cd_hero_tab', 'label' => 'Hero Section', 'type' => 'tab'],
-		['key' => 'field_cd_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "أفضل محامي صياغة عقود تجارية\nوتدقيقها في السعودية"],
-		['key' => 'field_cd_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'تُعد صياغة العقود حجر الزاوية في حماية الحقوق وضمان استدامة الأعمال في المملكة. وفي مكتب المستشار القانوني آمال المالكي نقدم خدمة صياغة عقد شراكة في السعودية بمهنية عالية تضمن لك ولشركائك الوضوح التام والالتزام بالأنظمة المعمول بها'],
-		['key' => 'field_cd_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان'],
-		['key' => 'field_cd_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099'],
+		['key' => 'field_cd_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "أفضل محامي صياغة عقود تجارية\nوتدقيقها في السعودية", 'placeholder' => "أفضل محامي صياغة عقود تجارية\nوتدقيقها في السعودية"],
+		['key' => 'field_cd_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'تُعد صياغة العقود حجر الزاوية في حماية الحقوق وضمان استدامة الأعمال في المملكة. وفي مكتب المستشار القانوني آمال المالكي نقدم خدمة صياغة عقد شراكة في السعودية بمهنية عالية تضمن لك ولشركائك الوضوح التام والالتزام بالأنظمة المعمول بها', 'placeholder' => 'تُعد صياغة العقود حجر الزاوية في حماية الحقوق وضمان استدامة الأعمال في المملكة. وفي مكتب المستشار القانوني آمال المالكي نقدم خدمة صياغة عقد شراكة في السعودية بمهنية عالية تضمن لك ولشركائك الوضوح التام والالتزام بالأنظمة المعمول بها'],
+		['key' => 'field_cd_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان', 'placeholder' => 'اطلب الخدمة الان'],
+		['key' => 'field_cd_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099', 'placeholder' => 'https://wa.me/9660541415099'],
 		['key' => 'field_cd_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
 
 	];
 
 	$contract_fields[] = ['key' => 'field_cd_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'];
 	$contract_fields[] = ['key' => 'field_cd_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'];
-	$contract_fields[] = ['key' => 'field_cd_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'أهمية صياغة العقود التجارية بدقة؟'];
-	$contract_fields[] = ['key' => 'field_cd_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'العقود ليست مجرد أوراق، بل هي حماية لاستثماراتك ومستقبلك التجاري. من خلال صياغة احترافية، نضمن لك:'];
+	$contract_fields[] = ['key' => 'field_cd_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'أهمية صياغة العقود التجارية بدقة؟', 'placeholder' => 'أهمية صياغة العقود التجارية بدقة؟'];
+	$contract_fields[] = ['key' => 'field_cd_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'العقود ليست مجرد أوراق، بل هي حماية لاستثماراتك ومستقبلك التجاري. من خلال صياغة احترافية، نضمن لك:', 'placeholder' => 'العقود ليست مجرد أوراق، بل هي حماية لاستثماراتك ومستقبلك التجاري. من خلال صياغة احترافية، نضمن لك:'];
 	$contract_fields[] = ['key' => 'field_cd_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'];
 	
 	$default_why_lists = [
@@ -37,14 +37,14 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 5; $i++) {
 		$def_val = isset($default_why_lists[$i-1]) ? $default_why_lists[$i-1] : '';
-		$contract_fields[] = ['key' => "field_cd_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val];
+		$contract_fields[] = ['key' => "field_cd_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val, 'placeholder' => $def_val];
 	}
-	$contract_fields[] = ['key' => 'field_cd_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا'];
-	$contract_fields[] = ['key' => 'field_cd_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#'];
+	$contract_fields[] = ['key' => 'field_cd_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا', 'placeholder' => 'اعرف المزيد عن خدماتنا'];
+	$contract_fields[] = ['key' => 'field_cd_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#', 'placeholder' => '#'];
 
 	$contract_fields[] = ['key' => 'field_cd_types_tab', 'label' => 'Specialization Types', 'type' => 'tab'];
-	$contract_fields[] = ['key' => 'field_cd_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'أنواع العقود التي نصيغها'];
-	$contract_fields[] = ['key' => 'field_cd_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نغطي كافة احتياجاتك القانونية من خلال صياغة عقود متنوعة تشمل:'];
+	$contract_fields[] = ['key' => 'field_cd_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'أنواع العقود التي نصيغها', 'placeholder' => 'أنواع العقود التي نصيغها'];
+	$contract_fields[] = ['key' => 'field_cd_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نغطي كافة احتياجاتك القانونية من خلال صياغة عقود متنوعة تشمل:', 'placeholder' => 'نغطي كافة احتياجاتك القانونية من خلال صياغة عقود متنوعة تشمل:'];
 	
 	$default_types = [
 		1 => ['title' => 'صياغة عقود تجارية', 'desc' => 'تشمل عقود البيع، التوريد، التوزيع، والوكالات التجارية بما يضمن سير أعمالك بسلاسة.'],
@@ -53,13 +53,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$contract_fields[] = ['key' => "field_cd_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$contract_fields[] = ['key' => "field_cd_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_types[$i]['title']];
-		$contract_fields[] = ['key' => "field_cd_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_types[$i]['desc']];
+		$contract_fields[] = ['key' => "field_cd_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_types[$i, 'placeholder' => $default_types[$i]['title']];
+		$contract_fields[] = ['key' => "field_cd_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_types[$i, 'placeholder' => $default_types[$i]['desc']];
 	}
 
 	$contract_fields[] = ['key' => 'field_cd_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
-	$contract_fields[] = ['key' => 'field_cd_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'لماذا تختارنا لـ صياغة ومراجعة العقود؟'];
-	$contract_fields[] = ['key' => 'field_cd_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'نحن في مكتب المستشار القانوني آمال المالكي نتبع منهجية واضحة وموثوقة:'];
+	$contract_fields[] = ['key' => 'field_cd_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'لماذا تختارنا لـ صياغة ومراجعة العقود؟', 'placeholder' => 'لماذا تختارنا لـ صياغة ومراجعة العقود؟'];
+	$contract_fields[] = ['key' => 'field_cd_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'نحن في مكتب المستشار القانوني آمال المالكي نتبع منهجية واضحة وموثوقة:', 'placeholder' => 'نحن في مكتب المستشار القانوني آمال المالكي نتبع منهجية واضحة وموثوقة:'];
 	
 	$default_steps = [
 		1 => ['title' => 'الاستشارة الأولية ودراسة المتطلبات', 'desc' => 'نجتمع معك لفهم طبيعة الصفقة التجارية والأهداف المرجوة من العقد.'],
@@ -72,13 +72,13 @@ function amal_register_service_acf_fields() {
 		$contract_fields[] = ['key' => "field_cd_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
 		$st_title = isset($default_steps[$i]) ? $default_steps[$i]['title'] : '';
 		$st_desc = isset($default_steps[$i]) ? $default_steps[$i]['desc'] : '';
-		$contract_fields[] = ['key' => "field_cd_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $st_title];
-		$contract_fields[] = ['key' => "field_cd_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $st_desc];
+		$contract_fields[] = ['key' => "field_cd_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $st_title, 'placeholder' => $st_title];
+		$contract_fields[] = ['key' => "field_cd_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $st_desc, 'placeholder' => $st_desc];
 	}
 
 	$contract_fields[] = ['key' => 'field_cd_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
-	$contract_fields[] = ['key' => 'field_cd_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول صياغة العقود'];
-	$contract_fields[] = ['key' => 'field_cd_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا'];
+	$contract_fields[] = ['key' => 'field_cd_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول صياغة العقود', 'placeholder' => 'الأسئلة الشائعة حول صياغة العقود'];
+	$contract_fields[] = ['key' => 'field_cd_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا', 'placeholder' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا'];
 	
 	$default_faqs = [
 		1 => ['q' => 'كم تستغرق عملية صياغة العقد؟', 'a' => 'تختلف المدة حسب تعقيد العقد، ولكننا نلتزم بإنجاز المهام في أسرع وقت ممكن دون المساس بالجودة.'],
@@ -88,8 +88,8 @@ function amal_register_service_acf_fields() {
 	for ($i = 1; $i <= 5; $i++) {
 		$q_val = isset($default_faqs[$i]) ? $default_faqs[$i]['q'] : '';
 		$a_val = isset($default_faqs[$i]) ? $default_faqs[$i]['a'] : '';
-		$contract_fields[] = ['key' => "field_cd_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val];
-		$contract_fields[] = ['key' => "field_cd_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val];
+		$contract_fields[] = ['key' => "field_cd_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val, 'placeholder' => $q_val];
+		$contract_fields[] = ['key' => "field_cd_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val, 'placeholder' => $a_val];
 	}
 
 	acf_add_local_field_group([
@@ -106,17 +106,20 @@ function amal_register_service_acf_fields() {
 	// ---------------------------------------------------------
 	$company_fields = [
 		['key' => 'field_cf_hero_tab', 'label' => 'Hero Section', 'type' => 'tab'],
-		['key' => 'field_cf_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'خطوات تأسيس شركة في السعودية'],
-		['key' => 'field_cf_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'نقدم لك خدمة شاملة لتأسيس شركتك في المملكة العربية السعودية، بدءاً من اختيار الشكل القانوني الأنسب وحتى إصدار التراخيص اللازمة، لضمان انطلاقة قوية وقانونية لأعمالك.'],
-		['key' => 'field_cf_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان'],
-		['key' => 'field_cf_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099'],
+		['key' => 'field_cf_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'خطوات تأسيس شركة في السعودية', 'placeholder' => 'خطوات تأسيس شركة في السعودية'],
+		['key' => 'field_cf_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'نقدم لك خدمة شاملة لتأسيس شركتك في المملكة العربية السعودية، بدءاً من اختيار الشكل القانوني الأنسب وحتى إصدار التراخيص اللازمة، لضمان انطلاقة قوية وقانونية لأعمالك.', 'placeholder' => 'نقدم لك خدمة شاملة لتأسيس شركتك في المملكة العربية السعودية، بدءاً من اختيار الشكل القانوني الأنسب وحتى إصدار التراخيص اللازمة، لضمان انطلاقة قوية وقانونية لأعمالك.'],
+		['key' => 'field_cf_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان', 'placeholder' => 'اطلب الخدمة الان'],
+		['key' => 'field_cf_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099', 'placeholder' => 'https://wa.me/9660541415099'],
 		['key' => 'field_cf_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
 
 		['key' => 'field_cf_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'],
 		['key' => 'field_cf_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'],
-		['key' => 'field_cf_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'لماذا تختارنا لتأسيس شركتك؟'],
-		['key' => 'field_cf_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'تأسيس الشركات يتطلب دقة وخبرة لضمان الامتثال للأنظمة، نحن نضمن لك:'],
+		['key' => 'field_cf_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'لماذا تختارنا لتأسيس شركتك؟', 'placeholder' => 'لماذا تختارنا لتأسيس شركتك؟'],
+		['key' => 'field_cf_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'تأسيس الشركات يتطلب دقة وخبرة لضمان الامتثال للأنظمة، نحن نضمن لك:', 'placeholder' => 'تأسيس الشركات يتطلب دقة وخبرة لضمان الامتثال للأنظمة، نحن نضمن لك:'],
 		['key' => 'field_cf_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'],
+		['key' => 'field_cf_why_title_color', 'label' => '??? ???????', 'name' => 'why_us_title_color', 'type' => 'color_picker', 'default_value' => '#C38A47'],
+		['key' => 'field_cf_why_sub1_color', 'label' => '??? ???? ?????? 1', 'name' => 'why_us_sub1_color', 'type' => 'color_picker', 'default_value' => '#574c40'],
+		['key' => 'field_cf_why_sub2_color', 'label' => '??? ???? ?????? 2', 'name' => 'why_us_sub2_color', 'type' => 'color_picker', 'default_value' => '#724d49'],
 	];
 	
 	$default_cf_lists = [
@@ -126,14 +129,14 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 5; $i++) {
 		$def_val = isset($default_cf_lists[$i-1]) ? $default_cf_lists[$i-1] : '';
-		$company_fields[] = ['key' => "field_cf_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val];
+		$company_fields[] = ['key' => "field_cf_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val, 'placeholder' => $def_val];
 	}
-	$company_fields[] = ['key' => 'field_cf_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا'];
-	$company_fields[] = ['key' => 'field_cf_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#'];
+	$company_fields[] = ['key' => 'field_cf_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا', 'placeholder' => 'اعرف المزيد عن خدماتنا'];
+	$company_fields[] = ['key' => 'field_cf_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#', 'placeholder' => '#'];
 
 	$company_fields[] = ['key' => 'field_cf_types_tab', 'label' => 'Specialization Types', 'type' => 'tab'];
-	$company_fields[] = ['key' => 'field_cf_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'انواع الشركات التي نؤسسها لك'];
-	$company_fields[] = ['key' => 'field_cf_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نقدم خدمات تأسيس لمختلف أنواع الشركات، منها:'];
+	$company_fields[] = ['key' => 'field_cf_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'انواع الشركات التي نؤسسها لك', 'placeholder' => 'انواع الشركات التي نؤسسها لك'];
+	$company_fields[] = ['key' => 'field_cf_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نقدم خدمات تأسيس لمختلف أنواع الشركات، منها:', 'placeholder' => 'نقدم خدمات تأسيس لمختلف أنواع الشركات، منها:'];
 	
 	$default_cf_types = [
 		1 => ['title' => 'شركة ذات مسؤولية محدودة', 'desc' => 'الخيار المفضل للشركات الصغيرة والمتوسطة، حيث تقتصر مسؤولية الشركاء على حصصهم.'],
@@ -142,13 +145,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$company_fields[] = ['key' => "field_cf_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$company_fields[] = ['key' => "field_cf_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_cf_types[$i]['title']];
-		$company_fields[] = ['key' => "field_cf_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_cf_types[$i]['desc']];
+		$company_fields[] = ['key' => "field_cf_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_cf_types[$i, 'placeholder' => $default_cf_types[$i]['title']];
+		$company_fields[] = ['key' => "field_cf_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_cf_types[$i, 'placeholder' => $default_cf_types[$i]['desc']];
 	}
 
 	$company_fields[] = ['key' => 'field_cf_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
-	$company_fields[] = ['key' => 'field_cf_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'ما هي خطوات تأسيس الشركة؟'];
-	$company_fields[] = ['key' => 'field_cf_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'عملية تأسيس سلسة وواضحة نرافقك فيها خطوة بخطوة:'];
+	$company_fields[] = ['key' => 'field_cf_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'ما هي خطوات تأسيس الشركة؟', 'placeholder' => 'ما هي خطوات تأسيس الشركة؟'];
+	$company_fields[] = ['key' => 'field_cf_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'عملية تأسيس سلسة وواضحة نرافقك فيها خطوة بخطوة:', 'placeholder' => 'عملية تأسيس سلسة وواضحة نرافقك فيها خطوة بخطوة:'];
 	
 	$default_cf_steps = [
 		1 => ['title' => 'الاستشارة واختيار الكيان', 'desc' => 'دراسة نشاطك وتحديد الشكل القانوني المناسب.'],
@@ -157,13 +160,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$company_fields[] = ['key' => "field_cf_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$company_fields[] = ['key' => "field_cf_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_cf_steps[$i]['title']];
-		$company_fields[] = ['key' => "field_cf_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_cf_steps[$i]['desc']];
+		$company_fields[] = ['key' => "field_cf_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_cf_steps[$i, 'placeholder' => $default_cf_steps[$i]['title']];
+		$company_fields[] = ['key' => "field_cf_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_cf_steps[$i, 'placeholder' => $default_cf_steps[$i]['desc']];
 	}
 
 	$company_fields[] = ['key' => 'field_cf_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
-	$company_fields[] = ['key' => 'field_cf_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول تأسيس الشركات'];
-	$company_fields[] = ['key' => 'field_cf_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على الأسئلة المتكررة'];
+	$company_fields[] = ['key' => 'field_cf_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول تأسيس الشركات', 'placeholder' => 'الأسئلة الشائعة حول تأسيس الشركات'];
+	$company_fields[] = ['key' => 'field_cf_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على الأسئلة المتكررة', 'placeholder' => 'إجابات على الأسئلة المتكررة'];
 	
 	$default_cf_faqs = [
 		1 => ['q' => 'هل يجب أن يكون هناك شريك سعودي لتأسيس شركة؟', 'a' => 'لا، يمكن للمستثمر الأجنبي تأسيس شركة بملكية 100% في العديد من الأنشطة وفق نظام الاستثمار.'],
@@ -173,8 +176,8 @@ function amal_register_service_acf_fields() {
 	for ($i = 1; $i <= 5; $i++) {
 		$q_val = isset($default_cf_faqs[$i]) ? $default_cf_faqs[$i]['q'] : '';
 		$a_val = isset($default_cf_faqs[$i]) ? $default_cf_faqs[$i]['a'] : '';
-		$company_fields[] = ['key' => "field_cf_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val];
-		$company_fields[] = ['key' => "field_cf_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val];
+		$company_fields[] = ['key' => "field_cf_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val, 'placeholder' => $q_val];
+		$company_fields[] = ['key' => "field_cf_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val, 'placeholder' => $a_val];
 	}
 
 	acf_add_local_field_group([
@@ -191,17 +194,20 @@ function amal_register_service_acf_fields() {
 	// ---------------------------------------------------------
 	$lawsuits_fields = [
 		['key' => 'field_lp_hero_tab', 'label' => 'Hero Section', 'type' => 'tab'],
-		['key' => 'field_lp_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'صياغة الدعاوى القضائية'],
-		['key' => 'field_lp_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'تعد صياغة الدعاوى القضائية الخطوة الأولى والأهم في مسار أي نزاع قانوني. نحن في مكتب المستشار القانوني آمال المالكي نضمن لك صياغة دقيقة واحترافية لدعواك، مما يعزز فرص نجاحها أمام المحاكم بمختلف درجاتها.'],
-		['key' => 'field_lp_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان'],
-		['key' => 'field_lp_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099'],
+		['key' => 'field_lp_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'صياغة الدعاوى القضائية', 'placeholder' => 'صياغة الدعاوى القضائية'],
+		['key' => 'field_lp_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'تعد صياغة الدعاوى القضائية الخطوة الأولى والأهم في مسار أي نزاع قانوني. نحن في مكتب المستشار القانوني آمال المالكي نضمن لك صياغة دقيقة واحترافية لدعواك، مما يعزز فرص نجاحها أمام المحاكم بمختلف درجاتها.', 'placeholder' => 'تعد صياغة الدعاوى القضائية الخطوة الأولى والأهم في مسار أي نزاع قانوني. نحن في مكتب المستشار القانوني آمال المالكي نضمن لك صياغة دقيقة واحترافية لدعواك، مما يعزز فرص نجاحها أمام المحاكم بمختلف درجاتها.'],
+		['key' => 'field_lp_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان', 'placeholder' => 'اطلب الخدمة الان'],
+		['key' => 'field_lp_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099', 'placeholder' => 'https://wa.me/9660541415099'],
 		['key' => 'field_lp_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
 
 		['key' => 'field_lp_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'],
 		['key' => 'field_lp_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'],
-		['key' => 'field_lp_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'أهمية صياغة الدعوى القضائية بشكل صحيح'],
-		['key' => 'field_lp_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'صياغة الدعوى هي الأساس الذي تبنى عليه المحاكمة، وأي خطأ قد يؤدي إلى رفض الدعوى، لذا نضمن لك:'],
+		['key' => 'field_lp_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'أهمية صياغة الدعوى القضائية بشكل صحيح', 'placeholder' => 'أهمية صياغة الدعوى القضائية بشكل صحيح'],
+		['key' => 'field_lp_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'صياغة الدعوى هي الأساس الذي تبنى عليه المحاكمة، وأي خطأ قد يؤدي إلى رفض الدعوى، لذا نضمن لك:', 'placeholder' => 'صياغة الدعوى هي الأساس الذي تبنى عليه المحاكمة، وأي خطأ قد يؤدي إلى رفض الدعوى، لذا نضمن لك:'],
 		['key' => 'field_lp_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'],
+		['key' => 'field_lp_why_title_color', 'label' => '??? ???????', 'name' => 'why_us_title_color', 'type' => 'color_picker', 'default_value' => '#C38A47'],
+		['key' => 'field_lp_why_sub1_color', 'label' => '??? ???? ?????? 1', 'name' => 'why_us_sub1_color', 'type' => 'color_picker', 'default_value' => '#574c40'],
+		['key' => 'field_lp_why_sub2_color', 'label' => '??? ???? ?????? 2', 'name' => 'why_us_sub2_color', 'type' => 'color_picker', 'default_value' => '#724d49'],
 	];
 	
 	$default_lp_lists = [
@@ -211,14 +217,14 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 5; $i++) {
 		$def_val = isset($default_lp_lists[$i-1]) ? $default_lp_lists[$i-1] : '';
-		$lawsuits_fields[] = ['key' => "field_lp_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val];
+		$lawsuits_fields[] = ['key' => "field_lp_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val, 'placeholder' => $def_val];
 	}
-	$lawsuits_fields[] = ['key' => 'field_lp_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا'];
-	$lawsuits_fields[] = ['key' => 'field_lp_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#'];
+	$lawsuits_fields[] = ['key' => 'field_lp_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا', 'placeholder' => 'اعرف المزيد عن خدماتنا'];
+	$lawsuits_fields[] = ['key' => 'field_lp_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#', 'placeholder' => '#'];
 
 	$lawsuits_fields[] = ['key' => 'field_lp_types_tab', 'label' => 'Specialization Types', 'type' => 'tab'];
-	$lawsuits_fields[] = ['key' => 'field_lp_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'أنواع الدعاوى التي نقوم بصياغتها'];
-	$lawsuits_fields[] = ['key' => 'field_lp_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نمتلك خبرة واسعة في صياغة مختلف أنواع الدعاوى القضائية:'];
+	$lawsuits_fields[] = ['key' => 'field_lp_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'أنواع الدعاوى التي نقوم بصياغتها', 'placeholder' => 'أنواع الدعاوى التي نقوم بصياغتها'];
+	$lawsuits_fields[] = ['key' => 'field_lp_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نمتلك خبرة واسعة في صياغة مختلف أنواع الدعاوى القضائية:', 'placeholder' => 'نمتلك خبرة واسعة في صياغة مختلف أنواع الدعاوى القضائية:'];
 	
 	$default_lp_types = [
 		1 => ['title' => 'الدعاوى التجارية', 'desc' => 'تشمل المطالبات المالية، النزاعات بين الشركاء، ودعاوى الإفلاس.'],
@@ -227,13 +233,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$lawsuits_fields[] = ['key' => "field_lp_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$lawsuits_fields[] = ['key' => "field_lp_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_lp_types[$i]['title']];
-		$lawsuits_fields[] = ['key' => "field_lp_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lp_types[$i]['desc']];
+		$lawsuits_fields[] = ['key' => "field_lp_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_lp_types[$i, 'placeholder' => $default_lp_types[$i]['title']];
+		$lawsuits_fields[] = ['key' => "field_lp_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lp_types[$i, 'placeholder' => $default_lp_types[$i]['desc']];
 	}
 
 	$lawsuits_fields[] = ['key' => 'field_lp_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
-	$lawsuits_fields[] = ['key' => 'field_lp_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'لماذا نحن الأفضل في صياغة الدعاوى؟'];
-	$lawsuits_fields[] = ['key' => 'field_lp_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'نحرص على تقديم خدمة متكاملة تبدأ من دراسة القضية وحتى تقديم الدعوى:'];
+	$lawsuits_fields[] = ['key' => 'field_lp_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'لماذا نحن الأفضل في صياغة الدعاوى؟', 'placeholder' => 'لماذا نحن الأفضل في صياغة الدعاوى؟'];
+	$lawsuits_fields[] = ['key' => 'field_lp_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'نحرص على تقديم خدمة متكاملة تبدأ من دراسة القضية وحتى تقديم الدعوى:', 'placeholder' => 'نحرص على تقديم خدمة متكاملة تبدأ من دراسة القضية وحتى تقديم الدعوى:'];
 	
 	$default_lp_steps = [
 		1 => ['title' => 'دراسة متعمقة', 'desc' => 'نحلل كافة تفاصيل ومستندات القضية قبل البدء بالصياغة.'],
@@ -242,13 +248,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_lp_steps[$i]['title']];
-		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lp_steps[$i]['desc']];
+		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_lp_steps[$i, 'placeholder' => $default_lp_steps[$i]['title']];
+		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lp_steps[$i, 'placeholder' => $default_lp_steps[$i]['desc']];
 	}
 
 	$lawsuits_fields[] = ['key' => 'field_lp_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
-	$lawsuits_fields[] = ['key' => 'field_lp_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول إعداد الدعاوى'];
-	$lawsuits_fields[] = ['key' => 'field_lp_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات وافية لاستفساراتكم'];
+	$lawsuits_fields[] = ['key' => 'field_lp_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول إعداد الدعاوى', 'placeholder' => 'الأسئلة الشائعة حول إعداد الدعاوى'];
+	$lawsuits_fields[] = ['key' => 'field_lp_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات وافية لاستفساراتكم', 'placeholder' => 'إجابات وافية لاستفساراتكم'];
 	
 	$default_lp_faqs = [
 		1 => ['q' => 'هل يمكنكم صياغة دعوى إلكترونياً لتقديمها عبر منصة ناجز؟', 'a' => 'نعم، نحن نصيغ الدعوى بشكل يتوافق تماماً مع متطلبات التقديم الإلكتروني عبر ناجز.'],
@@ -258,8 +264,8 @@ function amal_register_service_acf_fields() {
 	for ($i = 1; $i <= 5; $i++) {
 		$q_val = isset($default_lp_faqs[$i]) ? $default_lp_faqs[$i]['q'] : '';
 		$a_val = isset($default_lp_faqs[$i]) ? $default_lp_faqs[$i]['a'] : '';
-		$lawsuits_fields[] = ['key' => "field_lp_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val];
-		$lawsuits_fields[] = ['key' => "field_lp_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val];
+		$lawsuits_fields[] = ['key' => "field_lp_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val, 'placeholder' => $q_val];
+		$lawsuits_fields[] = ['key' => "field_lp_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val, 'placeholder' => $a_val];
 	}
 
 	acf_add_local_field_group([
@@ -276,17 +282,20 @@ function amal_register_service_acf_fields() {
 	// ---------------------------------------------------------
 	$memos_fields = [
 		['key' => 'field_mm_hero_tab', 'label' => 'Hero Section', 'type' => 'tab'],
-		['key' => 'field_mm_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'كتابة المذكرات القانونية بجميع أنواعها'],
-		['key' => 'field_mm_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'المذكرات القانونية هي صوتك أمام القضاء، وصياغتها باحترافية هي الفاصل بين كسب القضية أو خسارتها. نحن في مكتب المستشار القانوني آمال المالكي نقدم خدمة صياغة المذكرات القانونية بدقة متناهية تستند إلى أقوى الأسانيد الشرعية والنظامية.'],
-		['key' => 'field_mm_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان'],
-		['key' => 'field_mm_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099'],
+		['key' => 'field_mm_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'كتابة المذكرات القانونية بجميع أنواعها', 'placeholder' => 'كتابة المذكرات القانونية بجميع أنواعها'],
+		['key' => 'field_mm_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'المذكرات القانونية هي صوتك أمام القضاء، وصياغتها باحترافية هي الفاصل بين كسب القضية أو خسارتها. نحن في مكتب المستشار القانوني آمال المالكي نقدم خدمة صياغة المذكرات القانونية بدقة متناهية تستند إلى أقوى الأسانيد الشرعية والنظامية.', 'placeholder' => 'المذكرات القانونية هي صوتك أمام القضاء، وصياغتها باحترافية هي الفاصل بين كسب القضية أو خسارتها. نحن في مكتب المستشار القانوني آمال المالكي نقدم خدمة صياغة المذكرات القانونية بدقة متناهية تستند إلى أقوى الأسانيد الشرعية والنظامية.'],
+		['key' => 'field_mm_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان', 'placeholder' => 'اطلب الخدمة الان'],
+		['key' => 'field_mm_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099', 'placeholder' => 'https://wa.me/9660541415099'],
 		['key' => 'field_mm_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
 
 		['key' => 'field_mm_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'],
 		['key' => 'field_mm_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'],
-		['key' => 'field_mm_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'أهمية صياغة المذكرات القانونية بشكل احترافي'],
-		['key' => 'field_mm_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'المذكرات هي حجر الزاوية في بناء قناعة القاضي، ومن خلالها نضمن لك:'],
+		['key' => 'field_mm_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'أهمية صياغة المذكرات القانونية بشكل احترافي', 'placeholder' => 'أهمية صياغة المذكرات القانونية بشكل احترافي'],
+		['key' => 'field_mm_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'المذكرات هي حجر الزاوية في بناء قناعة القاضي، ومن خلالها نضمن لك:', 'placeholder' => 'المذكرات هي حجر الزاوية في بناء قناعة القاضي، ومن خلالها نضمن لك:'],
 		['key' => 'field_mm_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'],
+		['key' => 'field_mm_why_title_color', 'label' => '??? ???????', 'name' => 'why_us_title_color', 'type' => 'color_picker', 'default_value' => '#C38A47'],
+		['key' => 'field_mm_why_sub1_color', 'label' => '??? ???? ?????? 1', 'name' => 'why_us_sub1_color', 'type' => 'color_picker', 'default_value' => '#574c40'],
+		['key' => 'field_mm_why_sub2_color', 'label' => '??? ???? ?????? 2', 'name' => 'why_us_sub2_color', 'type' => 'color_picker', 'default_value' => '#724d49'],
 	];
 	
 	$default_mm_lists = [
@@ -296,14 +305,14 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 5; $i++) {
 		$def_val = isset($default_mm_lists[$i-1]) ? $default_mm_lists[$i-1] : '';
-		$memos_fields[] = ['key' => "field_mm_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val];
+		$memos_fields[] = ['key' => "field_mm_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val, 'placeholder' => $def_val];
 	}
-	$memos_fields[] = ['key' => 'field_mm_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا'];
-	$memos_fields[] = ['key' => 'field_mm_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#'];
+	$memos_fields[] = ['key' => 'field_mm_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا', 'placeholder' => 'اعرف المزيد عن خدماتنا'];
+	$memos_fields[] = ['key' => 'field_mm_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#', 'placeholder' => '#'];
 
 	$memos_fields[] = ['key' => 'field_mm_types_tab', 'label' => 'Specialization Types', 'type' => 'tab'];
-	$memos_fields[] = ['key' => 'field_mm_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'أنواع المذكرات التي نقوم بصياغتها'];
-	$memos_fields[] = ['key' => 'field_mm_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نقدم خدمات صياغة المذكرات لكافة درجات التقاضي، ومنها:'];
+	$memos_fields[] = ['key' => 'field_mm_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'أنواع المذكرات التي نقوم بصياغتها', 'placeholder' => 'أنواع المذكرات التي نقوم بصياغتها'];
+	$memos_fields[] = ['key' => 'field_mm_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نقدم خدمات صياغة المذكرات لكافة درجات التقاضي، ومنها:', 'placeholder' => 'نقدم خدمات صياغة المذكرات لكافة درجات التقاضي، ومنها:'];
 	
 	$default_mm_types = [
 		1 => ['title' => 'مذكرة تحرير دعوى', 'desc' => 'صياغة متكاملة للدعوى تتضمن تحرير الوقائع والأسانيد والطلبات الختامية بدقة واحترافية.'],
@@ -312,13 +321,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$memos_fields[] = ['key' => "field_mm_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$memos_fields[] = ['key' => "field_mm_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_mm_types[$i]['title']];
-		$memos_fields[] = ['key' => "field_mm_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_mm_types[$i]['desc']];
+		$memos_fields[] = ['key' => "field_mm_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_mm_types[$i, 'placeholder' => $default_mm_types[$i]['title']];
+		$memos_fields[] = ['key' => "field_mm_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_mm_types[$i, 'placeholder' => $default_mm_types[$i]['desc']];
 	}
 
 	$memos_fields[] = ['key' => 'field_mm_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
-	$memos_fields[] = ['key' => 'field_mm_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'لماذا نحن الأفضل في صياغة المذكرات؟'];
-	$memos_fields[] = ['key' => 'field_mm_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'نتميز بمنهجية عمل دقيقة تضمن تحقيق أفضل النتائج:'];
+	$memos_fields[] = ['key' => 'field_mm_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'لماذا نحن الأفضل في صياغة المذكرات؟', 'placeholder' => 'لماذا نحن الأفضل في صياغة المذكرات؟'];
+	$memos_fields[] = ['key' => 'field_mm_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'نتميز بمنهجية عمل دقيقة تضمن تحقيق أفضل النتائج:', 'placeholder' => 'نتميز بمنهجية عمل دقيقة تضمن تحقيق أفضل النتائج:'];
 	
 	$default_mm_steps = [
 		1 => ['title' => 'دراسة شاملة', 'desc' => 'قراءة متأنية لكافة أوراق القضية وملفاتها لاستخراج نقاط القوة والضعف.'],
@@ -327,13 +336,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$memos_fields[] = ['key' => "field_mm_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$memos_fields[] = ['key' => "field_mm_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_mm_steps[$i]['title']];
-		$memos_fields[] = ['key' => "field_mm_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_mm_steps[$i]['desc']];
+		$memos_fields[] = ['key' => "field_mm_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_mm_steps[$i, 'placeholder' => $default_mm_steps[$i]['title']];
+		$memos_fields[] = ['key' => "field_mm_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_mm_steps[$i, 'placeholder' => $default_mm_steps[$i]['desc']];
 	}
 
 	$memos_fields[] = ['key' => 'field_mm_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
-	$memos_fields[] = ['key' => 'field_mm_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول المذكرات القانونية'];
-	$memos_fields[] = ['key' => 'field_mm_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على استفساراتكم'];
+	$memos_fields[] = ['key' => 'field_mm_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول المذكرات القانونية', 'placeholder' => 'الأسئلة الشائعة حول المذكرات القانونية'];
+	$memos_fields[] = ['key' => 'field_mm_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على استفساراتكم', 'placeholder' => 'إجابات على استفساراتكم'];
 	
 	$default_mm_faqs = [
 		1 => ['q' => 'ما الفرق بين مذكرة تحرير الدعوى والمذكرة الجوابية؟', 'a' => 'تحرير الدعوى يقدمها المدعي لبيان طلباته، بينما المذكرة الجوابية يقدمها المدعى عليه للرد على تلك الطلبات.'],
@@ -343,8 +352,8 @@ function amal_register_service_acf_fields() {
 	for ($i = 1; $i <= 5; $i++) {
 		$q_val = isset($default_mm_faqs[$i]) ? $default_mm_faqs[$i]['q'] : '';
 		$a_val = isset($default_mm_faqs[$i]) ? $default_mm_faqs[$i]['a'] : '';
-		$memos_fields[] = ['key' => "field_mm_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val];
-		$memos_fields[] = ['key' => "field_mm_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val];
+		$memos_fields[] = ['key' => "field_mm_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val, 'placeholder' => $q_val];
+		$memos_fields[] = ['key' => "field_mm_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val, 'placeholder' => $a_val];
 	}
 
 	acf_add_local_field_group([
@@ -361,17 +370,20 @@ function amal_register_service_acf_fields() {
 	// ---------------------------------------------------------
 	$consultant_fields = [
 		['key' => 'field_lc_hero_tab', 'label' => 'Hero Section', 'type' => 'tab'],
-		['key' => 'field_lc_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'مستشار قانوني معتمد لتأسيس الشركات في السعودية'],
-		['key' => 'field_lc_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'نلتزم بتقديم استشارات قانونية متميزة لتأسيس الشركات بأنواعها وفق الأنظمة واللوائح المعمول بها في المملكة، من خلال فريق قانوني متخصص يقدم لك الدعم المتكامل لضمان نجاح أعمالك.'],
-		['key' => 'field_lc_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان'],
-		['key' => 'field_lc_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099'],
+		['key' => 'field_lc_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'مستشار قانوني معتمد لتأسيس الشركات في السعودية', 'placeholder' => 'مستشار قانوني معتمد لتأسيس الشركات في السعودية'],
+		['key' => 'field_lc_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'نلتزم بتقديم استشارات قانونية متميزة لتأسيس الشركات بأنواعها وفق الأنظمة واللوائح المعمول بها في المملكة، من خلال فريق قانوني متخصص يقدم لك الدعم المتكامل لضمان نجاح أعمالك.', 'placeholder' => 'نلتزم بتقديم استشارات قانونية متميزة لتأسيس الشركات بأنواعها وفق الأنظمة واللوائح المعمول بها في المملكة، من خلال فريق قانوني متخصص يقدم لك الدعم المتكامل لضمان نجاح أعمالك.'],
+		['key' => 'field_lc_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان', 'placeholder' => 'اطلب الخدمة الان'],
+		['key' => 'field_lc_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099', 'placeholder' => 'https://wa.me/9660541415099'],
 		['key' => 'field_lc_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
 
 		['key' => 'field_lc_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'],
 		['key' => 'field_lc_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'],
-		['key' => 'field_lc_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'لماذا تحتاج إلى مستشار قانوني معتمد لتأسيس الشركات؟'],
-		['key' => 'field_lc_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'الإدارة القانونية الصحيحة هي التي تحمي استثماراتك مستقبلا، دورنا كفريق متخصص يشمل:'],
+		['key' => 'field_lc_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'لماذا تحتاج إلى مستشار قانوني معتمد لتأسيس الشركات؟', 'placeholder' => 'لماذا تحتاج إلى مستشار قانوني معتمد لتأسيس الشركات؟'],
+		['key' => 'field_lc_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'الإدارة القانونية الصحيحة هي التي تحمي استثماراتك مستقبلا، دورنا كفريق متخصص يشمل:', 'placeholder' => 'الإدارة القانونية الصحيحة هي التي تحمي استثماراتك مستقبلا، دورنا كفريق متخصص يشمل:'],
 		['key' => 'field_lc_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'],
+		['key' => 'field_lc_why_title_color', 'label' => '??? ???????', 'name' => 'why_us_title_color', 'type' => 'color_picker', 'default_value' => '#C38A47'],
+		['key' => 'field_lc_why_sub1_color', 'label' => '??? ???? ?????? 1', 'name' => 'why_us_sub1_color', 'type' => 'color_picker', 'default_value' => '#574c40'],
+		['key' => 'field_lc_why_sub2_color', 'label' => '??? ???? ?????? 2', 'name' => 'why_us_sub2_color', 'type' => 'color_picker', 'default_value' => '#724d49'],
 	];
 	
 	$default_lc_lists = [
@@ -381,14 +393,14 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 5; $i++) {
 		$def_val = isset($default_lc_lists[$i-1]) ? $default_lc_lists[$i-1] : '';
-		$consultant_fields[] = ['key' => "field_lc_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val];
+		$consultant_fields[] = ['key' => "field_lc_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val, 'placeholder' => $def_val];
 	}
-	$consultant_fields[] = ['key' => 'field_lc_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا'];
-	$consultant_fields[] = ['key' => 'field_lc_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#'];
+	$consultant_fields[] = ['key' => 'field_lc_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا', 'placeholder' => 'اعرف المزيد عن خدماتنا'];
+	$consultant_fields[] = ['key' => 'field_lc_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#', 'placeholder' => '#'];
 
 	$consultant_fields[] = ['key' => 'field_lc_types_tab', 'label' => 'Specialization Types', 'type' => 'tab'];
-	$consultant_fields[] = ['key' => 'field_lc_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'خدماتنا في الاستشارة القانونية للشركات'];
-	$consultant_fields[] = ['key' => 'field_lc_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نقدم استشارات قانونية تغطي كافة احتياجاتك، ومنها:'];
+	$consultant_fields[] = ['key' => 'field_lc_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'خدماتنا في الاستشارة القانونية للشركات', 'placeholder' => 'خدماتنا في الاستشارة القانونية للشركات'];
+	$consultant_fields[] = ['key' => 'field_lc_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نقدم استشارات قانونية تغطي كافة احتياجاتك، ومنها:', 'placeholder' => 'نقدم استشارات قانونية تغطي كافة احتياجاتك، ومنها:'];
 	
 	$default_lc_types = [
 		1 => ['title' => 'حوكمة الشركات', 'desc' => 'إعداد لوائح الحوكمة وتطبيق القواعد المنظمة للشركات.'],
@@ -397,19 +409,19 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$consultant_fields[] = ['key' => "field_lc_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$consultant_fields[] = ['key' => "field_lc_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_lc_types[$i]['title']];
-		$consultant_fields[] = ['key' => "field_lc_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lc_types[$i]['desc']];
+		$consultant_fields[] = ['key' => "field_lc_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_lc_types[$i, 'placeholder' => $default_lc_types[$i]['title']];
+		$consultant_fields[] = ['key' => "field_lc_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lc_types[$i, 'placeholder' => $default_lc_types[$i]['desc']];
 	}
 
 	$consultant_fields[] = ['key' => 'field_lc_trust_tab', 'label' => 'Trust Section', 'type' => 'tab'];
-	$consultant_fields[] = ['key' => 'field_lc_trust_title', 'label' => 'عنوان القسم', 'name' => 'trust_title', 'type' => 'text', 'default_value' => 'كيف نحقق معايير الثقة والخبرة؟'];
-	$consultant_fields[] = ['key' => 'field_lc_trust_sub', 'label' => 'النص الفرعي', 'name' => 'trust_subtitle', 'type' => 'textarea', 'default_value' => 'نلتزم بتقديم أعلى مستويات الجودة والاحترافية في العمل.'];
+	$consultant_fields[] = ['key' => 'field_lc_trust_title', 'label' => 'عنوان القسم', 'name' => 'trust_title', 'type' => 'text', 'default_value' => 'كيف نحقق معايير الثقة والخبرة؟', 'placeholder' => 'كيف نحقق معايير الثقة والخبرة؟'];
+	$consultant_fields[] = ['key' => 'field_lc_trust_sub', 'label' => 'النص الفرعي', 'name' => 'trust_subtitle', 'type' => 'textarea', 'default_value' => 'نلتزم بتقديم أعلى مستويات الجودة والاحترافية في العمل.', 'placeholder' => 'نلتزم بتقديم أعلى مستويات الجودة والاحترافية في العمل.'];
 	$consultant_fields[] = ['key' => 'field_lc_trust_icon', 'label' => 'صورة/أيقونة الثقة', 'name' => 'trust_icon', 'type' => 'image', 'return_format' => 'url'];
-	$consultant_fields[] = ['key' => 'field_lc_trust_desc', 'label' => 'وصف الثقة', 'name' => 'trust_desc', 'type' => 'textarea', 'default_value' => 'عندما تتعامل مع مستشار قانوني معتمد لتأسيس الشركات من فريقنا، فأنت تحصل على خبرة ممتدة في السوق السعودي مع الالتزام التام بالسرية والاحترافية التي تفرضها هوية المحاماة والاستشارات القانونية.'];
+	$consultant_fields[] = ['key' => 'field_lc_trust_desc', 'label' => 'وصف الثقة', 'name' => 'trust_desc', 'type' => 'textarea', 'default_value' => 'عندما تتعامل مع مستشار قانوني معتمد لتأسيس الشركات من فريقنا، فأنت تحصل على خبرة ممتدة في السوق السعودي مع الالتزام التام بالسرية والاحترافية التي تفرضها هوية المحاماة والاستشارات القانونية.', 'placeholder' => 'عندما تتعامل مع مستشار قانوني معتمد لتأسيس الشركات من فريقنا، فأنت تحصل على خبرة ممتدة في السوق السعودي مع الالتزام التام بالسرية والاحترافية التي تفرضها هوية المحاماة والاستشارات القانونية.'];
 
 	$consultant_fields[] = ['key' => 'field_lc_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
-	$consultant_fields[] = ['key' => 'field_lc_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول الاستشارة القانونية للشركات'];
-	$consultant_fields[] = ['key' => 'field_lc_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا'];
+	$consultant_fields[] = ['key' => 'field_lc_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول الاستشارة القانونية للشركات', 'placeholder' => 'الأسئلة الشائعة حول الاستشارة القانونية للشركات'];
+	$consultant_fields[] = ['key' => 'field_lc_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا', 'placeholder' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا'];
 	
 	$default_lc_faqs = [
 		1 => ['q' => 'ما هي أهمية وجود مستشار قانوني عند التأسيس؟', 'a' => 'المستشار القانوني يضمن اختيار الكيان القانوني الصحيح وتجنب أي ثغرات قد تكلف الشركة مبالغ طائلة مستقبلاً.'],
@@ -419,8 +431,8 @@ function amal_register_service_acf_fields() {
 	for ($i = 1; $i <= 5; $i++) {
 		$q_val = isset($default_lc_faqs[$i]) ? $default_lc_faqs[$i]['q'] : '';
 		$a_val = isset($default_lc_faqs[$i]) ? $default_lc_faqs[$i]['a'] : '';
-		$consultant_fields[] = ['key' => "field_lc_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val];
-		$consultant_fields[] = ['key' => "field_lc_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val];
+		$consultant_fields[] = ['key' => "field_lc_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val, 'placeholder' => $q_val];
+		$consultant_fields[] = ['key' => "field_lc_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val, 'placeholder' => $a_val];
 	}
 
 	acf_add_local_field_group([
@@ -437,17 +449,20 @@ function amal_register_service_acf_fields() {
 	// ---------------------------------------------------------
 	$notarization_fields = [
 		['key' => 'field_ns_hero_tab', 'label' => 'Hero Section', 'type' => 'tab'],
-		['key' => 'field_ns_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'محامي توثيق عقود الشركات في جدة والسعودية'],
-		['key' => 'field_ns_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'توثيق العقود القانونية هو الخطوة الأولى في حماية حقوقك. نحن في مكتب المستشار القانوني آمال المالكي نقدم خدمة التوثيق القانوني بأسلوب دقيق يحفظ حقوق الشركات ورجال الأعمال.'],
-		['key' => 'field_ns_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان'],
-		['key' => 'field_ns_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099'],
+		['key' => 'field_ns_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'محامي توثيق عقود الشركات في جدة والسعودية', 'placeholder' => 'محامي توثيق عقود الشركات في جدة والسعودية'],
+		['key' => 'field_ns_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'توثيق العقود القانونية هو الخطوة الأولى في حماية حقوقك. نحن في مكتب المستشار القانوني آمال المالكي نقدم خدمة التوثيق القانوني بأسلوب دقيق يحفظ حقوق الشركات ورجال الأعمال.', 'placeholder' => 'توثيق العقود القانونية هو الخطوة الأولى في حماية حقوقك. نحن في مكتب المستشار القانوني آمال المالكي نقدم خدمة التوثيق القانوني بأسلوب دقيق يحفظ حقوق الشركات ورجال الأعمال.'],
+		['key' => 'field_ns_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان', 'placeholder' => 'اطلب الخدمة الان'],
+		['key' => 'field_ns_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099', 'placeholder' => 'https://wa.me/9660541415099'],
 		['key' => 'field_ns_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
 
 		['key' => 'field_ns_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'],
 		['key' => 'field_ns_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'],
-		['key' => 'field_ns_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'أهمية الاستعانة بـ محامي توثيق عقود الشركات في جدة؟'],
-		['key' => 'field_ns_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'التوثيق ليس مجرد ختم بل هو إقرار بصحة الأوراق القانونية للشركات. نحن نساعدك في:'],
+		['key' => 'field_ns_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'أهمية الاستعانة بـ محامي توثيق عقود الشركات في جدة؟', 'placeholder' => 'أهمية الاستعانة بـ محامي توثيق عقود الشركات في جدة؟'],
+		['key' => 'field_ns_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'التوثيق ليس مجرد ختم بل هو إقرار بصحة الأوراق القانونية للشركات. نحن نساعدك في:', 'placeholder' => 'التوثيق ليس مجرد ختم بل هو إقرار بصحة الأوراق القانونية للشركات. نحن نساعدك في:'],
 		['key' => 'field_ns_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'],
+		['key' => 'field_ns_why_title_color', 'label' => '??? ???????', 'name' => 'why_us_title_color', 'type' => 'color_picker', 'default_value' => '#C38A47'],
+		['key' => 'field_ns_why_sub1_color', 'label' => '??? ???? ?????? 1', 'name' => 'why_us_sub1_color', 'type' => 'color_picker', 'default_value' => '#574c40'],
+		['key' => 'field_ns_why_sub2_color', 'label' => '??? ???? ?????? 2', 'name' => 'why_us_sub2_color', 'type' => 'color_picker', 'default_value' => '#724d49'],
 	];
 	
 	$default_ns_lists = [
@@ -456,14 +471,14 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 5; $i++) {
 		$def_val = isset($default_ns_lists[$i-1]) ? $default_ns_lists[$i-1] : '';
-		$notarization_fields[] = ['key' => "field_ns_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val];
+		$notarization_fields[] = ['key' => "field_ns_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val, 'placeholder' => $def_val];
 	}
-	$notarization_fields[] = ['key' => 'field_ns_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا'];
-	$notarization_fields[] = ['key' => 'field_ns_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#'];
+	$notarization_fields[] = ['key' => 'field_ns_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا', 'placeholder' => 'اعرف المزيد عن خدماتنا'];
+	$notarization_fields[] = ['key' => 'field_ns_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#', 'placeholder' => '#'];
 
 	$notarization_fields[] = ['key' => 'field_ns_types_tab', 'label' => 'Specialization Types', 'type' => 'tab'];
-	$notarization_fields[] = ['key' => 'field_ns_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'خدماتنا في توثيق عقود الشركات'];
-	$notarization_fields[] = ['key' => 'field_ns_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نغطي كافة احتياجات الشركات في جدة والمملكة بشكل عام.'];
+	$notarization_fields[] = ['key' => 'field_ns_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'خدماتنا في توثيق عقود الشركات', 'placeholder' => 'خدماتنا في توثيق عقود الشركات'];
+	$notarization_fields[] = ['key' => 'field_ns_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'نغطي كافة احتياجات الشركات في جدة والمملكة بشكل عام.', 'placeholder' => 'نغطي كافة احتياجات الشركات في جدة والمملكة بشكل عام.'];
 	
 	$default_ns_types = [
 		1 => ['title' => 'توثيق عقود التأسيس', 'desc' => 'إصدار وتوثيق العقود وتعديلاتها قانونياً.'],
@@ -472,13 +487,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$notarization_fields[] = ['key' => "field_ns_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$notarization_fields[] = ['key' => "field_ns_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_ns_types[$i]['title']];
-		$notarization_fields[] = ['key' => "field_ns_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ns_types[$i]['desc']];
+		$notarization_fields[] = ['key' => "field_ns_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_ns_types[$i, 'placeholder' => $default_ns_types[$i]['title']];
+		$notarization_fields[] = ['key' => "field_ns_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ns_types[$i, 'placeholder' => $default_ns_types[$i]['desc']];
 	}
 
 	$notarization_fields[] = ['key' => 'field_ns_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
-	$notarization_fields[] = ['key' => 'field_ns_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'لماذا مكتب المستشار القانوني آمال المالكي للتوثيق القانوني؟'];
-	$notarization_fields[] = ['key' => 'field_ns_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'إعداد قانوني دقيق يضمن قوة الدعوى بشكل يضمن حقوقك خلال التنفيذ.'];
+	$notarization_fields[] = ['key' => 'field_ns_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'لماذا مكتب المستشار القانوني آمال المالكي للتوثيق القانوني؟', 'placeholder' => 'لماذا مكتب المستشار القانوني آمال المالكي للتوثيق القانوني؟'];
+	$notarization_fields[] = ['key' => 'field_ns_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'إعداد قانوني دقيق يضمن قوة الدعوى بشكل يضمن حقوقك خلال التنفيذ.', 'placeholder' => 'إعداد قانوني دقيق يضمن قوة الدعوى بشكل يضمن حقوقك خلال التنفيذ.'];
 	
 	$default_ns_steps = [
 		1 => ['title' => 'إنجاز قانوني باحترافية عالية', 'desc' => 'سرعة ودقة في التعامل مع توثيق عقود وتعديلات الشركات في وقت قياسي.'],
@@ -487,13 +502,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$notarization_fields[] = ['key' => "field_ns_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$notarization_fields[] = ['key' => "field_ns_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_ns_steps[$i]['title']];
-		$notarization_fields[] = ['key' => "field_ns_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ns_steps[$i]['desc']];
+		$notarization_fields[] = ['key' => "field_ns_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_ns_steps[$i, 'placeholder' => $default_ns_steps[$i]['title']];
+		$notarization_fields[] = ['key' => "field_ns_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ns_steps[$i, 'placeholder' => $default_ns_steps[$i]['desc']];
 	}
 
 	$notarization_fields[] = ['key' => 'field_ns_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
-	$notarization_fields[] = ['key' => 'field_ns_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول توثيق العقود'];
-	$notarization_fields[] = ['key' => 'field_ns_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا'];
+	$notarization_fields[] = ['key' => 'field_ns_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول توثيق العقود', 'placeholder' => 'الأسئلة الشائعة حول توثيق العقود'];
+	$notarization_fields[] = ['key' => 'field_ns_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا', 'placeholder' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا'];
 	
 	$default_ns_faqs = [
 		1 => ['q' => 'هل التوثيق الإلكتروني معتمد؟', 'a' => 'نعم، التوثيق الإلكتروني عبر منصة الموثق معتمد رسمياً من وزارة العدل وله نفس الحجية القانونية.'],
@@ -503,8 +518,8 @@ function amal_register_service_acf_fields() {
 	for ($i = 1; $i <= 5; $i++) {
 		$q_val = isset($default_ns_faqs[$i]) ? $default_ns_faqs[$i]['q'] : '';
 		$a_val = isset($default_ns_faqs[$i]) ? $default_ns_faqs[$i]['a'] : '';
-		$notarization_fields[] = ['key' => "field_ns_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val];
-		$notarization_fields[] = ['key' => "field_ns_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val];
+		$notarization_fields[] = ['key' => "field_ns_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val, 'placeholder' => $q_val];
+		$notarization_fields[] = ['key' => "field_ns_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val, 'placeholder' => $a_val];
 	}
 
 	acf_add_local_field_group([
@@ -521,17 +536,20 @@ function amal_register_service_acf_fields() {
 	// ---------------------------------------------------------
 	$hearings_fields = [
 		['key' => 'field_hr_hero_tab', 'label' => 'Hero Section', 'type' => 'tab'],
-		['key' => 'field_hr_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'محامي ترافع وتمثيل قانوني للشركات والأفراد'],
-		['key' => 'field_hr_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'الترافع والمثول أمام المحاكم واللجان القضائية وشبه القضائية يمثل الجزء الأهم من نجاح القضية. نحن في مكتب المستشار القانوني آمال المالكي نضمن لك تمثيلاً قانونياً قوياً من خلال فريق محامين متخصصين في كافة أنواع القضايا التجارية.'],
-		['key' => 'field_hr_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان'],
-		['key' => 'field_hr_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099'],
+		['key' => 'field_hr_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'محامي ترافع وتمثيل قانوني للشركات والأفراد', 'placeholder' => 'محامي ترافع وتمثيل قانوني للشركات والأفراد'],
+		['key' => 'field_hr_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'الترافع والمثول أمام المحاكم واللجان القضائية وشبه القضائية يمثل الجزء الأهم من نجاح القضية. نحن في مكتب المستشار القانوني آمال المالكي نضمن لك تمثيلاً قانونياً قوياً من خلال فريق محامين متخصصين في كافة أنواع القضايا التجارية.', 'placeholder' => 'الترافع والمثول أمام المحاكم واللجان القضائية وشبه القضائية يمثل الجزء الأهم من نجاح القضية. نحن في مكتب المستشار القانوني آمال المالكي نضمن لك تمثيلاً قانونياً قوياً من خلال فريق محامين متخصصين في كافة أنواع القضايا التجارية.'],
+		['key' => 'field_hr_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان', 'placeholder' => 'اطلب الخدمة الان'],
+		['key' => 'field_hr_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099', 'placeholder' => 'https://wa.me/9660541415099'],
 		['key' => 'field_hr_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
 
 		['key' => 'field_hr_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'],
 		['key' => 'field_hr_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'],
-		['key' => 'field_hr_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'دور محامي ترافع وتمثيل قانوني'],
-		['key' => 'field_hr_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'دورنا لا يقتصر على الحضور الشكلي، بل نقود استراتيجية التقاضي من خلال:'],
+		['key' => 'field_hr_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'دور محامي ترافع وتمثيل قانوني', 'placeholder' => 'دور محامي ترافع وتمثيل قانوني'],
+		['key' => 'field_hr_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'دورنا لا يقتصر على الحضور الشكلي، بل نقود استراتيجية التقاضي من خلال:', 'placeholder' => 'دورنا لا يقتصر على الحضور الشكلي، بل نقود استراتيجية التقاضي من خلال:'],
 		['key' => 'field_hr_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'],
+		['key' => 'field_hr_why_title_color', 'label' => '??? ???????', 'name' => 'why_us_title_color', 'type' => 'color_picker', 'default_value' => '#C38A47'],
+		['key' => 'field_hr_why_sub1_color', 'label' => '??? ???? ?????? 1', 'name' => 'why_us_sub1_color', 'type' => 'color_picker', 'default_value' => '#574c40'],
+		['key' => 'field_hr_why_sub2_color', 'label' => '??? ???? ?????? 2', 'name' => 'why_us_sub2_color', 'type' => 'color_picker', 'default_value' => '#724d49'],
 	];
 	
 	$default_hr_lists = [
@@ -541,14 +559,14 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 5; $i++) {
 		$def_val = isset($default_hr_lists[$i-1]) ? $default_hr_lists[$i-1] : '';
-		$hearings_fields[] = ['key' => "field_hr_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val];
+		$hearings_fields[] = ['key' => "field_hr_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val, 'placeholder' => $def_val];
 	}
-	$hearings_fields[] = ['key' => 'field_hr_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا'];
-	$hearings_fields[] = ['key' => 'field_hr_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#'];
+	$hearings_fields[] = ['key' => 'field_hr_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا', 'placeholder' => 'اعرف المزيد عن خدماتنا'];
+	$hearings_fields[] = ['key' => 'field_hr_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#', 'placeholder' => '#'];
 
 	$hearings_fields[] = ['key' => 'field_hr_types_tab', 'label' => 'Specialization Types', 'type' => 'tab'];
-	$hearings_fields[] = ['key' => 'field_hr_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'تمثيل الشركات في القضايا التجارية'];
-	$hearings_fields[] = ['key' => 'field_hr_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'تتعرض الشركات لنزاعات معقدة تتطلب محامي ترافع وتمثيل قانوني يفهم لغة الأرقام والسوق:'];
+	$hearings_fields[] = ['key' => 'field_hr_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'تمثيل الشركات في القضايا التجارية', 'placeholder' => 'تمثيل الشركات في القضايا التجارية'];
+	$hearings_fields[] = ['key' => 'field_hr_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'تتعرض الشركات لنزاعات معقدة تتطلب محامي ترافع وتمثيل قانوني يفهم لغة الأرقام والسوق:', 'placeholder' => 'تتعرض الشركات لنزاعات معقدة تتطلب محامي ترافع وتمثيل قانوني يفهم لغة الأرقام والسوق:'];
 	
 	$default_hr_types = [
 		1 => ['title' => 'قضايا المطالبات المالية', 'desc' => 'إثبات الحقوق والمطالبة بالديون والتعويضات المالية.'],
@@ -557,13 +575,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$hearings_fields[] = ['key' => "field_hr_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$hearings_fields[] = ['key' => "field_hr_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_hr_types[$i]['title']];
-		$hearings_fields[] = ['key' => "field_hr_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_hr_types[$i]['desc']];
+		$hearings_fields[] = ['key' => "field_hr_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_hr_types[$i, 'placeholder' => $default_hr_types[$i]['title']];
+		$hearings_fields[] = ['key' => "field_hr_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_hr_types[$i, 'placeholder' => $default_hr_types[$i]['desc']];
 	}
 
 	$hearings_fields[] = ['key' => 'field_hr_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
-	$hearings_fields[] = ['key' => 'field_hr_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'لماذا تثق بالتمثيل القانوني؟'];
-	$hearings_fields[] = ['key' => 'field_hr_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'تمثيل قانوني احترافي يحمي حقوقك ويعزز موقفك الدعوى:'];
+	$hearings_fields[] = ['key' => 'field_hr_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'لماذا تثق بالتمثيل القانوني؟', 'placeholder' => 'لماذا تثق بالتمثيل القانوني؟'];
+	$hearings_fields[] = ['key' => 'field_hr_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'تمثيل قانوني احترافي يحمي حقوقك ويعزز موقفك الدعوى:', 'placeholder' => 'تمثيل قانوني احترافي يحمي حقوقك ويعزز موقفك الدعوى:'];
 	
 	$default_hr_steps = [
 		1 => ['title' => 'محامون مرخصون وإجراءات ناجز', 'desc' => 'فريقنا يضم نخبة من المحامين والمستشارين مرخصين ومسجلين بنظام ناجز.'],
@@ -572,13 +590,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$hearings_fields[] = ['key' => "field_hr_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$hearings_fields[] = ['key' => "field_hr_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_hr_steps[$i]['title']];
-		$hearings_fields[] = ['key' => "field_hr_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_hr_steps[$i]['desc']];
+		$hearings_fields[] = ['key' => "field_hr_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_hr_steps[$i, 'placeholder' => $default_hr_steps[$i]['title']];
+		$hearings_fields[] = ['key' => "field_hr_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_hr_steps[$i, 'placeholder' => $default_hr_steps[$i]['desc']];
 	}
 
 	$hearings_fields[] = ['key' => 'field_hr_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
-	$hearings_fields[] = ['key' => 'field_hr_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول التمثيل القضائي'];
-	$hearings_fields[] = ['key' => 'field_hr_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا'];
+	$hearings_fields[] = ['key' => 'field_hr_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول التمثيل القضائي', 'placeholder' => 'الأسئلة الشائعة حول التمثيل القضائي'];
+	$hearings_fields[] = ['key' => 'field_hr_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا', 'placeholder' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا'];
 	
 	$default_hr_faqs = [
 		1 => ['q' => 'هل يمكن لمحامي تمثيلي دون حضوري؟', 'a' => 'نعم، بموجب وكالة شرعية يمكننا الترافع والحضور نيابة عنك في كافة الجلسات.'],
@@ -588,8 +606,8 @@ function amal_register_service_acf_fields() {
 	for ($i = 1; $i <= 5; $i++) {
 		$q_val = isset($default_hr_faqs[$i]) ? $default_hr_faqs[$i]['q'] : '';
 		$a_val = isset($default_hr_faqs[$i]) ? $default_hr_faqs[$i]['a'] : '';
-		$hearings_fields[] = ['key' => "field_hr_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val];
-		$hearings_fields[] = ['key' => "field_hr_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val];
+		$hearings_fields[] = ['key' => "field_hr_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val, 'placeholder' => $q_val];
+		$hearings_fields[] = ['key' => "field_hr_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val, 'placeholder' => $a_val];
 	}
 
 	acf_add_local_field_group([
@@ -606,17 +624,20 @@ function amal_register_service_acf_fields() {
 	// ---------------------------------------------------------
 	$appeals_fields = [
 		['key' => 'field_ap_hero_tab', 'label' => 'Hero Section', 'type' => 'tab'],
-		['key' => 'field_ap_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'نقض واستئناف في السعودية من مكتب المستشار القانوني آمال المالكي'],
-		['key' => 'field_ap_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'صدور حكم ابتدائي ليس نهاية المطاف! الاعتراض على الأحكام والمطالبة بالنقض في السعودية من أبرز ما يقدمه مكتب المستشار القانوني آمال المالكي متخصص في تحليل الأحكام واستنباط الأخطاء القانونية لتقديم لوائح اعتراضية قوية تضمن إعادة النظر في الحكم.'],
-		['key' => 'field_ap_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان'],
-		['key' => 'field_ap_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099'],
+		['key' => 'field_ap_hero_title', 'label' => 'العنوان الرئيسي', 'name' => 'hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'نقض واستئناف في السعودية من مكتب المستشار القانوني آمال المالكي', 'placeholder' => 'نقض واستئناف في السعودية من مكتب المستشار القانوني آمال المالكي'],
+		['key' => 'field_ap_hero_subtitle', 'label' => 'النص الفرعي', 'name' => 'hero_subtitle', 'type' => 'textarea', 'default_value' => 'صدور حكم ابتدائي ليس نهاية المطاف! الاعتراض على الأحكام والمطالبة بالنقض في السعودية من أبرز ما يقدمه مكتب المستشار القانوني آمال المالكي متخصص في تحليل الأحكام واستنباط الأخطاء القانونية لتقديم لوائح اعتراضية قوية تضمن إعادة النظر في الحكم.', 'placeholder' => 'صدور حكم ابتدائي ليس نهاية المطاف! الاعتراض على الأحكام والمطالبة بالنقض في السعودية من أبرز ما يقدمه مكتب المستشار القانوني آمال المالكي متخصص في تحليل الأحكام واستنباط الأخطاء القانونية لتقديم لوائح اعتراضية قوية تضمن إعادة النظر في الحكم.'],
+		['key' => 'field_ap_hero_btn_text', 'label' => 'نص الزر', 'name' => 'hero_btn_text', 'type' => 'text', 'default_value' => 'اطلب الخدمة الان', 'placeholder' => 'اطلب الخدمة الان'],
+		['key' => 'field_ap_hero_btn_url', 'label' => 'رابط الزر', 'name' => 'hero_btn_url', 'type' => 'url', 'default_value' => 'https://wa.me/9660541415099', 'placeholder' => 'https://wa.me/9660541415099'],
 		['key' => 'field_ap_hero_bg', 'label' => 'صورة الخلفية', 'name' => 'hero_bg', 'type' => 'image', 'return_format' => 'url'],
 
 		['key' => 'field_ap_why_tab', 'label' => 'Why Us Section', 'type' => 'tab'],
 		['key' => 'field_ap_why_img', 'label' => 'صورة القسم', 'name' => 'why_us_image', 'type' => 'image', 'return_format' => 'url'],
-		['key' => 'field_ap_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'لماذا تحتاج إلى محامي نقض واستئناف في السعودية؟'],
-		['key' => 'field_ap_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'مرحلة الاستئناف والنقض تتطلب دقة متناهية وفهماً عميقاً لنصوص النظام، حيث نقوم بـ:'],
+		['key' => 'field_ap_why_title', 'label' => 'العنوان', 'name' => 'why_us_title', 'type' => 'text', 'default_value' => 'لماذا تحتاج إلى محامي نقض واستئناف في السعودية؟', 'placeholder' => 'لماذا تحتاج إلى محامي نقض واستئناف في السعودية؟'],
+		['key' => 'field_ap_why_subtitle', 'label' => 'النص الفرعي 1', 'name' => 'why_us_subtitle', 'type' => 'text', 'default_value' => 'مرحلة الاستئناف والنقض تتطلب دقة متناهية وفهماً عميقاً لنصوص النظام، حيث نقوم بـ:', 'placeholder' => 'مرحلة الاستئناف والنقض تتطلب دقة متناهية وفهماً عميقاً لنصوص النظام، حيث نقوم بـ:'],
 		['key' => 'field_ap_why_desc', 'label' => 'النص الفرعي 2', 'name' => 'why_us_desc', 'type' => 'textarea'],
+		['key' => 'field_ap_why_title_color', 'label' => '??? ???????', 'name' => 'why_us_title_color', 'type' => 'color_picker', 'default_value' => '#C38A47'],
+		['key' => 'field_ap_why_sub1_color', 'label' => '??? ???? ?????? 1', 'name' => 'why_us_sub1_color', 'type' => 'color_picker', 'default_value' => '#574c40'],
+		['key' => 'field_ap_why_sub2_color', 'label' => '??? ???? ?????? 2', 'name' => 'why_us_sub2_color', 'type' => 'color_picker', 'default_value' => '#724d49'],
 	];
 	
 	$default_ap_lists = [
@@ -626,14 +647,14 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 5; $i++) {
 		$def_val = isset($default_ap_lists[$i-1]) ? $default_ap_lists[$i-1] : '';
-		$appeals_fields[] = ['key' => "field_ap_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val];
+		$appeals_fields[] = ['key' => "field_ap_why_list_{$i}", 'label' => "نقطة {$i}", 'name' => "why_us_list_{$i}", 'type' => 'text', 'default_value' => $def_val, 'placeholder' => $def_val];
 	}
-	$appeals_fields[] = ['key' => 'field_ap_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا'];
-	$appeals_fields[] = ['key' => 'field_ap_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#'];
+	$appeals_fields[] = ['key' => 'field_ap_why_btn', 'label' => 'نص الزر', 'name' => 'why_us_btn_text', 'type' => 'text', 'default_value' => 'اعرف المزيد عن خدماتنا', 'placeholder' => 'اعرف المزيد عن خدماتنا'];
+	$appeals_fields[] = ['key' => 'field_ap_why_url', 'label' => 'رابط الزر', 'name' => 'why_us_btn_url', 'type' => 'url', 'default_value' => '#', 'placeholder' => '#'];
 
 	$appeals_fields[] = ['key' => 'field_ap_types_tab', 'label' => 'Specialization Types', 'type' => 'tab'];
-	$appeals_fields[] = ['key' => 'field_ap_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'خدماتنا في قضايا الاستئناف والنقض'];
-	$appeals_fields[] = ['key' => 'field_ap_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'خبرة قانونية دقيقة تضمن لموكلينا أقوى أداء أمام محكمة النقض.'];
+	$appeals_fields[] = ['key' => 'field_ap_types_title', 'label' => 'عنوان القسم', 'name' => 'types_title', 'type' => 'text', 'default_value' => 'خدماتنا في قضايا الاستئناف والنقض', 'placeholder' => 'خدماتنا في قضايا الاستئناف والنقض'];
+	$appeals_fields[] = ['key' => 'field_ap_types_sub', 'label' => 'النص الفرعي', 'name' => 'types_subtitle', 'type' => 'text', 'default_value' => 'خبرة قانونية دقيقة تضمن لموكلينا أقوى أداء أمام محكمة النقض.', 'placeholder' => 'خبرة قانونية دقيقة تضمن لموكلينا أقوى أداء أمام محكمة النقض.'];
 	
 	$default_ap_types = [
 		1 => ['title' => 'محكمة الاستئناف', 'desc' => 'الاعتراض على الأحكام الابتدائية في قضايا تجارية وعمالية وأحوال شخصية أمام المحاكم.'],
@@ -642,13 +663,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$appeals_fields[] = ['key' => "field_ap_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$appeals_fields[] = ['key' => "field_ap_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_ap_types[$i]['title']];
-		$appeals_fields[] = ['key' => "field_ap_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ap_types[$i]['desc']];
+		$appeals_fields[] = ['key' => "field_ap_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_ap_types[$i, 'placeholder' => $default_ap_types[$i]['title']];
+		$appeals_fields[] = ['key' => "field_ap_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ap_types[$i, 'placeholder' => $default_ap_types[$i]['desc']];
 	}
 
 	$appeals_fields[] = ['key' => 'field_ap_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
-	$appeals_fields[] = ['key' => 'field_ap_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'مميزات التعامل في قضايا النقض'];
-	$appeals_fields[] = ['key' => 'field_ap_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'مكتب المستشار القانوني آمال المالكي خيارك الأفضل في قضايا الاستئناف والنقض في السعودية للأسباب التالية:'];
+	$appeals_fields[] = ['key' => 'field_ap_steps_title', 'label' => 'عنوان القسم', 'name' => 'steps_title', 'type' => 'text', 'default_value' => 'مميزات التعامل في قضايا النقض', 'placeholder' => 'مميزات التعامل في قضايا النقض'];
+	$appeals_fields[] = ['key' => 'field_ap_steps_sub', 'label' => 'النص الفرعي', 'name' => 'steps_subtitle', 'type' => 'textarea', 'default_value' => 'مكتب المستشار القانوني آمال المالكي خيارك الأفضل في قضايا الاستئناف والنقض في السعودية للأسباب التالية:', 'placeholder' => 'مكتب المستشار القانوني آمال المالكي خيارك الأفضل في قضايا الاستئناف والنقض في السعودية للأسباب التالية:'];
 	
 	$default_ap_steps = [
 		1 => ['title' => 'خبرة قانونية متخصصة', 'desc' => 'فريقنا يضم نخبة من المستشارين متخصصين في صياغة اللوائح الاعتراضية ومذكرات النقض.'],
@@ -657,13 +678,13 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$appeals_fields[] = ['key' => "field_ap_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$appeals_fields[] = ['key' => "field_ap_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_ap_steps[$i]['title']];
-		$appeals_fields[] = ['key' => "field_ap_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ap_steps[$i]['desc']];
+		$appeals_fields[] = ['key' => "field_ap_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_ap_steps[$i, 'placeholder' => $default_ap_steps[$i]['title']];
+		$appeals_fields[] = ['key' => "field_ap_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ap_steps[$i, 'placeholder' => $default_ap_steps[$i]['desc']];
 	}
 
 	$appeals_fields[] = ['key' => 'field_ap_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
-	$appeals_fields[] = ['key' => 'field_ap_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول الاستئناف والنقض'];
-	$appeals_fields[] = ['key' => 'field_ap_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا'];
+	$appeals_fields[] = ['key' => 'field_ap_faq_title', 'label' => 'عنوان القسم', 'name' => 'faq_title', 'type' => 'text', 'default_value' => 'الأسئلة الشائعة حول الاستئناف والنقض', 'placeholder' => 'الأسئلة الشائعة حول الاستئناف والنقض'];
+	$appeals_fields[] = ['key' => 'field_ap_faq_sub', 'label' => 'النص الفرعي', 'name' => 'faq_subtitle', 'type' => 'text', 'default_value' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا', 'placeholder' => 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا'];
 	
 	$default_ap_faqs = [
 		1 => ['q' => 'كم مدة الاستئناف في السعودية؟', 'a' => 'مدة الاستئناف هي 30 يوماً من تاريخ استلام الصك، وتتقلص إلى 10 أيام في القضايا المستعجلة.'],
@@ -673,8 +694,8 @@ function amal_register_service_acf_fields() {
 	for ($i = 1; $i <= 5; $i++) {
 		$q_val = isset($default_ap_faqs[$i]) ? $default_ap_faqs[$i]['q'] : '';
 		$a_val = isset($default_ap_faqs[$i]) ? $default_ap_faqs[$i]['a'] : '';
-		$appeals_fields[] = ['key' => "field_ap_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val];
-		$appeals_fields[] = ['key' => "field_ap_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val];
+		$appeals_fields[] = ['key' => "field_ap_faq_{$i}_q", 'label' => "سؤال {$i}", 'name' => "faq_{$i}_question", 'type' => 'text', 'default_value' => $q_val, 'placeholder' => $q_val];
+		$appeals_fields[] = ['key' => "field_ap_faq_{$i}_a", 'label' => "إجابة {$i}", 'name' => "faq_{$i}_answer", 'type' => 'textarea', 'default_value' => $a_val, 'placeholder' => $a_val];
 	}
 
 	acf_add_local_field_group([

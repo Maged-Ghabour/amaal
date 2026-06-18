@@ -52,13 +52,18 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				<div class="why-contract-image">
 					<img src="<?php echo esc_url($why_img); ?>" alt="<?php echo esc_attr($why_title); ?>">
 				</div>
+								<?php
+				$title_color = function_exists('get_field') && get_field('why_us_title_color') ? get_field('why_us_title_color') : '#C38A47';
+				$sub1_color = function_exists('get_field') && get_field('why_us_sub1_color') ? get_field('why_us_sub1_color') : '#574c40';
+				$sub2_color = function_exists('get_field') && get_field('why_us_sub2_color') ? get_field('why_us_sub2_color') : '#724d49';
+				?>
 				<div class="why-contract-content" style="padding-inline-end: 0; padding-inline-start: 1rem;">
-					<h2 class="why-contract-title" style="font-size: 1.8rem; line-height: 1.4;"><?php echo esc_html($why_title); ?></h2>
+					<h2 class="why-contract-title" style="font-size: 1.8rem; line-height: 1.4; color: <?php echo esc_attr($title_color); ?>;"><?php echo esc_html($why_title); ?></h2>
 					<?php if ($why_sub): ?>
-						<p class="why-contract-desc" style="color: var(--color-gold); font-weight: bold; margin-bottom: 0.5rem;"><?php echo esc_html($why_sub); ?></p>
+						<p class="why-contract-desc" style="color: <?php echo esc_attr($sub1_color); ?>; font-weight: bold; margin-bottom: 0.5rem;"><?php echo esc_html($why_sub); ?></p>
 					<?php endif; ?>
 					<?php if ($why_desc): ?>
-						<p class="why-contract-desc" style="color: var(--color-dark); font-weight: bold;"><?php echo esc_html($why_desc); ?></p>
+						<p class="why-contract-desc" style="color: <?php echo esc_attr($sub2_color); ?>; font-weight: bold;"><?php echo esc_html($why_desc); ?></p>
 					<?php endif; ?>
 					<ul class="why-contract-list">
 						<?php 
@@ -85,7 +90,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$types_title = get_field('types_title') ?: 'خدماتنا في توثيق عقود الشركات';
 				$types_sub = get_field('types_subtitle') ?: 'نغطي كافة احتياجات الشركات في جدة والمملكة بشكل عام.';
 				?>
-				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($types_title); ?></h2>
+				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($types_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($types_sub); ?></p>
 			</div>
 			
@@ -123,7 +128,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$steps_title = get_field('steps_title') ?: 'لماذا مكتب المستشار القانوني آمال المالكي للتوثيق القانوني؟';
 				$steps_sub = get_field('steps_subtitle') ?: 'إعداد قانوني دقيق يضمن قوة الدعوى بشكل يضمن حقوقك خلال التنفيذ.';
 				?>
-				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($steps_title); ?></h2>
+				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($steps_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($steps_sub); ?></p>
 			</div>
 
@@ -159,7 +164,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$faq_title = get_field('faq_title') ?: 'الأسئلة الشائعة حول توثيق العقود';
 				$faq_sub = get_field('faq_subtitle') ?: 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا';
 				?>
-				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($faq_title); ?></h2>
+				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($faq_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($faq_sub); ?></p>
 			</div>
 

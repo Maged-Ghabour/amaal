@@ -53,13 +53,18 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				<div class="why-contract-image">
 					<img src="<?php echo esc_url($why_img); ?>" alt="<?php echo esc_attr($why_title); ?>">
 				</div>
+								<?php
+				$title_color = function_exists('get_field') && get_field('why_us_title_color') ? get_field('why_us_title_color') : '#C38A47';
+				$sub1_color = function_exists('get_field') && get_field('why_us_sub1_color') ? get_field('why_us_sub1_color') : '#574c40';
+				$sub2_color = function_exists('get_field') && get_field('why_us_sub2_color') ? get_field('why_us_sub2_color') : '#724d49';
+				?>
 				<div class="why-contract-content" style="padding-inline-end: 0; padding-inline-start: 1rem;">
-					<h2 class="why-contract-title" style="font-size: 1.8rem; line-height: 1.4;"><?php echo esc_html($why_title); ?></h2>
+					<h2 class="why-contract-title" style="font-size: 1.8rem; line-height: 1.4; color: <?php echo esc_attr($title_color); ?>;"><?php echo esc_html($why_title); ?></h2>
 					<?php if ($why_sub): ?>
-						<p class="why-contract-desc" style="color: var(--color-gold); font-weight: bold; margin-bottom: 0.5rem;"><?php echo esc_html($why_sub); ?></p>
+						<p class="why-contract-desc" style="color: <?php echo esc_attr($sub1_color); ?>; font-weight: bold; margin-bottom: 0.5rem;"><?php echo esc_html($why_sub); ?></p>
 					<?php endif; ?>
 					<?php if ($why_desc): ?>
-						<p class="why-contract-desc" style="color: var(--color-dark); font-weight: bold;"><?php echo esc_html($why_desc); ?></p>
+						<p class="why-contract-desc" style="color: <?php echo esc_attr($sub2_color); ?>; font-weight: bold;"><?php echo esc_html($why_desc); ?></p>
 					<?php endif; ?>
 					<ul class="why-contract-list">
 						<?php 
@@ -86,7 +91,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$types_title = get_field('types_title') ?: 'خدماتنا في الاستشارة القانونية للشركات';
 				$types_sub = get_field('types_subtitle') ?: 'نقدم استشارات قانونية تغطي كافة احتياجاتك، ومنها:';
 				?>
-				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($types_title); ?></h2>
+				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($types_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($types_sub); ?></p>
 			</div>
 			
@@ -124,7 +129,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$trust_title = get_field('trust_title') ?: 'كيف نحقق معايير الثقة والخبرة؟';
 				$trust_sub = get_field('trust_subtitle') ?: 'نلتزم بتقديم أعلى مستويات الجودة والاحترافية في العمل.';
 				?>
-				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($trust_title); ?></h2>
+				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($trust_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($trust_sub); ?></p>
 			</div>
 
@@ -156,7 +161,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$faq_title = get_field('faq_title') ?: 'الأسئلة الشائعة حول الاستشارة القانونية للشركات';
 				$faq_sub = get_field('faq_subtitle') ?: 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا';
 				?>
-				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($faq_title); ?></h2>
+				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($faq_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($faq_sub); ?></p>
 			</div>
 

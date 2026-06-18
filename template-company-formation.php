@@ -85,8 +85,13 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/' . rawurlencode('تأ�
 				<div class="why-contract-image">
 					<img src="<?php echo esc_url($why_img); ?>" alt="<?php echo esc_attr($why_title); ?>">
 				</div>
+								<?php
+				$title_color = function_exists('get_field') && get_field('why_us_title_color') ? get_field('why_us_title_color') : '#C38A47';
+				$sub1_color = function_exists('get_field') && get_field('why_us_sub1_color') ? get_field('why_us_sub1_color') : '#574c40';
+				$sub2_color = function_exists('get_field') && get_field('why_us_sub2_color') ? get_field('why_us_sub2_color') : '#724d49';
+				?>
 				<div class="why-contract-content" style="padding-inline-end: 0; padding-inline-start: 1rem;">
-					<h2 class="why-contract-title"><?php echo esc_html($why_title); ?></h2>
+					<h2 class="why-contract-title" style="font-size: 1.8rem; line-height: 1.4; color: <?php echo esc_attr($title_color); ?>;"><?php echo esc_html($why_title); ?></h2>
 					<p class="why-contract-desc"><?php echo esc_html($why_desc); ?></p>
 					<ul class="why-contract-list">
 						<?php 
@@ -113,7 +118,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/' . rawurlencode('تأ�
 				$types_title = get_field('types_title') ?: 'الشركات التي نساعدك في تأسيسها';
 				$types_badge = get_field('types_badge') ?: 'أنواع الشركات';
 				?>
-				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($types_title); ?></h2>
+				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($types_title); ?></h2>
 				<span class="badge-title"><?php echo esc_html($types_badge); ?></span>
 			</div>
 			
@@ -151,7 +156,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/' . rawurlencode('تأ�
 				$faq_title = get_field('faq_title') ?: 'الأسئلة الشائعة حول تأسيس الشركات';
 				$faq_sub = get_field('faq_subtitle') ?: 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا';
 				?>
-				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($faq_title); ?></h2>
+				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($faq_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($faq_sub); ?></p>
 			</div>
 
