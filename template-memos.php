@@ -225,15 +225,6 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/' . rawurlencode('مذ�
 		});
 	</script>
 
-	<!-- Page Content -->
-	<?php while ( have_posts() ) : the_post(); ?>
-		<div class="container page-content-wrap" style="padding: 40px 15px;">
-			<article id="post-<?php the_ID(); ?>" <?php post_class( 'page-article entry-content' ); ?>>
-				<?php the_content(); ?>
-			</article>
-		</div>
-	<?php endwhile; ?>
-
 </main><!-- #primary -->
 
 <?php
