@@ -767,7 +767,7 @@
 .contract-types-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
+  gap: 3rem;
 }
 
 .contract-type-card {
@@ -788,6 +788,11 @@
   border-radius: 8px;
   overflow: hidden;
   height: 200px;
+}
+@media (min-width: 992px) {
+  .contract-type-image {
+    height: 300px;
+  }
 }
 
 .contract-type-image img {
