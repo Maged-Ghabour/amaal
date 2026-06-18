@@ -721,6 +721,11 @@
   color: var(--color-white);
 }
 
+.why-contract-image {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
 .why-contract-image img {
   width: 100%;
   height: auto;
