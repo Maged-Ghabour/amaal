@@ -23,7 +23,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/' . rawurlencode('تأ�
 	<section id="hero" class="hero-section" style="background-image: url('<?php echo esc_url($bg_url); ?>');"
 		aria-label="<?php esc_attr_e('القسم الرئيسي - تأسيس الشركات', 'amal-malki'); ?>">
 
-		<div class="hero-overlay" aria-hidden="true"></div>
+
 
 		<div class="hero-content container">
 			<h1 class="hero-title"><?php echo nl2br(esc_html($title)); ?></h1>

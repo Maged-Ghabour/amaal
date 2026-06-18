@@ -51,7 +51,7 @@ $social_tiktok = get_theme_mod('social_tiktok', '#');
 	aria-label="<?php esc_attr_e('القسم الرئيسي', 'amal-malki'); ?>">
 
 	<!-- Dark overlay -->
-	<div class="hero-overlay" aria-hidden="true"></div>
+
 
 	<!-- Social Pills (top left) -->
 	<!-- <div class="hero-social" aria-label="<?php esc_attr_e('روابط التواصل الاجتماعي', 'amal-malki'); ?>">
