@@ -90,7 +90,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$types_title = get_field('types_title') ?: 'خدماتنا في توثيق عقود الشركات';
 				$types_sub = get_field('types_subtitle') ?: 'نغطي كافة احتياجات الشركات في جدة والمملكة بشكل عام.';
 				?>
-				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($types_title); ?></h2>
+				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($types_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($types_sub); ?></p>
 			</div>
 			
@@ -128,7 +128,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$steps_title = get_field('steps_title') ?: 'لماذا مكتب المستشار القانوني آمال المالكي للتوثيق القانوني؟';
 				$steps_sub = get_field('steps_subtitle') ?: 'إعداد قانوني دقيق يضمن قوة الدعوى بشكل يضمن حقوقك خلال التنفيذ.';
 				?>
-				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($steps_title); ?></h2>
+				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($steps_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($steps_sub); ?></p>
 			</div>
 
@@ -164,7 +164,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$faq_title = get_field('faq_title') ?: 'الأسئلة الشائعة حول توثيق العقود';
 				$faq_sub = get_field('faq_subtitle') ?: 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا';
 				?>
-				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($faq_title); ?></h2>
+				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($faq_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($faq_sub); ?></p>
 			</div>
 

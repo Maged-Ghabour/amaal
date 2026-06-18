@@ -91,7 +91,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$types_title = get_field('types_title') ?: 'تمثيل الشركات في القضايا التجارية';
 				$types_sub = get_field('types_subtitle') ?: 'تتعرض الشركات لنزاعات معقدة تتطلب محامي ترافع وتمثيل قانوني يفهم لغة الأرقام والسوق:';
 				?>
-				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($types_title); ?></h2>
+				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($types_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($types_sub); ?></p>
 			</div>
 			
@@ -129,7 +129,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$steps_title = get_field('steps_title') ?: 'لماذا تثق بالتمثيل القانوني؟';
 				$steps_sub = get_field('steps_subtitle') ?: 'تمثيل قانوني احترافي يحمي حقوقك ويعزز موقفك الدعوى:';
 				?>
-				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($steps_title); ?></h2>
+				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($steps_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($steps_sub); ?></p>
 			</div>
 
@@ -165,7 +165,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$faq_title = get_field('faq_title') ?: 'الأسئلة الشائعة حول التمثيل القضائي';
 				$faq_sub = get_field('faq_subtitle') ?: 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا';
 				?>
-				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($faq_title); ?></h2>
+				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($faq_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($faq_sub); ?></p>
 			</div>
 

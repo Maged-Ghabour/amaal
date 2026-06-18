@@ -91,7 +91,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$types_title = get_field('types_title') ?: 'خدماتنا في قضايا الاستئناف والنقض';
 				$types_sub = get_field('types_subtitle') ?: 'خبرة قانونية دقيقة تضمن لموكلينا أقوى أداء أمام محكمة النقض.';
 				?>
-				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($types_title); ?></h2>
+				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($types_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($types_sub); ?></p>
 			</div>
 			
@@ -129,7 +129,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$steps_title = get_field('steps_title') ?: 'مميزات التعامل في قضايا النقض';
 				$steps_sub = get_field('steps_subtitle') ?: 'مكتب المستشار القانوني آمال المالكي خيارك الأفضل في قضايا الاستئناف والنقض في السعودية للأسباب التالية:';
 				?>
-				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($steps_title); ?></h2>
+				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($steps_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($steps_sub); ?></p>
 			</div>
 
@@ -165,7 +165,7 @@ $bg_url = get_field('hero_bg') ?: AMAL_ASSETS . '/public/company1.png'; // Fallb
 				$faq_title = get_field('faq_title') ?: 'الأسئلة الشائعة حول الاستئناف والنقض';
 				$faq_sub = get_field('faq_subtitle') ?: 'إجابات على أكثر الأسئلة شيوعاً حول خدماتنا';
 				?>
-				<h2 class="section-title" style="color: <?php echo esc_attr($sub1_color); ?>;"><?php echo esc_html($faq_title); ?></h2>
+				<h2 class="section-title" style="color: var(--color-gold);"><?php echo esc_html($faq_title); ?></h2>
 				<p class="section-subtitle"><?php echo esc_html($faq_sub); ?></p>
 			</div>
 
