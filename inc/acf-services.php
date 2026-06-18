@@ -53,8 +53,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$contract_fields[] = ['key' => "field_cd_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$contract_fields[] = ['key' => "field_cd_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_types[$i, 'placeholder' => $default_types[$i]['title']];
-		$contract_fields[] = ['key' => "field_cd_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_types[$i, 'placeholder' => $default_types[$i]['desc']];
+		$contract_fields[] = ['key' => "field_cd_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_types[$i]['title'], 'placeholder' => $default_types[$i]['title']];
+		$contract_fields[] = ['key' => "field_cd_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_types[$i]['desc'], 'placeholder' => $default_types[$i]['desc']];
 	}
 
 	$contract_fields[] = ['key' => 'field_cd_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
@@ -145,8 +145,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$company_fields[] = ['key' => "field_cf_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$company_fields[] = ['key' => "field_cf_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_cf_types[$i, 'placeholder' => $default_cf_types[$i]['title']];
-		$company_fields[] = ['key' => "field_cf_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_cf_types[$i, 'placeholder' => $default_cf_types[$i]['desc']];
+		$company_fields[] = ['key' => "field_cf_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_cf_types[$i]['title'], 'placeholder' => $default_cf_types[$i]['title']];
+		$company_fields[] = ['key' => "field_cf_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_cf_types[$i]['desc'], 'placeholder' => $default_cf_types[$i]['desc']];
 	}
 
 	$company_fields[] = ['key' => 'field_cf_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
@@ -160,8 +160,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$company_fields[] = ['key' => "field_cf_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$company_fields[] = ['key' => "field_cf_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_cf_steps[$i, 'placeholder' => $default_cf_steps[$i]['title']];
-		$company_fields[] = ['key' => "field_cf_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_cf_steps[$i, 'placeholder' => $default_cf_steps[$i]['desc']];
+		$company_fields[] = ['key' => "field_cf_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_cf_steps[$i]['title'], 'placeholder' => $default_cf_steps[$i]['title']];
+		$company_fields[] = ['key' => "field_cf_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_cf_steps[$i]['desc'], 'placeholder' => $default_cf_steps[$i]['desc']];
 	}
 
 	$company_fields[] = ['key' => 'field_cf_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
@@ -233,8 +233,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$lawsuits_fields[] = ['key' => "field_lp_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$lawsuits_fields[] = ['key' => "field_lp_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_lp_types[$i, 'placeholder' => $default_lp_types[$i]['title']];
-		$lawsuits_fields[] = ['key' => "field_lp_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lp_types[$i, 'placeholder' => $default_lp_types[$i]['desc']];
+		$lawsuits_fields[] = ['key' => "field_lp_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_lp_types[$i]['title'], 'placeholder' => $default_lp_types[$i]['title']];
+		$lawsuits_fields[] = ['key' => "field_lp_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lp_types[$i]['desc'], 'placeholder' => $default_lp_types[$i]['desc']];
 	}
 
 	$lawsuits_fields[] = ['key' => 'field_lp_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
@@ -248,8 +248,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_lp_steps[$i, 'placeholder' => $default_lp_steps[$i]['title']];
-		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lp_steps[$i, 'placeholder' => $default_lp_steps[$i]['desc']];
+		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_lp_steps[$i]['title'], 'placeholder' => $default_lp_steps[$i]['title']];
+		$lawsuits_fields[] = ['key' => "field_lp_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lp_steps[$i]['desc'], 'placeholder' => $default_lp_steps[$i]['desc']];
 	}
 
 	$lawsuits_fields[] = ['key' => 'field_lp_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
@@ -321,8 +321,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$memos_fields[] = ['key' => "field_mm_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$memos_fields[] = ['key' => "field_mm_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_mm_types[$i, 'placeholder' => $default_mm_types[$i]['title']];
-		$memos_fields[] = ['key' => "field_mm_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_mm_types[$i, 'placeholder' => $default_mm_types[$i]['desc']];
+		$memos_fields[] = ['key' => "field_mm_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_mm_types[$i]['title'], 'placeholder' => $default_mm_types[$i]['title']];
+		$memos_fields[] = ['key' => "field_mm_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_mm_types[$i]['desc'], 'placeholder' => $default_mm_types[$i]['desc']];
 	}
 
 	$memos_fields[] = ['key' => 'field_mm_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
@@ -336,8 +336,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$memos_fields[] = ['key' => "field_mm_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$memos_fields[] = ['key' => "field_mm_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_mm_steps[$i, 'placeholder' => $default_mm_steps[$i]['title']];
-		$memos_fields[] = ['key' => "field_mm_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_mm_steps[$i, 'placeholder' => $default_mm_steps[$i]['desc']];
+		$memos_fields[] = ['key' => "field_mm_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_mm_steps[$i]['title'], 'placeholder' => $default_mm_steps[$i]['title']];
+		$memos_fields[] = ['key' => "field_mm_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_mm_steps[$i]['desc'], 'placeholder' => $default_mm_steps[$i]['desc']];
 	}
 
 	$memos_fields[] = ['key' => 'field_mm_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
@@ -409,8 +409,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$consultant_fields[] = ['key' => "field_lc_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$consultant_fields[] = ['key' => "field_lc_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_lc_types[$i, 'placeholder' => $default_lc_types[$i]['title']];
-		$consultant_fields[] = ['key' => "field_lc_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lc_types[$i, 'placeholder' => $default_lc_types[$i]['desc']];
+		$consultant_fields[] = ['key' => "field_lc_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_lc_types[$i]['title'], 'placeholder' => $default_lc_types[$i]['title']];
+		$consultant_fields[] = ['key' => "field_lc_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_lc_types[$i]['desc'], 'placeholder' => $default_lc_types[$i]['desc']];
 	}
 
 	$consultant_fields[] = ['key' => 'field_lc_trust_tab', 'label' => 'Trust Section', 'type' => 'tab'];
@@ -487,8 +487,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$notarization_fields[] = ['key' => "field_ns_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$notarization_fields[] = ['key' => "field_ns_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_ns_types[$i, 'placeholder' => $default_ns_types[$i]['title']];
-		$notarization_fields[] = ['key' => "field_ns_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ns_types[$i, 'placeholder' => $default_ns_types[$i]['desc']];
+		$notarization_fields[] = ['key' => "field_ns_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_ns_types[$i]['title'], 'placeholder' => $default_ns_types[$i]['title']];
+		$notarization_fields[] = ['key' => "field_ns_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ns_types[$i]['desc'], 'placeholder' => $default_ns_types[$i]['desc']];
 	}
 
 	$notarization_fields[] = ['key' => 'field_ns_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
@@ -502,8 +502,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$notarization_fields[] = ['key' => "field_ns_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$notarization_fields[] = ['key' => "field_ns_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_ns_steps[$i, 'placeholder' => $default_ns_steps[$i]['title']];
-		$notarization_fields[] = ['key' => "field_ns_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ns_steps[$i, 'placeholder' => $default_ns_steps[$i]['desc']];
+		$notarization_fields[] = ['key' => "field_ns_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_ns_steps[$i]['title'], 'placeholder' => $default_ns_steps[$i]['title']];
+		$notarization_fields[] = ['key' => "field_ns_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ns_steps[$i]['desc'], 'placeholder' => $default_ns_steps[$i]['desc']];
 	}
 
 	$notarization_fields[] = ['key' => 'field_ns_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
@@ -575,8 +575,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$hearings_fields[] = ['key' => "field_hr_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$hearings_fields[] = ['key' => "field_hr_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_hr_types[$i, 'placeholder' => $default_hr_types[$i]['title']];
-		$hearings_fields[] = ['key' => "field_hr_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_hr_types[$i, 'placeholder' => $default_hr_types[$i]['desc']];
+		$hearings_fields[] = ['key' => "field_hr_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_hr_types[$i]['title'], 'placeholder' => $default_hr_types[$i]['title']];
+		$hearings_fields[] = ['key' => "field_hr_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_hr_types[$i]['desc'], 'placeholder' => $default_hr_types[$i]['desc']];
 	}
 
 	$hearings_fields[] = ['key' => 'field_hr_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
@@ -590,8 +590,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$hearings_fields[] = ['key' => "field_hr_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$hearings_fields[] = ['key' => "field_hr_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_hr_steps[$i, 'placeholder' => $default_hr_steps[$i]['title']];
-		$hearings_fields[] = ['key' => "field_hr_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_hr_steps[$i, 'placeholder' => $default_hr_steps[$i]['desc']];
+		$hearings_fields[] = ['key' => "field_hr_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_hr_steps[$i]['title'], 'placeholder' => $default_hr_steps[$i]['title']];
+		$hearings_fields[] = ['key' => "field_hr_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_hr_steps[$i]['desc'], 'placeholder' => $default_hr_steps[$i]['desc']];
 	}
 
 	$hearings_fields[] = ['key' => 'field_hr_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
@@ -663,8 +663,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$appeals_fields[] = ['key' => "field_ap_type_{$i}_img", 'label' => "نوع {$i} - صورة", 'name' => "type_{$i}_image", 'type' => 'image', 'return_format' => 'url'];
-		$appeals_fields[] = ['key' => "field_ap_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_ap_types[$i, 'placeholder' => $default_ap_types[$i]['title']];
-		$appeals_fields[] = ['key' => "field_ap_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ap_types[$i, 'placeholder' => $default_ap_types[$i]['desc']];
+		$appeals_fields[] = ['key' => "field_ap_type_{$i}_title", 'label' => "نوع {$i} - العنوان", 'name' => "type_{$i}_title", 'type' => 'text', 'default_value' => $default_ap_types[$i]['title'], 'placeholder' => $default_ap_types[$i]['title']];
+		$appeals_fields[] = ['key' => "field_ap_type_{$i}_desc", 'label' => "نوع {$i} - الوصف", 'name' => "type_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ap_types[$i]['desc'], 'placeholder' => $default_ap_types[$i]['desc']];
 	}
 
 	$appeals_fields[] = ['key' => 'field_ap_steps_tab', 'label' => 'Steps Section', 'type' => 'tab'];
@@ -678,8 +678,8 @@ function amal_register_service_acf_fields() {
 	];
 	for ($i = 1; $i <= 3; $i++) {
 		$appeals_fields[] = ['key' => "field_ap_step_{$i}_icon", 'label' => "خطوة {$i} - أيقونة", 'name' => "step_{$i}_icon", 'type' => 'image', 'return_format' => 'url'];
-		$appeals_fields[] = ['key' => "field_ap_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_ap_steps[$i, 'placeholder' => $default_ap_steps[$i]['title']];
-		$appeals_fields[] = ['key' => "field_ap_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ap_steps[$i, 'placeholder' => $default_ap_steps[$i]['desc']];
+		$appeals_fields[] = ['key' => "field_ap_step_{$i}_title", 'label' => "خطوة {$i} - العنوان", 'name' => "step_{$i}_title", 'type' => 'text', 'default_value' => $default_ap_steps[$i]['title'], 'placeholder' => $default_ap_steps[$i]['title']];
+		$appeals_fields[] = ['key' => "field_ap_step_{$i}_desc", 'label' => "خطوة {$i} - الوصف", 'name' => "step_{$i}_desc", 'type' => 'textarea', 'default_value' => $default_ap_steps[$i]['desc'], 'placeholder' => $default_ap_steps[$i]['desc']];
 	}
 
 	$appeals_fields[] = ['key' => 'field_ap_faq_tab', 'label' => 'FAQ Section', 'type' => 'tab'];
