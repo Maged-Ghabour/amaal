@@ -19,6 +19,11 @@
 		<?php
 		$custom_link = function_exists('get_field') ? get_field('custom_service_link') : '';
 		$svc_link = $custom_link ? esc_url($custom_link) : get_permalink();
+		
+		$title = get_the_title();
+		if ( strpos( $title, 'متابعه قضايا الاستئناف' ) !== false || strpos( $title, 'متابعة قضايا الاستئناف' ) !== false ) {
+			$svc_link = str_replace( '/services/', '/', $svc_link );
+		}
 		?>
 		<h3 class="service-card__title">
 			<a href="<?php echo $svc_link; ?>"><?php the_title(); ?></a>
