@@ -1500,6 +1500,7 @@ svg {
   .footer-columns .footer-col:nth-child(2) {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .footer-columns .footer-col:nth-child(3) {
